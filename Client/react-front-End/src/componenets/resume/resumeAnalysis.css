@@ -1,0 +1,94 @@
+header ul  
+{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 1px solid #2a2a2a2a;
+    padding-bottom: 19px;
+    padding-top: 10px;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 11%;
+}
+header ul .logo 
+{
+    margin-right: auto;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+header ul .links 
+{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+}
+header ul .links a
+{
+      text-decoration: none;
+      color: black;
+}
+header ul .links a:hover
+{
+    font-weight: bold;
+    animation: fontWeight 0.1s ease-out;
+}
+
+header ul .links li 
+{
+    margin: 0 14px;
+}
+header ul .buttons 
+{
+    
+}
+header ul .buttons button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 20px;
+    font-size: 16px;
+    transition: transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow 0.2s, background 0.2s, color 0.2s;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.08);
+    outline: none;
+}
+header ul .buttons button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 16px 0 rgba(0,120,255,0.15);
+    background: #222;
+    color: #fff;
+}
+header ul .buttons button:active {
+    transform: scale(0.97);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.12);
+}
+header ul .buttons button.login 
+{
+    background: white;
+    color: black;
+    font-size: 16px;
+    border: 1px solid;
+}
+header ul .buttons button.signup 
+{
+    background: black;
+    color: white;
+    font-size: 16px;
+    border: 1px solid;
+    border-radius: 15px;
+}
+@keyframes fontWeight {
+    0% {
+        font-weight: normal;
+    }
+    100% {
+        font-weight: bold;
+    }
+}
