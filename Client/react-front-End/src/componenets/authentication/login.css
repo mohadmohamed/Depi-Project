@@ -4,7 +4,7 @@
 :root {
   --clr-bg-light: #ffffff;
   /* primary text (headings, labels) - dark slate with purple undertone */
-  --clr-text-dark: #000000;
+  --clr-text-dark:#000000;
   /* secondary / placeholder text - soft cool gray */
   --clr-text-light: #6c6c6c;
   /* primary link / accent (used for CTAs and links) */
@@ -31,11 +31,11 @@ body {
  
   background-color: #ffffff;
  
-  /* background-image:
-    radial-gradient(ellipse at 10% 90%, rgba(255,164,175,0.45) 0%, rgba(255,164,175,0.28) 18%, transparent 45%),
-    radial-gradient(ellipse at 90% 90%, rgba(255,182,195,0.42) 0%, rgba(255,182,195,0.2) 20%, transparent 48%),
-    radial-gradient(circle at 50% 8%, rgba(132,103,255,0.12) 0%, rgba(132,103,255,0.06) 28%, transparent 60%),
-    linear-gradient(180deg, rgba(248,243,255,1) 0%, rgba(255,249,247,0.95) 42%, rgba(255,243,246,1) 100%); */
+  background-image:
+    radial-gradient(ellipse at 10% 90%, rgba(255, 153, 153, 0.45) 0%, rgba(246, 143, 155, 0.335) 18%, transparent 45%),
+    radial-gradient(ellipse at 90% 90%, rgba(255, 153, 153, 0.45) 0%, rgba(246, 143, 155, 0.335) 18%  , transparent 45%),
+    radial-gradient(circle at 50% 10%, rgba(241, 85, 255, 0.213) 0%, rgba(93, 71, 202, 0.357) 28%, transparent 45%),
+    linear-gradient(180deg, rgba(248,243,255,1) 0%, rgb(255, 255, 255) 42%, rgb(255, 255, 255) 100%);
  
 }
 
@@ -47,19 +47,24 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 5rem;
+  padding-top: 3.7rem;
 }
 
-main > h1 {
-  font-size: 2.5rem;
+main h1 {
+  font-size: 2.2rem;
   font-weight: 600;
+  text-align: center;
+  color: var(--clr-text-dark);
 }
 
-main > p {
-  margin-top: 12px;
-  font-size: 1.25rem;
-  font-weight: 400;
+main p {
+  margin-top: 0px;
+  font-size: 1.1rem;
+  font-weight: 500;
   color: var(--clr-text-dark);
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0 1rem;
 }
 
 /* =========================
@@ -67,12 +72,13 @@ main > p {
    ========================= */
 main > form {
  
-  padding: 2rem 2.5rem;
+  padding: 2.1rem 2.5rem;
   /* keep form container minimal; card styles live on inner elements */
   width: 100%;
   max-width: 44rem;
   margin-bottom: 0rem;
   padding-bottom: 0.4rem;
+  padding-top: 22px;
 }
 
 main > form div {
@@ -93,7 +99,7 @@ main > form div {
 .card-inner {
   background: var(--clr-bg-light);
   border-radius: 18px;
-  padding: 26px 34px;
+  padding: 34px 34px;
   box-shadow: 0 6px 18px rgba(22, 22, 22, 0.06), 0 0 0 6px rgba(229,232,247,0.9) inset;
 }
 
@@ -147,17 +153,20 @@ main form #submit {
   font-weight: 600;
   color: white;
   margin-top: 18px;
-  background:black;
+  background: rgb(0, 0, 0);
   border: none;
   cursor: pointer;
-  box-shadow: 0 18px 34px rgba(99,72,255,0.18);
   background-size: 200% 100%;
-  transition: all 0.28s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  /* box-shadow: 0 5px 0px #D6CBCF ;   */
+  box-shadow: 0 5px 0px #D6CBCF ;
+  
 }
 
 main form #submit:hover {
   background-position: right center;
   transform: translateY(-1px) scale(1.01);
+   
 }
 
 /* tweak labels and spacing for the form look */
@@ -221,4 +230,69 @@ margin-top: 7px;
   margin-top: 6px;
   color: #2e7d32; /* green */
   font-size: 0.9rem;
+}
+
+/* =========================
+   Animations & Micro-interactions (Auth pages)
+   These styles power a gentle entrance animation for the
+   login / signup pages and small hover/focus interactions.
+   Applied in a non-invasive way so existing markup works.
+   ========================= */
+
+
+main {
+  animation: fadeInUp 560ms cubic-bezier(.2,.9,.2,1) both;
+}
+
+/* Slight pop-in for card and inner area with a tiny stagger */
+.card-outer {
+  animation: popIn 520ms cubic-bezier(.2,.9,.2,1) both;
+}
+
+.card-inner {
+  animation: popIn 520ms cubic-bezier(.2,.9,.2,1) both;
+  animation-delay: 120ms;
+}
+
+/* Inputs lift subtly on focus to add depth */
+main > form div input {
+  transition: box-shadow 220ms ease, transform 200ms ease, border-color 180ms ease;
+}
+
+main > form div input:focus {
+  transform: translateY(-3px);
+}
+
+
+
+
+
+/* Optional floating variant to keep the card feeling alive; apply `float` class on `.card-outer` if you like */
+/* .card-outer{
+  animation: float 6s ease-in-out infinite;
+} */
+
+/* Keyframes */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(14px) scale(0.995); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: translateY(10px) scale(.995); }
+  60% { transform: translateY(-4px) scale(1.005); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Respect user's reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  main, .card-outer, .card-inner, .card-outer.float {
+    animation: none !important;
+    transition: none !important;
+  }
 }
