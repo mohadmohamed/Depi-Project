@@ -8,9 +8,8 @@ function App() {
 
   return (
     <>
-      <ResumeAnalysis />
-      <Login />
-      <Signup />
+      {/*<ResumeAnalysis /> comment out for now should use Routes to get to it */}
+      {/*<Login /> commented out for now should use Routes to get to it */}
     </>
   );
 }
