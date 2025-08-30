@@ -53,11 +53,12 @@ export default function Signup() {
 
   return (
     <main>
-      <h1>Create Your Account</h1>
-      <p>Join Us and Kickstart Your Job Search</p>
+    
       <form onSubmit={handleSubmit} noValidate>
         <div className="card-outer">
           <div className="card-inner">
+              <h1>Create Your Account</h1>
+      <p>Join Us and Kickstart Your Job Search!</p>
             <div>
               <label htmlFor="name">Full Name</label>
               <input

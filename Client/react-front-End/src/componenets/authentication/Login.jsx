@@ -4,11 +4,11 @@ export default function Login() {
  
   return (
     <main>
-       <h1>Welcome Back!</h1>
-       <p>Log In to Continue Your Job Journey</p>
        <form action="">
-        <div className="card-outer">
+        <div className="card-outer float">
           <div className="card-inner">
+       <h1>Welcome Back!</h1>
+       <p>Log In to Continue Your Job Journey!</p>
             <div>
               <label htmlFor="email">Email Address</label>
               <input type="email" name="email" id="email" placeholder="Enter your email" />
