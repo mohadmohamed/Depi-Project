@@ -1,4 +1,4 @@
-export default function Header()
+export default function Header({isLoggedIn})
 {
     return(
         <header>
@@ -10,10 +10,10 @@ export default function Header()
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Contact</a></li>
                 </div>
-                <div className="buttons">
+                {isLoggedIn && <div className="buttons">
                     <button className="login">Login</button>
                     <button className="signup">Sign Up</button>
-                </div>
+                </div>}
             </ul>
         </header>
     )
