@@ -188,3 +188,37 @@ main > span a {
   font-weight: 600;
   cursor: pointer;
 }
+
+#su-span{
+  margin-bottom:2.5rem;
+}
+
+/* Password checklist and inline field messages */
+.pw-checklist {
+
+  color: var(--clr-text-light);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+.pw-checklist small {
+font-size: 0.9rem;
+margin-top: 7px;
+
+}
+.pw-checklist ul {
+  margin: 8px 0 0 0;
+  /* match the input horizontal padding so bullets align with input text */
+  padding-left: 18px;
+  list-style: disc;
+}
+.field-error {
+  margin-top: 10px;
+  margin-bottom:10px;
+  color: #c62828; /* red */
+  font-size: 0.9rem;
+}
+.field-ok {
+  margin-top: 6px;
+  color: #2e7d32; /* green */
+  font-size: 0.9rem;
+}
