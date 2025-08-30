@@ -19,6 +19,10 @@ public class HomeController : ControllerBase
     [HttpGet("ping")]
     public IActionResult Ping()
     {
-        return Ok(new { message = "pong from MVC!" });
+        return Ok(new { message = "pong from MVC! mohamed is here" });
+    }
+    public IActionResult Hello()
+    {
+        return Ok(new { message = "this is a created Message from MVC! mohamed is here" });
     }
 }
