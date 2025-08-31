@@ -74,18 +74,18 @@
 /* Suggestions Section Styles */
 .suggestions {
   background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.06);
-    /* padding: 32px 130px 24px 40px; */
-    max-width: 480px;
-    margin: 32px auto 0 auto;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-    padding: 34px 85px 35px 84px;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(30, 60, 90, 0.08), 0 1.5px 6px 0 rgba(0,0,0,0.03);
+  width: 80%;
+  margin: 40px auto 0 auto;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 36px 0 36px 0;
   animation: cardFadeIn 0.8s cubic-bezier(.4,2,.6,1);
   transition: box-shadow 0.2s, transform 0.2s;
+  margin-left: 11%;
 }
 .suggestions:hover {
   box-shadow: 0 6px 32px 0 rgba(0,120,255,0.10);
@@ -93,15 +93,15 @@
 }
 
 .suggestions > div {
-  background: #fafbfc;
-  border-radius: 10px;
-  padding: 18px 18px 12px 18px;
+  background: #f8fafc;
+  border-radius: 14px;
+  padding: 22px 28px 18px 22px;
   margin-bottom: 0;
-  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.03);
-  border-left: 6px solid #eee;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+  border-left: 4px solid #e0e7ef;
   display: flex;
   align-items: flex-start;
-  gap: 14px;
+  gap: 18px;
   position: relative;
   opacity: 0;
   transform: translateY(30px);
@@ -179,13 +179,17 @@
 }
 /* Resume Score Card Styles */
 .resume-score-card {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.06);
-    padding: 34px 85px 35px 84px;
-    max-width: 480px;
-    margin: 32px auto;
-    font-family: 'Poppins', sans-serif;
+  background: #f6f8fb;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(30, 60, 90, 0.08), 0 1.5px 6px 0 rgba(0,0,0,0.03);
+  width: 80%;
+  margin: 32px auto 0 auto;
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  padding: 38px 0 38px 0;
+  margin-left: 11%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .resume-score-header {
   display: flex;

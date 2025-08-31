@@ -1,5 +1,4 @@
 import ResumeScoreCard from "./ResumeScoreCard";
-
 export default function Main() {
     const tone = 100;
     const content = 25;
