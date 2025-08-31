@@ -30,14 +30,11 @@ body {
  
  
   background-color: #ffffff;
- 
-  background-image:
-    radial-gradient(ellipse at 10% 90%, rgba(255, 153, 153, 0.45) 0%, rgba(246, 143, 155, 0.335) 18%, transparent 45%),
-    radial-gradient(ellipse at 90% 90%, rgba(255, 153, 153, 0.45) 0%, rgba(246, 143, 155, 0.335) 18%  , transparent 45%),
-    radial-gradient(circle at 50% 10%, rgba(241, 85, 255, 0.213) 0%, rgba(93, 71, 202, 0.357) 28%, transparent 45%),
-    linear-gradient(180deg, rgba(248,243,255,1) 0%, rgb(255, 255, 255) 42%, rgb(255, 255, 255) 100%);
- 
+
+  
 }
+
+
 
 /* =========================
    Main Container
@@ -48,6 +45,11 @@ main {
   justify-content: center;
   align-items: center;
   padding-top: 3.7rem;
+ background-image:
+    radial-gradient(ellipse at 10% 90%, rgba(255, 153, 153, 0.45) 0%, rgba(246, 143, 155, 0.335) 18%, transparent 45%),
+    radial-gradient(ellipse at 90% 90%, rgba(255, 153, 153, 0.45) 0%, rgba(246, 143, 155, 0.335) 18%  , transparent 45%),
+    radial-gradient(circle at 50% 10%, rgba(241, 85, 255, 0.213) 0%, rgba(93, 71, 202, 0.357) 28%, transparent 45%),
+    linear-gradient(180deg, rgba(248,243,255,1) 0%, rgb(255, 255, 255) 42%, rgb(255, 255, 255) 100%);
 }
 
 main h1 {
