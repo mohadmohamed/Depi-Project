@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import './login.css'
+import Header from '../resume/Header'
+import Footer from '../resume/Footer'
 
 export default function Signup() {
   const [form, setForm] = useState({ name: '', email: '', password: '', confirm: '' })
@@ -52,11 +54,13 @@ export default function Signup() {
   }
 
   return (
-    <main id ="su-main">
+    <>
+    {/* <Header isLoggedIn={false}/> */}
+    <main id ="su-main" className='login-main'>
     
       <form onSubmit={handleSubmit} noValidate id='signup-form'>
         <div className="card-outer">
-          <div className="card-inner">
+          <div className="card-inner-su">
               <h1>Create Your Account</h1>
       <p>Join Us and Kickstart Your Job Search!</p>
             <div>
@@ -134,5 +138,7 @@ export default function Signup() {
 
       <span id="su-span">Already have an account? <a href="./Login.jsx">Log In</a></span>
     </main>
+    {/* <Footer/> */}
+    </>
   )
 }

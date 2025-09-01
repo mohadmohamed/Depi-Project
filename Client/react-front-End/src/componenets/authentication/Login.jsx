@@ -1,9 +1,12 @@
-import './Login.css'
-
+import './login.css'
+import Header from '../resume/Header'
+import Footer from '../resume/Footer'
 export default function Login() {
  
   return (
-    <main>
+    <>
+    {/* <Header isLoggedIn={true}/> */}
+    <main className='login-main'>
        <form action="">
         <div className="card-outer float">
           <div className="card-inner">
@@ -23,10 +26,9 @@ export default function Login() {
         </div>
        </form>
     <span>Don't have an account? <a href="">Sign Up</a></span>
-
-    
     </main>
-   
+    {/* <Footer/> */}
+   </>
   )
   
  
