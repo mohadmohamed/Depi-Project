@@ -52,9 +52,9 @@ export default function Signup() {
   }
 
   return (
-    <main>
+    <main id ="su-main">
     
-      <form onSubmit={handleSubmit} noValidate>
+      <form onSubmit={handleSubmit} noValidate id='signup-form'>
         <div className="card-outer">
           <div className="card-inner">
               <h1>Create Your Account</h1>
