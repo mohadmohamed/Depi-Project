@@ -92,7 +92,7 @@ body {
 .login-main > form div {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.2rem;
 }
 
 .card-outer {
@@ -122,7 +122,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   color: var(--clr-text-dark);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .login-main > form div input {
@@ -163,11 +163,10 @@ body {
 .login-main form #submit {
   width: 100%;
   border-radius: 9999px;
-  padding: 12px 18px; /* smaller button */
+  padding: 13px 18px; /* smaller button */
   font-size: 1rem;
   font-weight: 600;
   color: white;
-  margin-top: 0px;
   background: rgb(0, 0, 0);
   border: none;
   cursor: pointer;
@@ -182,12 +181,7 @@ body {
    
 }
 
-/* tweak labels and spacing for the form look */
-.login-main > form div label {
-  margin-bottom: 10px;
-  color: var(--clr-text-dark);
-  font-weight: 400;
-}
+
 
 /* smaller input placeholder like the design */
 .login-main > form div input::placeholder {
@@ -203,7 +197,9 @@ body {
   font-weight: 400;
   color: var(--clr-text-dark);
 }
-
+input#password{
+  margin-bottom: 0px;
+}
 .login-main > span a {
   color: var(--clr-link);
   text-decoration: none;
@@ -223,19 +219,19 @@ body {
 }
 .pw-checklist small {
 font-size: 0.9rem;
-margin-top: 9px;
+margin-top: 7px;
 
 }
 .pw-checklist ul {
-  margin: 8px 0 0 0;
+  margin: 2px 0 0 0;
   /* match the input horizontal padding so bullets align with input text */
   padding-left: 18px;
   list-style: disc;
   font-size: 0.85rem;
 }
-.field-error {
-  margin-top: 10px;
-  margin-bottom:10px;
+.login-main > form div .field-error {
+  margin-top: 7px;
+  margin-bottom:0px;
   color: #c62828; /* red */
   font-size: 0.9rem;
 }
@@ -291,7 +287,7 @@ margin-top: 9px;
 
 /* Inputs lift subtly on focus to add depth */
 .login-main > form div input {
-  transition: box-shadow 220ms ease, transform 200ms ease, border-color 180ms ease;
+  transition: box-shadow 200ms ease, transform 200ms ease, border-color 180ms ease;
 }
 
 .login-main > form div input:focus {
