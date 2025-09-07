@@ -1,0 +1,272 @@
+:root{
+  --questions-fc:#293264;
+}
+
+.exam-main {
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: #F5F7FB;
+
+}
+.exam-title{
+  font-size: 2rem;
+  color: #293264;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.quiz-start{
+  all: unset;  
+  display: block;
+  margin: 100px auto;
+  color: white;
+  font-size: 1.5rem;
+  background-color: #4D5B9E;
+  font-family: 'poppins',sans-serif;
+  padding:12px 20px;
+  border-radius:5px;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+
+.q-card{
+border-bottom: 1px solid #c7cffe;
+padding-bottom: 20px;
+margin-bottom: 25px;
+color: var(--questions-fc);
+text-align: left;
+width:70%
+
+}
+
+.q-header{
+  margin-bottom: 17px;
+  font-size:1.4rem;
+  font-weight: 600;
+}
+
+.choice{
+ font-size: 1.2rem; 
+ font-weight: 500;
+ border-radius: 5px;
+ border: 0.1px solid #4D5B9E;
+ padding: 8px 10px;
+ margin-bottom: 14px;
+ cursor: pointer; 
+ /* wrap text */
+  word-wrap: break-word;
+  
+}
+
+
+.choice-selected{
+  background-color: #cad3fe;
+}
+
+.choice-bs:hover:not(.choice-selected){
+ background-color: #D6DBF5;
+}
+
+.selected-p{
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+
+/* Correct answer */
+.choice-as.correct {
+  background-color: #94D7A2;
+  border:none;
+
+}
+
+.choice-as{
+  cursor:default;
+}
+
+/* Wrong choice */
+.choice-as.wrong {
+  background-color:#F8BCBC;
+  border-color: #F8BCBC;
+}
+.choice-as:not(.correct){
+   opacity: 0.8;
+   
+}
+
+.show-ex, .exam-submit{
+  all: unset;  
+  display: block;
+  margin-top: 10px;
+  color: white;
+  font-size: 1rem;
+  background-color: #4D5B9E;
+  font-family: 'poppins',sans-serif;
+  padding:8px 10px;
+  border-radius:5px;
+  cursor: pointer;
+  transition: 0.2s all ease;
+  margin-bottom:12px;
+ 
+}
+.exam-submit{
+  width: 200px;
+  text-align: center;
+  margin: 20px auto;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+ .q-explanation{
+  font-style: italic;
+  font-size: 1.2rem;
+ }
+ 
+
+
+.show-ex:hover,.exam-submit:hover,.quiz-start:hover {
+  background-color: #2e3f93;
+  transform: scale(1.01);
+}
+
+
+/* TIMER STYLES */
+
+.circle-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #293264 calc(var(--percent) * 1%),
+    #eee 0
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 5px solid #293264;
+  transition: background 1s linear, border-color 1s linear;
+}
+
+.circle::before {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 1;
+}
+
+.time-text {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  color: #4D5B9E;
+  z-index: 2;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* PC */
+@media (min-width: 768px) {
+  .circle-timer {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    margin: 0;
+    justify-content: flex-end;
+  }
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .exam-main {
+    display: block;
+    margin: 0px;
+    width: 100%;
+    padding: 20px 35px;
+}
+.q-card{
+  width: 100%;
+}
+}
+
+.essay-box {
+  width: 100%;
+  min-height: 120px;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  color: var(--questions-fc);
+  border: 0.1px solid #4D5B9E;
+  border-radius: 5px;
+  padding: 10px 12px;
+  margin-top: 12px;
+  margin-bottom: 14px;
+  resize: vertical; /* allow resizing only vertically */
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+/* Hover effect */
+.essay-box:hover {
+  border-color: #2e3f93;
+  cursor: text;
+}
+
+/* Focus effect */
+.essay-box:focus {
+  border-color: #2e3f93;
+  box-shadow: 0 0 5px rgba(77, 91, 158, 0.4);
+}
+
+/* Disabled after submission */
+.essay-box:disabled {
+  background-color: #fbf6f6;
+
+
+}
+
+
+/* score */
+.exam-result {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.result-icon {
+  font-size: 60px;
+  color: #4CAF50; /* green */
+  border: 3px solid #4CAF50;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-message {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.score-exam {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #293264;
+}
