@@ -10,7 +10,7 @@ function App() {
     <>
      {/* <Signup /> */}
      {/* <Login /> */ }
-      <ResumeAnalysis /> 
+     {<ResumeAnalysis />}  
     </>
   );
 }

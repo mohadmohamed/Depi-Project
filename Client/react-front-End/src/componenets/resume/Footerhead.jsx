@@ -7,7 +7,6 @@ export default function Footer() {
     const handleBotClick = () => {
         setIsAnimating(true);
         setTimeout(() => setIsAnimating(false), 1000);
-        // You could add additional functionality here like opening a chatbot
     };
 
     return(
