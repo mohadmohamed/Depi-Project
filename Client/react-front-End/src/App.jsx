@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <MockInterview />
+      {/* <MockInterview /> */}
       {/* <Questions /> */}
      {/* <Signup/> */}
       {/* <Login /> */}
