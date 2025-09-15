@@ -45,7 +45,7 @@ export default function MockInterview() {
                 {noOfAttempts === 0 ? <div className="no-attempts">
                     <h2 className="no-attempts-title">No Attempts Yet</h2>
                     <p className="no-attempts-text">You haven't attempted any mock interviews yet. Start practicing now!</p>
-                    <button className="mi-start-btn">Start Your First Attempt Now</button>
+                    {/* <button className="mi-start-btn">Start Your First Attempt Now</button> */}
                 </div> : null}
 
 
