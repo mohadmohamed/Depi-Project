@@ -1,0 +1,262 @@
+:root {
+  --mi-color: #293264;
+  --mi-accent: #4D5B9E;
+}
+
+/* main container */
+.mi-main {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  /* background-image:
+    radial-gradient(ellipse at 10% 90%, rgba(255, 153, 153, 0.45) 0%, rgba(246, 143, 155, 0.335) 18%, transparent 45%),
+    radial-gradient(ellipse at 90% 90%, rgba(255, 202, 202, 0.45) 0%, rgba(246, 143, 155, 0.335) 18%  , transparent 45%),
+    radial-gradient(circle at 50% 10%, rgba(248, 169, 255, 0.213) 0%, rgba(194, 183, 248, 0.357) 28%, transparent 45%),
+    linear-gradient(180deg, rgba(248,243,255,1) 0%, rgb(255, 255, 255) 42%, rgb(255, 255, 255) 100%); */
+
+ 
+
+    padding: 30px 20px;
+}
+.mapped-attempts::-webkit-scrollbar {
+  width: 5px;
+}
+
+.mapped-attempts::-webkit-scrollbar-track {
+  background: #f0f2fa; 
+  border-radius: 10px;
+}
+
+.mapped-attempts::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8884d8, #293264);
+  border-radius: 10px;
+}
+
+.mapped-attempts::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #6a5acd, #1e285c);
+}
+
+
+.mock-interview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Header */
+.mi-header {
+  font-size: 2rem;
+  color: var(--mi-color);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.mi-text {
+  font-size: 1.1rem;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+
+/* Attempt Card */
+
+.mi-attempt-card {
+  background-color: #fff;
+
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin: auto;
+  border:1px solid #3c2364;
+  margin-bottom: 15px;
+  width: max-content;
+  max-width: 800px;
+  transition: 0.2s all ease;
+ box-shadow:  0px 2px 0px #502d92;
+  margin-right: 15px;
+}
+
+.mi-attempt-card:hover{
+    transform: translateY(-3px);
+}
+
+/* .mi-attempt-card:hover {
+  box-shadow: 0 4px 10px rgba(102, 37, 186, 0.7);
+  transform: scale(1.02);
+} */
+
+/* Start Button */
+.load-more-btn {
+  all: unset;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: 0.2s all ease;
+  margin-top: 10px;
+}
+
+.load-more-btn:hover {
+  background-color: #1D1D1D;
+  transform: scale(1.02);
+}
+
+.mi-start-btn {
+  all: unset;
+  background-color: rgb(23, 23, 23);  color: #fff;
+  padding: 10px 17px;
+  border-radius: 100px;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: 0.2s all ease;
+  margin-bottom: 25px;
+}
+
+.mi-start-btn::after {
+  content: ' ➔ ';
+  font-size: 1rem;
+}
+
+.mi-start-btn:hover {
+  background-color: #1d1d1d;
+  transform: scale(1.01);
+}
+
+/* Attempts section */
+.mi-attempts {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 30px;
+  display: flex;
+}
+
+.mi-subtitle {
+  font-size: 1.4rem;
+  color: var(--mi-color);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+
+
+/* No Attempts */
+.no-attempts {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.no-attempts-title {
+  font-size: 1.5rem;
+  color: var(--mi-color);
+  margin-bottom: 10px;
+}
+
+.no-attempts-text {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/*Mapped Attempts  */
+.view-details-btn{
+  all: unset;
+  background-color: var(--mi-accent);
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 100px;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.view-details-btn:hover{
+    background-color: #2e3f93;
+    transform: scale(1.02);
+}
+
+.mapped-attempts {
+flex:1;
+text-align: center;
+max-height: 450px;
+overflow-y: auto;
+overflow-x: hidden;
+box-sizing: border-box;
+
+}
+
+
+
+#mi-graph{
+    flex: 2.5;
+    transition: 0.2s all ease;
+    height: 370px;
+    margin-left: 20px;
+
+}
+/* #mi-graph:hover{
+    transform: scale(1.01);
+} */
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mi-main {
+    padding: 20px;
+  }
+
+  .mi-header {
+    font-size: 1.7rem;
+  }
+
+  .mi-start-btn {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+
+  .mi-subtitle {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 600px){
+  .mi-attempts {
+    flex-direction: column;
+    align-items: center;
+  }
+    #mi-graph{
+        margin-top: 30px;
+        margin-left: 0;
+        width: 100%;
+        max-height:auto;
+        flex: none;
+    }
+    .mapped-attempts
+    {
+    max-height: 100%;
+    }
+    .mi-attempt-card{
+        margin-right: 0;
+        
+    }
+
+}
+@media (max-width:450px){
+ 
+    #mi-graph{
+        margin-top: 30px;
+        width: 100%;
+        max-height:250px;
+        flex: none;
+    }
+}
+
