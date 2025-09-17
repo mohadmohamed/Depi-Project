@@ -86,6 +86,7 @@
   animation: cardFadeIn 0.8s cubic-bezier(.4,2,.6,1);
   transition: box-shadow 0.2s, transform 0.2s;
   margin-left: 11%;
+  margin-bottom: 5.5rem;
 }
 .suggestions:hover {
   box-shadow: 0 6px 32px 0 rgba(0,120,255,0.10);

@@ -6,15 +6,9 @@ import Signup from "./componenets/authentication/Signup";
 import Questions from "./componenets/Questions/Questions";
 import MockInterview from "./componenets/Mock-Interview/mockInterview";
 function App() {
-
   return (
     <>
-      {/* <MockInterview /> */}
-      {/* <Questions /> */}
-     {/* <Signup/> */}
-      {/* <Login /> */}
-      {/* <ResumeAnalysis />  */}
-   
+    
     </>
   );
 }
