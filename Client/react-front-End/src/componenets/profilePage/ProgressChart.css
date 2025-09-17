@@ -1,0 +1,125 @@
+/* Progress Chart Styling */
+.progress-chart { 
+  width: 100%; 
+}
+
+.progress-chart svg { 
+  width: 100%; 
+  height: auto; 
+  display: block; 
+  overflow: visible;
+}
+
+.chart-container {
+  padding: 1rem;
+  background-color: #f9fafb;
+  border-radius: 0.75rem;
+}
+
+.chart-point {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.chart-point:hover circle {
+  r: 6;
+  filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.07));
+}
+
+.chart-label {
+  font-size: 0.75rem;
+  fill: #888;
+  font-weight: 500;
+}
+
+.chart-value {
+  font-size: 0.75rem;
+  fill: #e65cfa;
+  font-weight: 600;
+}
+
+.chart-grid-line {
+  stroke: #e5e7eb;
+  stroke-dasharray: 4,4;
+}
+
+.chart-line {
+  stroke: #6ad6fc;
+  stroke-width: 2.5;
+  fill: none;
+}
+
+.chart-area {
+  fill: url(#areaGradient);
+}
+
+.chart-x-axis {
+  stroke: #e5e7eb;
+}
+
+/* Media queries for responsive chart */
+@media (max-width: 1200px) {
+  .progress-chart svg { 
+    min-height: 200px; 
+  }
+}
+
+@media (max-width: 900px) {
+  .chart-container {
+    padding: 1rem 0.75rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .chart-container {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .chart-point circle {
+    r: 3;
+  }
+  
+  .chart-value {
+    font-size: 0.65rem;
+  }
+  
+  .chart-label {
+    font-size: 0.65rem;
+  }
+  
+  .progress-chart svg { 
+    min-height: 180px; 
+  }
+}
+
+@media (max-width: 500px) {
+  .chart-point:nth-child(even) .chart-value {
+    display: none;
+  }
+  
+  .chart-container {
+    padding: 0.5rem 0.25rem;
+  }
+  
+  .progress-chart svg { 
+    min-height: 150px; 
+  }
+}
+
+@media (max-width: 380px) {
+  .chart-point circle {
+    r: 2.5;
+  }
+  
+  .chart-value {
+    font-size: 0.6rem;
+  }
+  
+  .chart-label {
+    font-size: 0.6rem;
+  }
+  
+  .progress-chart svg { 
+    min-height: 120px; 
+  }
+}

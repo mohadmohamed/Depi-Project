@@ -1,6 +1,52 @@
+import { useState, useEffect } from 'react';
 import "./footer.css"
 import Footerhead from "./Footerhead";
+
 export default function Footer() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        // Check if the device is a touch device
+        const checkMobile = () => {
+            setIsMobile('ontouchstart' in window || navigator.maxTouchPoints > 0);
+        };
+
+        // Add touch-friendly classes for mobile devices
+        const addTouchClasses = () => {
+            const footerLinks = document.querySelectorAll('.footer-links a');
+            const socialLinks = document.querySelectorAll('.footer-socials a');
+            
+            if (isMobile) {
+                footerLinks.forEach(link => {
+                    link.classList.add('touch-friendly');
+                });
+                socialLinks.forEach(link => {
+                    link.classList.add('touch-friendly');
+                });
+            }
+        };
+
+        // Handle window resize
+        const handleResize = () => {
+            checkMobile();
+            addTouchClasses();
+        };
+
+        // Initial check
+        checkMobile();
+        
+        // Run after component mounts to ensure DOM elements exist
+        setTimeout(addTouchClasses, 100);
+        
+        // Add resize listener
+        window.addEventListener('resize', handleResize);
+        
+        // Cleanup
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [isMobile]);
+
     return (
         <>
         <div style={{ position: 'relative' }}>

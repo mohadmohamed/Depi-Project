@@ -1,17 +1,11 @@
-
-import { useEffect, useState } from "react";
-import ResumeAnalysis from "./componenets/resume/ResumeAnalysis";
-import Login from "./componenets/authentication/Login";  
-import Signup from "./componenets/authentication/Signup";
-
+﻿import React from "react";
+import Profile from "./componenets/profilePage/Profile";
+import   ResumeAnalysisPage from "./componenets/resume/ResumeAnalysis";
 function App() {
-
   return (
-    <>
-     {/* <Signup /> */}
-     {/* <Login /> */ }
-     {<ResumeAnalysis />}  
-    </>
+    <div>
+      <ResumeAnalysisPage />
+    </div>
   );
 }
 
