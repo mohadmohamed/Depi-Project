@@ -1,5 +1,5 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import React from 'react';
+
 import attemptsFile from '../../data/attempts.json'
 
 export default function AttemptsGraph() {
