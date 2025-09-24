@@ -215,8 +215,9 @@
   transition: all 0.2s ease;
 }
 .mi-attempt-card button{
-  width: 80%;
+  width: 90%;
   text-align: center;
+  margin-top: 10px;
 }
   #mi-graph {
     height: 100%;
@@ -292,7 +293,7 @@
   }
   
   .mi-attempt-card {
-    width: 70%;
+    width: 60%;
   }
    .mapped-attempts {
     gap: 20px;
