@@ -1,0 +1,54 @@
+{
+  "quizId": "ai-generated-001",
+  "title": "General Knowledge Quiz",
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "What is the capital of France?",
+      "choices": ["Berlin ", "Madrid", "Paris", "Rome"],
+      "correct": "Paris",
+      "explanation": "Paris is the capital of France."
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Which planet is known as the Red Planet?",
+      "choices": ["Earth", "Mars", "Jupiter", "Venus"],
+      "correct": "Mars",
+      "explanation": "Mars is often called the Red Planet because of its reddish appearance."
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "Who wrote the play 'Hamlet'?",
+      "choices": ["Charles Dickens", "William Shakespeare", "Leo Tolstoy", "Mark Twain"],
+      "correct": "Charles Dickens",
+      "explanation": "Hamlet was written by William Shakespeare."
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "Which gas do humans need to breathe to survive?",
+      "choices": ["Carbon Dioxide", "Oxygen", "Nitrogen", "Helium"],
+      "correct": "Carbon Dioxide",
+      "explanation": "Humans need oxygen to survive."
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "What is the largest ocean on Earth?",
+      "choices": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"],
+      "correct": "Indian Ocean",
+      "explanation": "The Pacific Ocean is the largest ocean on Earth."
+    },
+
+     {
+      "id": 6,
+      "type": "essay",
+      "question": "Explain the importance of renewable energy in today's world.",
+      "placeholder": "Write your answer here...",
+      "explanation": "Renewable energy is important because it reduces reliance on fossil fuels, helps fight climate change, and provides sustainable power for the future."
+    }
+  ]
+}
