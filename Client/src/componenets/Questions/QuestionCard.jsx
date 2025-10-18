@@ -30,6 +30,7 @@ export default function QuestionCard(prop) {
                         className={`
                         choice
                         ${prop.submitted ? "choice-as" : "choice-bs"}
+                        ${prop.submitted && choice === selectedChoice && choice === prop.correct ? "correct" : ""}
                         ${!prop.submitted && choice === selectedChoice ? "choice-selected" : ""}
                         ${prop.submitted && choice === selectedChoice && choice !== prop.correct ? "wrong" : ""}
                         ${prop.submitted && choice === prop.correct && choice !== selectedChoice ? "correct-not-chosen" : ""}

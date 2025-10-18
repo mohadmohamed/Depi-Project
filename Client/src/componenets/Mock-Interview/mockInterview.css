@@ -6,19 +6,18 @@
 /* main container */
 .mi-main {
   display: flex;
-  height: 100vh;
   flex-direction: column;
   align-items: center;
+  background-color: white;
   /* background-image:
     radial-gradient(ellipse at 10% 90%, rgba(255, 153, 153, 0.45) 0%, rgba(246, 143, 155, 0.335) 18%, transparent 45%),
     radial-gradient(ellipse at 90% 90%, rgba(255, 202, 202, 0.45) 0%, rgba(246, 143, 155, 0.335) 18%  , transparent 45%),
     radial-gradient(circle at 50% 10%, rgba(248, 169, 255, 0.213) 0%, rgba(194, 183, 248, 0.357) 28%, transparent 45%),
     linear-gradient(180deg, rgba(248,243,255,1) 0%, rgb(255, 255, 255) 42%, rgb(255, 255, 255) 100%); */
-
- 
-
-    padding: 30px 20px;
+    padding: 50px 20px;
+    padding-bottom: 120px;
 }
+
 .mapped-attempts::-webkit-scrollbar {
   width: 5px;
 }
@@ -68,24 +67,9 @@
 
 /* Attempt Card */
 
-.mi-attempt-card {
-  background-color: #fff;
 
-  border-radius: 10px;
-  padding: 15px 20px;
-  margin: auto;
-  border:1px solid #3c2364;
-  margin-bottom: 15px;
-  width: max-content;
-  max-width: 800px;
-  transition: 0.2s all ease;
- box-shadow:  0px 2px 0px #502d92;
-  margin-right: 15px;
-}
 
-.mi-attempt-card:hover{
-    transform: translateY(-3px);
-}
+
 
 /* .mi-attempt-card:hover {
   box-shadow: 0 4px 10px rgba(102, 37, 186, 0.7);
@@ -94,16 +78,18 @@
 
 /* Start Button */
 .load-more-btn {
+
   all: unset;
   background-color: rgb(0, 0, 0);
   color: #fff;
+  text-align: center;
   padding: 8px 16px;
   border-radius: 100px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
   transition: 0.2s all ease;
-  margin-top: 10px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
 }
 
 .load-more-btn:hover {
@@ -133,22 +119,13 @@
   transform: scale(1.01);
 }
 
-/* Attempts section */
-.mi-attempts {
-  width: 100%;
-  max-width: 800px;
-  margin-top: 30px;
-  display: flex;
-}
+
 
 .mi-subtitle {
   font-size: 1.4rem;
   color: var(--mi-color);
   font-weight: 500;
-  margin-bottom: 20px;
 }
-
-
 
 /* No Attempts */
 .no-attempts {
@@ -176,87 +153,167 @@
   padding: 5px 12px;
   border-radius: 100px;
   margin-top: 10px;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
   transition: 0.2s all ease;
+  margin: auto;
+  margin-top: 12px;
+
 }
+
 .view-details-btn:hover{
     background-color: #2e3f93;
     transform: scale(1.02);
 }
 
-.mapped-attempts {
-flex:1;
-text-align: center;
-max-height: 450px;
-overflow-y: auto;
-overflow-x: hidden;
-box-sizing: border-box;
-
+.mi-attempts{
+  margin-top:30px ;
+  display: flex;
+  gap:40px;
+  width: 80%;
+  margin-bottom: 30px;
 }
 
-
-
-#mi-graph{
-    flex: 2.5;
-    transition: 0.2s all ease;
-    height: 370px;
-    margin-left: 20px;
-
+ .prog-sect{
+  flex:1;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
+  .prog-sect h2{
+      /* text-align: center; */
+      text-align: center;
+  }
+
+.prog-sect #mi-graph tspan{
+    font-size: 12px; 
+}
+
+.details-attempts{
+  flex:1;
+  display: flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.mapped-attempts{
+  display: flex;
+  justify-content:flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.mi-attempt-card{
+  border-radius: 5px;
+  padding: 13px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  transition: 0.2s all ease;
+  border: 1px solid #180446bd;
+  transition: all 0.2s ease;
+}
+.mi-attempt-card button{
+  width: 90%;
+  text-align: center;
+  margin-top: 10px;
+}
+  #mi-graph {
+    height: 100%;
+    width: 100%;
+  }
+.mi-attempt-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  
+}
+.mi-attempt-card h3{
+  color: var(--mi-color);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.mi-attempt-card:hover{
+  box-shadow: 0 4px 10px rgba(25, 31, 65, 0.2);
+  transform: scale(1.02);
+  background-color: #f7f6ff;
+}
+
 /* #mi-graph:hover{
     transform: scale(1.01);
 } */
 
 /* Responsive */
-@media (max-width: 768px) {
-  .mi-main {
-    padding: 20px;
-  }
-
-  .mi-header {
-    font-size: 1.7rem;
-  }
-
-  .mi-start-btn {
-    font-size: 1rem;
-    padding: 10px 16px;
-  }
-
-  .mi-subtitle {
-    font-size: 1.2rem;
-  }
-}
-@media (max-width: 600px){
+@media (max-width: 1024px) {
   .mi-attempts {
     flex-direction: column;
+    width: 100%;
+    gap:60px;
+  }
+  .prog-sect{
+    height: 300px;
+    width: 80%;
+    flex: none;
+    margin: auto;
+    order:-1;
+  }
+  #mi-graph {
+    height: 100%;
+    width: 100%;
+  }
+  .details-attempts {
+    width: 100%;
+    justify-content: center;
     align-items: center;
   }
-    #mi-graph{
-        margin-top: 30px;
-        margin-left: 0;
-        width: 100%;
-        max-height:auto;
-        flex: none;
-    }
-    .mapped-attempts
-    {
-    max-height: 100%;
-    }
-    .mi-attempt-card{
-        margin-right: 0;
-        
-    }
-
-}
-@media (max-width:450px){
- 
-    #mi-graph{
-        margin-top: 30px;
-        width: 100%;
-        max-height:250px;
-        flex: none;
-    }
+  .mapped-attempts {
+    justify-content: center;
+  }
 }
 
+@media (max-width:730px) {
+  .mapped-attempts {
+    gap: 12px;
+  }
+  .mi-attempts{
+    margin-top: 0px;
+    gap:25px;
+  }
+}
+@media (max-width: 500px) {
+  .load-more-btn{
+    width: 60%;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .mi-attempt-card {
+    width: 60%;
+  }
+   .mapped-attempts {
+    gap: 20px;
+  }
+
+
+  .prog-sect {
+    order: -1;
+    margin-top: 30px;
+    width: 100%;
+    height: 250px;
+  }
+
+    #mi-graph {
+    height: 250px;
+  }
+  .mi-main {
+    padding: 30px 10px;
+    padding-bottom: 40px;
+  }
+
+  
+}

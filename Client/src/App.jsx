@@ -8,7 +8,7 @@ import MockInterview from "./componenets/Mock-Interview/mockInterview";
 function App() {
   return (
     <>
-   
+
     </>
   );
 }
