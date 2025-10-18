@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="../DEPI.Application/DEPI.Application.csproj" />
+  <Project Path="../DEPI.DataAccess/DEPI.DataAccess.csproj" />
+  <Project Path="DEPI.API.csproj" />
+</Solution>

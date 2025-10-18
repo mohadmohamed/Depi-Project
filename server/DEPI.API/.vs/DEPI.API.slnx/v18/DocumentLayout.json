@@ -1,0 +1,102 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{43E61FD7-D882-44F7-8C99-097D2E2FA920}|DEPI.API.csproj|d:\\projects\\depiproject\\depi-project\\server\\depi.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43E61FD7-D882-44F7-8C99-097D2E2FA920}|DEPI.API.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43E61FD7-D882-44F7-8C99-097D2E2FA920}|DEPI.API.csproj|d:\\projects\\depiproject\\depi-project\\server\\depi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43E61FD7-D882-44F7-8C99-097D2E2FA920}|DEPI.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B268AF1A-E777-4937-81BF-D61FC99596DC}|..\\DEPI.Application\\DEPI.Application.csproj|d:\\projects\\depiproject\\depi-project\\server\\depi.application\\depi.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AFFD965-0CC9-4EB7-804F-A87F26E7BAB6}|..\\DEPI.DataAccess\\DEPI.DataAccess.csproj|d:\\projects\\depiproject\\depi-project\\server\\depi.dataaccess\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B268AF1A-E777-4937-81BF-D61FC99596DC}|..\\DEPI.Application\\DEPI.Application.csproj|d:\\projects\\depiproject\\depi-project\\server\\depi.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.API\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.API\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T12:25:33.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.API\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.API\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwBoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T12:21:16.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DEPI.Application",
+              "DocumentMoniker": "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj",
+              "RelativeDocumentMoniker": "..\\DEPI.Application\\DEPI.Application.csproj",
+              "ToolTip": "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj",
+              "RelativeToolTip": "..\\DEPI.Application\\DEPI.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-18T12:17:33.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.DataAccess\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\DEPI.DataAccess\\Class1.cs",
+              "ToolTip": "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.DataAccess\\Class1.cs",
+              "RelativeToolTip": "..\\DEPI.DataAccess\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T12:17:28.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.Application\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\DEPI.Application\\Class1.cs",
+              "ToolTip": "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.Application\\Class1.cs",
+              "RelativeToolTip": "..\\DEPI.Application\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T12:16:57.148Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
