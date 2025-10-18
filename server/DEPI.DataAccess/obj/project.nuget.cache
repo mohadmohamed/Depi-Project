@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Gvph2Of0ifw=",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\oem\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.20\\microsoft.windowsdesktop.app.ref.8.0.20.nupkg.sha512",
+    "C:\\Users\\oem\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.20\\microsoft.netcore.app.ref.8.0.20.nupkg.sha512",
+    "C:\\Users\\oem\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.20\\microsoft.aspnetcore.app.ref.8.0.20.nupkg.sha512"
+  ],
+  "logs": []
+}
