@@ -1,0 +1,63 @@
+﻿using DEPI.DataAccess.Contracts;
+using DEPI.DataAccess.DataContext;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DEPI.DataAccess.Repositories
+{
+    internal class Repository<TEntity, TID> : IRepository<TEntity, TID> where TEntity : class
+    {
+        private readonly AppDbContext _context;
+        private readonly DbSet<TEntity> _Dbset;
+        public Repository(AppDbContext context)
+        {
+            _context = context;
+            _Dbset = _context.Set<TEntity>();
+        }
+        public async Task AddAsync(TEntity entity)
+        {
+            await _Dbset.AddAsync(entity);
+        }
+
+        public async Task Delete(TID id)
+        {
+            TEntity? entity = await _Dbset.FindAsync(id);
+            if (entity != null)
+            {
+                _Dbset.Remove(entity);
+            }
+        }
+
+        public async Task<TEntity?> DeleteAsync(TID id)
+        {
+            TEntity? entity = await _Dbset.FindAsync(id); 
+            if (entity == null)
+            {
+                return null;
+            }
+            
+            _Dbset.Remove(entity);
+            return entity;
+        }
+
+        public async Task<IEnumerable<TEntity>> GetAllAsync()
+        {
+            return await _Dbset.ToListAsync();
+        }
+
+        public async Task<TEntity?> GetByIdAsync(TID id)
+        {
+            return await _Dbset.FindAsync(id);
+        }
+
+        public  Task Update(TEntity entity)
+        {
+            _Dbset.Update(entity);
+            return Task.CompletedTask;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+John Smith
+Senior Software Engineer
+Email: john.smith@email.com
+Phone: (555) 987-6543
+
+PROFESSIONAL EXPERIENCE
+
+Senior Software Engineer at Microsoft Corporation
+March 2020 - Present
+• Developed scalable web applications using Python, React, and Azure
+• Led cross-functional team of 8 developers on cloud migration projects
+• Implemented microservices architecture with Docker and Kubernetes
+• Optimized database performance resulting in 40% faster query times
+
+Full Stack Developer at Amazon Web Services
+June 2018 - February 2020
+• Built REST APIs using Python FastAPI and Django frameworks
+• Created responsive frontend interfaces with React and TypeScript
+• Managed PostgreSQL and MongoDB databases
+• Collaborated using Git, Jira, and agile methodologies
+
+Junior Developer at Tech Startup Inc.
+January 2016 - May 2018
+• Developed web applications with JavaScript, HTML, and CSS
+• Worked with SQL databases and data analysis tools
+• Participated in code reviews and testing processes
+
+EDUCATION
+
+Master of Science in Computer Science
+Stanford University, 2014-2016
+• Specialization in Machine Learning and Artificial Intelligence
+• GPA: 3.8/4.0
+
+Bachelor of Science in Software Engineering  
+University of California Berkeley, 2010-2014
+• Magna Cum Laude
+• GPA: 3.7/4.0
+
+TECHNICAL SKILLS
+
+Programming Languages: Python, JavaScript, TypeScript, Java, C++, SQL
+Frontend Technologies: React, Angular, Vue.js, HTML5, CSS3, Bootstrap
+Backend Technologies: Node.js, FastAPI, Django, Flask, Express.js
+Databases: PostgreSQL, MongoDB, MySQL, Redis
+Cloud Platforms: AWS, Azure, Google Cloud Platform
+DevOps Tools: Docker, Kubernetes, Git, Jenkins, CI/CD
+Other: Machine Learning, AI, Data Analysis, Project Management, Leadership
+
+CERTIFICATIONS
+• AWS Certified Solutions Architect - Professional (2022)
+• Microsoft Azure Developer Associate (2021)
+• Google Cloud Professional Developer (2020)
+
+ACHIEVEMENTS
+• Led team that won "Best Innovation Award" at Microsoft Hackathon 2022
+• Published research paper on "Scalable Microservices Architecture" 
+• Speaker at PyCon 2021 on "Building APIs with FastAPI"

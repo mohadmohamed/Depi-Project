@@ -1,4 +1,6 @@
 
+using DEPI.DataAccess;
+
 namespace DEPI.API
 {
     public class Program
@@ -18,14 +20,25 @@ namespace DEPI.API
                           .AllowAnyMethod()
                           .AllowCredentials();
                 });
+                options.AddPolicy("ParserPolicy", policy =>
+                {
+                    policy.WithOrigins("http://localhost:8000") // Parser server origin - removed trailing slash
+                          .AllowAnyHeader()
+                          .AllowAnyMethod()
+                          .AllowCredentials();
+                });
             });
+            
+            // Add database context and unit of work
+            builder.Services.AddDataAccessServices(builder.Configuration);
+            
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
-
+                
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
