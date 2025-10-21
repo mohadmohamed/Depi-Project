@@ -10,3 +10,6 @@ D:\Projects\depiProject\Depi-Project\server\DEPI.DataAccess\obj\Debug\net8.0\DEP
 D:\Projects\depiProject\Depi-Project\server\DEPI.DataAccess\obj\Debug\net8.0\refint\DEPI.DataAccess.dll
 D:\Projects\depiProject\Depi-Project\server\DEPI.DataAccess\obj\Debug\net8.0\DEPI.DataAccess.pdb
 D:\Projects\depiProject\Depi-Project\server\DEPI.DataAccess\obj\Debug\net8.0\ref\DEPI.DataAccess.dll
+D:\Projects\depiProject\Depi-Project\server\DEPI.DataAccess\obj\Debug\net8.0\DEPI.DataAccess.csproj.AssemblyReference.cache
+D:\Projects\depiProject\Depi-Project\server\DEPI.DataAccess\bin\Debug\net8.0\DEPI.DataAccess.runtimeconfig.json
+D:\Projects\depiProject\Depi-Project\server\DEPI.DataAccess\obj\Debug\net8.0\DEPI.DataAccess.genruntimeconfig.cache

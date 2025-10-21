@@ -1,0 +1,32 @@
+﻿using DEPI.DataAccess.Contracts;
+using DEPI.DataAccess.DataContext;
+using DEPI.DataAccess.Repositories;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DEPI.DataAccess
+{
+    public static class DataAccessExtensions
+    {
+        public static IServiceCollection
+             AddDataAccessServices(this IServiceCollection services, IConfigurationManager configurationManager)
+        {
+
+            services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseSqlServer(configurationManager.GetConnectionString("DefaultConnection"));
+            });
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            return services;
+        }
+
+
+    }
+}

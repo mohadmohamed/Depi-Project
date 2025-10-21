@@ -1,0 +1,21 @@
+﻿using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DEPI.DataAccess.DataContext
+{
+    internal class AppDbContext : DbContext
+    {
+        AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        {
+        }
+        DbSet<Entites.User> Users { get; set; }
+        DbSet<Entites.Resume> Resumes { get; set; }
+        DbSet<Entites.ResumeAnalysis> ResumeAnalyses { get; set; }
+        DbSet<Entites.InterviewSession> InterviewSessions { get; set; }
+        DbSet<Entites.InterviewAnswer> InterviewAnswers { get; set; }
+    }
+}
