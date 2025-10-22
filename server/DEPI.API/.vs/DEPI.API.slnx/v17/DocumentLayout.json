@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mshms\\OneDrive\\Desktop\\F\\Depi-Project\\server\\DEPI.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|c:\\users\\mshms\\onedrive\\desktop\\f\\depi-project\\server\\depi.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|c:\\users\\mshms\\onedrive\\desktop\\f\\depi-project\\server\\depi.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|c:\\users\\mshms\\onedrive\\desktop\\f\\depi-project\\server\\depi.api\\depi.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|solutionrelative:depi.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|c:\\users\\mshms\\onedrive\\desktop\\f\\depi-project\\server\\depi.api\\depi.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|solutionrelative:depi.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\F\\Depi-Project\\server\\DEPI.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\F\\Depi-Project\\server\\DEPI.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-22T19:09:32.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\F\\Depi-Project\\server\\DEPI.API\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\F\\Depi-Project\\server\\DEPI.API\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T18:35:21.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DEPI.API",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\F\\Depi-Project\\server\\DEPI.API\\DEPI.API.csproj",
+              "RelativeDocumentMoniker": "DEPI.API.csproj",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\F\\Depi-Project\\server\\DEPI.API\\DEPI.API.csproj",
+              "RelativeToolTip": "DEPI.API.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-22T18:35:03.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DEPI.API.csproj",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\F\\Depi-Project\\server\\DEPI.API\\DEPI.API.csproj",
+              "RelativeDocumentMoniker": "DEPI.API.csproj",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\F\\Depi-Project\\server\\DEPI.API\\DEPI.API.csproj",
+              "RelativeToolTip": "DEPI.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-22T18:14:22.837Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

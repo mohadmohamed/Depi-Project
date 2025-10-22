@@ -7,18 +7,66 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Node modules and build outputs
+node_modules/
+dist/
+dist-ssr/
 *.local
 
-# Editor directories and files
+# .NET build outputs
+bin/
+obj/
+out/
+[Bb]uild/
+[Ll]og/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / VS Code / JetBrains IDEs
+.idea/
 .vscode/*
 !.vscode/extensions.json
-.idea
+
+# OS-specific files
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+
+# ASP.NET temporary files
+*.dbmdl
+*.dbproj.schemaview
+*.cache
+*.pdb
+*.mdb
+*.opendb
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+*.nuget.props
+*.nuget.targets
+
+# Publish output
+publish/
+*.Publish.xml
+*.pubxml
+*.publishproj
+
+# Backup and temp files
+*.bak
+*.tmp
+*.temp
+~$*
+
+# IIS
+App_Data/
