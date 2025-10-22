@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mshms\\OneDrive\\Desktop\\F\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj": {}
+    "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mshms\\OneDrive\\Desktop\\F\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj": {
+    "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mshms\\OneDrive\\Desktop\\F\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj",
+        "projectUniqueName": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj",
         "projectName": "DEPI.Application",
-        "projectPath": "C:\\Users\\mshms\\OneDrive\\Desktop\\F\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj",
+        "projectPath": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj",
         "packagesPath": "C:\\Users\\mshms\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mshms\\OneDrive\\Desktop\\F\\Depi-Project\\server\\DEPI.Application\\obj\\",
+        "outputPath": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\mshms\\OneDrive\\Desktop\\F\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\mshms\\OneDrive\\Desktop\\F\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj"
+              "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj"
               }
             }
           }
@@ -73,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\mshms\\OneDrive\\Desktop\\F\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj": {
+    "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mshms\\OneDrive\\Desktop\\F\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj",
         "projectName": "DEPI.DataAccess",
-        "projectPath": "C:\\Users\\mshms\\OneDrive\\Desktop\\F\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj",
+        "projectPath": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj",
         "packagesPath": "C:\\Users\\mshms\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mshms\\OneDrive\\Desktop\\F\\Depi-Project\\server\\DEPI.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
