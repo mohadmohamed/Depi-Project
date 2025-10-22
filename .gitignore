@@ -1,12 +1,41 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+﻿# Visual Studio and VS Code folders
+.vs/
+.vscode/
 
-/server/DEPI.API/.vs/DEPI.API.slnx/FileContentIndex/236b4916-a177-4dc0-a2c4-052100af2186.vsidx
-/server/DEPI.API/.vs/DEPI.API.slnx/FileContentIndex/6de17f87-12b9-433f-a8bc-35c155559123.vsidx
-/server/DEPI.API/.vs/DEPI.API.slnx/FileContentIndex/6e8f8b1e-9e1e-4b6c-8b5d-6b6b7c6b6b6b.vsidx
-/server/DEPI.API/.vs/DEPI.API.slnx/FileContentIndex/6e8f8b1e-9e1e-4b6c-8b5d-6b6b7c6b6b6b.vsidx
-/server/DEPI.API/.vs/DEPI.API.slnx/FileContentIndex/6e8f8b1e-9e1e-4b6c-8b5d-6b6b7c6b6b6b.vsidx
+# Build results
+bin/
+obj/
 
-#vs folder
-.vs
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build artifacts
+*.cache
+*.pdb
+*.log
+*.dbmdl
+*.bak
+*.tmp
+
+# Auto-generated files
+*.Generated.*
+*.AssemblyInfoInputs.cache
+*.AssemblyAttributes.cs
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+
+# IIS / ASP.NET temporary files
+App_Data/
+*.publishsettings
+
+# Others you don’t need in version control
+.env
+Thumbs.db
+Desktop.ini
