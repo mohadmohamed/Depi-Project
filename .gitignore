@@ -1,4 +1,4 @@
-﻿# Visual Studio and VS Code folders
+﻿# Visual Studio / VS Code
 .vs/
 .vscode/
 
@@ -13,17 +13,21 @@ obj/
 *.sln.docstates
 
 # Build artifacts
-*.cache
+*.dll
+*.exe
 *.pdb
-*.log
+*.cache
 *.dbmdl
 *.bak
 *.tmp
+*.log
 
-# Auto-generated files
-*.Generated.*
+# Auto-generated project files
+*.AssemblyInfo.cs
 *.AssemblyInfoInputs.cache
 *.AssemblyAttributes.cs
+*.genruntimeconfig.json
+*.sourceLink.json
 
 # NuGet packages
 *.nupkg
@@ -31,11 +35,15 @@ obj/
 packages/
 *.nuspec
 
-# IIS / ASP.NET temporary files
-App_Data/
+# Configuration / environment
+*.env
 *.publishsettings
 
-# Others you don’t need in version control
-.env
+# Other system files
 Thumbs.db
 Desktop.ini
+
+# Visual Studio 2017
+*.csproj.user
+*.vcxproj.user
+*.sln.user
