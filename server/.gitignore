@@ -1,0 +1,6 @@
+# Visual Studio Cache/Configuration
+**/.vs/
+
+# Build Output
+**/bin/
+**/obj/
