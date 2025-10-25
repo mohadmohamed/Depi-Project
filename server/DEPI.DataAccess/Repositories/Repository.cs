@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -42,6 +43,12 @@ namespace DEPI.DataAccess.Repositories
             
             _Dbset.Remove(entity);
             return entity;
+        }
+
+
+        public async Task<TEntity?> FindAsync(Expression<Func<TEntity, bool>> predicate)
+        {
+            return await _Dbset.FirstOrDefaultAsync(predicate);
         }
 
         public async Task<IEnumerable<TEntity>> GetAllAsync()

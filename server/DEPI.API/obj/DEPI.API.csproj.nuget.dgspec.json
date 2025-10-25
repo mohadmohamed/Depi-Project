@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\depiProject\\Depi-Project\\server\\Depi.API\\DEPI.API.csproj": {}
+    "D:\\Projects\\Depi-Project\\server\\DEPI.API\\DEPI.API.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\depiProject\\Depi-Project\\server\\Depi.API\\DEPI.API.csproj": {
+    "D:\\Projects\\Depi-Project\\server\\DEPI.API\\DEPI.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\depiProject\\Depi-Project\\server\\Depi.API\\DEPI.API.csproj",
+        "projectUniqueName": "D:\\Projects\\Depi-Project\\server\\DEPI.API\\DEPI.API.csproj",
         "projectName": "DEPI.API",
-        "projectPath": "D:\\Projects\\depiProject\\Depi-Project\\server\\Depi.API\\DEPI.API.csproj",
+        "projectPath": "D:\\Projects\\Depi-Project\\server\\DEPI.API\\DEPI.API.csproj",
         "packagesPath": "C:\\Users\\oem\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\depiProject\\Depi-Project\\server\\Depi.API\\obj\\",
+        "outputPath": "D:\\Projects\\Depi-Project\\server\\DEPI.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj": {
-                "projectPath": "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj"
+              "D:\\Projects\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj": {
+                "projectPath": "D:\\Projects\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj"
               }
             }
           }
@@ -48,7 +48,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -71,6 +71,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.14.0, )"
             }
           },
           "imports": [
@@ -110,18 +114,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100-rc.1.25451.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj": {
+    "D:\\Projects\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj",
+        "projectUniqueName": "D:\\Projects\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj",
         "projectName": "DEPI.Application",
-        "projectPath": "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj",
+        "projectPath": "D:\\Projects\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj",
         "packagesPath": "C:\\Users\\oem\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.Application\\obj\\",
+        "outputPath": "D:\\Projects\\Depi-Project\\server\\DEPI.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -142,8 +146,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj": {
-                "projectPath": "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj"
+              "D:\\Projects\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj": {
+                "projectPath": "D:\\Projects\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj"
               }
             }
           }
@@ -158,11 +162,23 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.3.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -193,18 +209,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100-rc.1.25451.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj": {
+    "D:\\Projects\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj",
+        "projectUniqueName": "D:\\Projects\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj",
         "projectName": "DEPI.DataAccess",
-        "projectPath": "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj",
+        "projectPath": "D:\\Projects\\Depi-Project\\server\\DEPI.DataAccess\\DEPI.DataAccess.csproj",
         "packagesPath": "C:\\Users\\oem\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\depiProject\\Depi-Project\\server\\DEPI.DataAccess\\obj\\",
+        "outputPath": "D:\\Projects\\Depi-Project\\server\\DEPI.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -237,7 +253,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -288,7 +304,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100-rc.1.25451.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
