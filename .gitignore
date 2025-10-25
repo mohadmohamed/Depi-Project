@@ -1,0 +1,49 @@
+﻿# Visual Studio / VS Code
+.vs/
+.vscode/
+
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build artifacts
+*.dll
+*.exe
+*.pdb
+*.cache
+*.dbmdl
+*.bak
+*.tmp
+*.log
+
+# Auto-generated project files
+*.AssemblyInfo.cs
+*.AssemblyInfoInputs.cache
+*.AssemblyAttributes.cs
+*.genruntimeconfig.json
+*.sourceLink.json
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+
+# Configuration / environment
+*.env
+*.publishsettings
+
+# Other system files
+Thumbs.db
+Desktop.ini
+
+# Visual Studio 2017
+*.csproj.user
+*.vcxproj.user
+*.sln.user
