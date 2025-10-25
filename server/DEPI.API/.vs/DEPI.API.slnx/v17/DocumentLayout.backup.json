@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\Depi-Project\\server\\DEPI.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|d:\\projects\\depi-project\\server\\depi.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DCE090A-3C96-44C0-0525-B7060394A3D1}|..\\DEPI.Application\\DEPI.Application.csproj|d:\\projects\\depi-project\\server\\depi.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DCE090A-3C96-44C0-0525-B7060394A3D1}|..\\DEPI.Application\\DEPI.Application.csproj|d:\\projects\\depi-project\\server\\depi.application\\contracts\\iuserservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Projects\\Depi-Project\\server\\DEPI.API\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "D:\\Projects\\Depi-Project\\server\\DEPI.API\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAlwBkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T19:13:01.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUserServices.cs",
+              "DocumentMoniker": "D:\\Projects\\Depi-Project\\server\\DEPI.Application\\Contracts\\IUserServices.cs",
+              "RelativeDocumentMoniker": "..\\DEPI.Application\\Contracts\\IUserServices.cs",
+              "ToolTip": "D:\\Projects\\Depi-Project\\server\\DEPI.Application\\Contracts\\IUserServices.cs*",
+              "RelativeToolTip": "..\\DEPI.Application\\Contracts\\IUserServices.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T19:12:29.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "userService.cs",
+              "DocumentMoniker": "D:\\Projects\\Depi-Project\\server\\DEPI.Application\\Services\\userService.cs",
+              "RelativeDocumentMoniker": "..\\DEPI.Application\\Services\\userService.cs",
+              "ToolTip": "D:\\Projects\\Depi-Project\\server\\DEPI.Application\\Services\\userService.cs*",
+              "RelativeToolTip": "..\\DEPI.Application\\Services\\userService.cs*",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAhwDMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T18:45:44.178Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

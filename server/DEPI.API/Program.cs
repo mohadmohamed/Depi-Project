@@ -1,4 +1,5 @@
 
+using DEPI.Application;
 using DEPI.DataAccess;
 
 namespace DEPI.API
@@ -7,8 +8,9 @@ namespace DEPI.API
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
 
+            var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddApplicationServices();
             // Add services to the container.
             // Configure CORS for the React client
             builder.Services.AddCors(options =>
@@ -45,7 +47,6 @@ namespace DEPI.API
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
             // Enable CORS for React client
             app.UseCors("ReactClientPolicy");
 
