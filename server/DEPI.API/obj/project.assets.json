@@ -5965,39 +5965,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mshms\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\habib\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.API\\DEPI.API.csproj",
+      "projectUniqueName": "D:\\Depi-Project\\server\\DEPI.API\\DEPI.API.csproj",
       "projectName": "DEPI.API",
-      "projectPath": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.API\\DEPI.API.csproj",
-      "packagesPath": "C:\\Users\\mshms\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.API\\obj\\",
+      "projectPath": "D:\\Depi-Project\\server\\DEPI.API\\DEPI.API.csproj",
+      "packagesPath": "C:\\Users\\habib\\.nuget\\packages\\",
+      "outputPath": "D:\\Depi-Project\\server\\DEPI.API\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\mshms\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\habib\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj": {
-              "projectPath": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj"
+            "D:\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj": {
+              "projectPath": "D:\\Depi-Project\\server\\DEPI.Application\\DEPI.Application.csproj"
             }
           }
         }
@@ -6052,6 +6045,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.20, 8.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[8.0.20, 8.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.20, 8.0.20]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.20, 8.0.20]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
