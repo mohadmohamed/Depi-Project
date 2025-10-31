@@ -47,3 +47,6 @@ Desktop.ini
 *.csproj.user
 *.vcxproj.user
 *.sln.user
+
+# Ignore local app settings with secrets
+appsettings.json
