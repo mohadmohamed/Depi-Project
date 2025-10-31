@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DEPI.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44a3eaf462e5295f5cf4c1d220b94353a1a699fc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a21bd243fac8742f9cb5689f852a72bf9bace4bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("DEPI.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DEPI.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
