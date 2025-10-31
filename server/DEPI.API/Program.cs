@@ -1,5 +1,6 @@
 
 using DEPI.Application;
+using DEPI.Application.Services;
 using DEPI.DataAccess;
 
 namespace DEPI.API
@@ -33,7 +34,7 @@ namespace DEPI.API
             
             // Add database context and unit of work
             builder.Services.AddDataAccessServices(builder.Configuration);
-            
+            builder.Services.AddHttpClient<GeminiService>();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
