@@ -14,11 +14,13 @@ namespace DEPI.DataAccess.Repositories
     {
         private readonly AppDbContext _context;
         private readonly DbSet<TEntity> _Dbset;
+
         public Repository(AppDbContext context)
         {
-            _context = context;
+            _context = context ?? throw new ArgumentNullException(nameof(context));
             _Dbset = _context.Set<TEntity>();
         }
+
         public async Task AddAsync(TEntity entity)
         {
             await _Dbset.AddAsync(entity);
@@ -45,7 +47,6 @@ namespace DEPI.DataAccess.Repositories
             return entity;
         }
 
-
         public async Task<TEntity?> FindAsync(Expression<Func<TEntity, bool>> predicate)
         {
             return await _Dbset.FirstOrDefaultAsync(predicate);
@@ -61,7 +62,7 @@ namespace DEPI.DataAccess.Repositories
             return await _Dbset.FindAsync(id);
         }
 
-        public  Task Update(TEntity entity)
+        public Task Update(TEntity entity)
         {
             _Dbset.Update(entity);
             return Task.CompletedTask;

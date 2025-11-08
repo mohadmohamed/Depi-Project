@@ -4,7 +4,6 @@ namespace DEPI.Application.Services
 {
     public interface IGeminiService
     {
-        Task<string> GenerateQuizAsync(string topic, string difficulty);
-
+        public Task<string> GenerateTextAsync(string prompt);
     }
 }
