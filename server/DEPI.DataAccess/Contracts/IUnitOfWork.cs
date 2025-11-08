@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DEPI.DataAccess.Contracts
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork : IDisposable
     {
         IRepository<InterviewAnswer ,int> InterviewAnswers { get; }
         IRepository<InterviewSession, int> InterviewSessions { get; }

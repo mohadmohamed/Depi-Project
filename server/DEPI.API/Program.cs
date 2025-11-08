@@ -1,6 +1,6 @@
-
 using DEPI.Application;
 using DEPI.Application.Services;
+using DEPI.Application.Settings;
 using DEPI.DataAccess;
 
 namespace DEPI.API
@@ -11,6 +11,9 @@ namespace DEPI.API
         {
 
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.Configure<gemeniSettings>(
+            builder.Configuration.GetSection("Gemini"));
+            
             builder.Services.AddApplicationServices();
             // Add services to the container.
             // Configure CORS for the React client

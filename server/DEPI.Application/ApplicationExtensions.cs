@@ -15,8 +15,10 @@ namespace DEPI.Application
         {
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<JwtService>();
-            services.AddHttpClient<IGeminiService, GeminiService>();
-
+            services.AddScoped<IGeminiService, GeminiService>(); 
+            services.AddScoped<IResumeService, ResumeService>();
+            services.AddScoped<IinterviewService, InterviewService>();
+            
             return services;
         }
     }
