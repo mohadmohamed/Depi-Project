@@ -1,28 +1,41 @@
-
 import React from "react";
 import ProgressChart from "./ProgressChart";
 import "./Profile.css";
 import Header from "../resume/Header";
 import Footer from "../resume/Footer";
+import { jwtDecode } from "jwt-decode"; // Use named import instead of default import
+
 export default function Profile() {
     const user = {
         userName: "John Doe" , 
         email: "john.doe@example.com"
     };
+    const token = sessionStorage.getItem("authToken");
     
+    // Add error handling for token decoding
+    let decryptedToken = null;
+    try {
+        decryptedToken = token ? jwtDecode(token) : null;
+    } catch (error) {
+        console.error("Invalid JWT token:", error);
+        // Clear invalid token
+        sessionStorage.removeItem("authToken");
+    }
+    
+    console.log("Decrypted Token:", decryptedToken);    
     return (
         <>
-        <Header/>
+        <Header isLoggedIn={!!token}/>
         <div className="profile-container">
             <div className="profile-content">
                 {/* User Header */}
                 <div className="user-header">
                     <div className="user-avatar">
-                        {user.userName.charAt(0)}
+                        {decryptedToken.name.charAt(0)}
                     </div>
                     <div className="user-info">
-                        <div className="user-name">Hello, {user.userName}</div>
-                        <div className="user-email">{user.email}</div>
+                        <div className="user-name">Hello, {decryptedToken.name}</div>
+                        <div className="user-email">{decryptedToken.email}</div>
                     </div>
                 </div>
                 

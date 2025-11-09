@@ -69,8 +69,10 @@ namespace DEPI.Application.Services
             
             string userId = foundUser.Id.ToString();
             string userEmail = foundUser.Email ?? throw new InvalidOperationException("User email is missing");
-            
-            string token = _jwtService.GenerateToken(userId, userEmail);
+            string userName = foundUser.FullName ?? throw new InvalidOperationException("User name is missing");
+
+
+            string token = _jwtService.GenerateToken(userId, userEmail , userName);
 
             return token;
         }

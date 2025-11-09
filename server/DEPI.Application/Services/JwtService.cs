@@ -16,7 +16,7 @@ namespace DEPI.Application.Services
             _config = config;
         }
 
-        public string GenerateToken(string userId, string email)
+        public string GenerateToken(string userId, string email , string name)
         {
             // 1. Get JWT settings from appsettings.json
             var key = _config["Jwt:Key"];
@@ -42,6 +42,7 @@ namespace DEPI.Application.Services
             var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.Sub, userId),
+                new Claim(JwtRegisteredClaimNames.Name , name),
                 new Claim(JwtRegisteredClaimNames.Email, email),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };

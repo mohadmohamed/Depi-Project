@@ -82,8 +82,9 @@ header ul .buttons {
   align-items: center;
 }
 
-header ul .buttons button {
-  background-color: black;
+header ul .buttons button,
+header ul .buttons a {
+  background-color: var(--primary);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -95,35 +96,45 @@ header ul .buttons button {
   transition: transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow 0.2s, background 0.2s, color 0.2s;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
   outline: none;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-header ul .buttons button:hover {
+header ul .buttons button:hover,
+header ul .buttons a:hover {
   transform: scale(1.08);
   box-shadow: 0 4px 16px 0 rgba(0, 120, 255, 0.15);
 }
 
-header ul .buttons button:active {
+header ul .buttons button:active,
+header ul .buttons a:active {
   transform: scale(0.97);
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.12);
 }
 
-header ul .buttons button.login {
+header ul .buttons button.login,
+header ul .buttons a.login {
   background: white;
   color: black;
   border: 1px solid #222;
 }
 
-header ul .buttons button.login:hover {
+header ul .buttons button.login:hover,
+header ul .buttons a.login:hover {
   background: #f5f5f5;
 }
 
-header ul .buttons button.signup {
-  background: linear-gradient(to right, #e65cfa, #6ad6fc);
+header ul .buttons button.signup,
+header ul .buttons a.signup {
+  background: var(--primary);
   color: white;
   border: none;
 }
 
-header ul .buttons button.signup:hover {
+header ul .buttons button.signup:hover,
+header ul .buttons a.signup:hover {
   background: linear-gradient(to right, #d84de8, #5ac0e5);
 }
 

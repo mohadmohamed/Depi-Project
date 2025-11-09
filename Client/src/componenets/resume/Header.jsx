@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
+import { CgProfile } from "react-icons/cg";
 
 export default function Header({isLoggedIn})
 {
@@ -12,16 +14,19 @@ export default function Header({isLoggedIn})
     return(
         <header className={menuOpen ? 'menu-open' : ''}>
             <ul>
-                <li><a href="#" className="logo">Depi</a></li>
+                <li><Link to="/" className="logo">Depi</Link></li>
                 <div className="links">
-                    <li><a href="#">Home</a></li>
+                    <li><Link to="/">Home</Link></li>
                     <li><a href="#">Process</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Contact</a></li>
                 </div>
                 {!isLoggedIn && <div className="buttons">
-                    <button className="login">Login</button>
-                    <button className="signup">Sign Up</button>
+                    <Link className="login" to="/login">Login</Link>
+                    <Link className="signup" to="/signup">Sign Up</Link>
+                </div>}
+                {!!isLoggedIn && <div className="buttons">
+                    <Link to="/profile"><CgProfile size={24} /></Link>
                 </div>}
                 <button className="mobile-menu-btn" onClick={toggleMenu}>
                     <span></span>
