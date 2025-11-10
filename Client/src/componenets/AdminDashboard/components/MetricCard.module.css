@@ -1,0 +1,35 @@
+.card {
+  background: #ffffff;
+  border: 1px solid #d3c4e3; 
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.title {
+  font-size: 22px;
+  color: #2c2f73;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.value {
+  font-size: 26px;
+  font-weight: bold;
+  color: #6b4c9a; 
+  margin-bottom: 5px;
+}
+
+.extra {
+  font-size: 16px;
+  color: #4a4a4a;
+}
+
+ 
