@@ -1,0 +1,232 @@
+:root {
+  --purple-100: #f5eefe;
+  --purple-300: #bfa0f0;
+  --purple-500: #7b37d6;
+  --purple-700: #5a249f;
+  --white: #ffffff;
+  --muted: #6b6b6b;
+  --card-shadow: 0 6px 18px rgba(123, 55, 214, 0.08);
+}
+
+.container {
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: var(--purple-700);
+  background: linear-gradient(180deg, var(--purple-100) 0%, var(--white) 100%);
+  padding: 24px;
+  border-radius: 14px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 22px;
+}
+
+.header h2 {
+  margin: 0;
+  color: var(--purple-700);
+  font-size: 28px;
+}
+
+.sub {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card,
+.cardWide {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease;
+}
+
+.card:hover,
+.cardWide:hover {
+  transform: translateY(-2px);
+}
+
+.cardWide {
+  grid-column: span 3;
+}
+
+.cardTitle {
+  margin: 0 0 12px 0;
+  color: var(--purple-500);
+  font-size: 20px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.tab {
+  padding: 7px 12px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--purple-700);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  background: var(--purple-100);
+}
+
+.tabActive {
+  background: linear-gradient(90deg, var(--purple-500), var(--purple-700));
+  color: var(--white);
+  box-shadow: 0 6px 14px rgba(123, 55, 214, 0.18);
+}
+
+.ticketList,
+.feedbackList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ticketItem,
+.feedbackItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, var(--purple-100), rgba(255, 255, 255, 0.6));
+  transition: background 0.2s ease;
+}
+
+.ticketItem:hover,
+.feedbackItem:hover {
+  background: linear-gradient(180deg, #ede4fb, rgba(255, 255, 255, 0.8));
+}
+
+.meta {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.note {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: var(--purple-700);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.actionsSmall {
+  display: flex;
+  gap: 6px;
+}
+
+.btn {
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--purple-500), var(--purple-700));
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, var(--purple-700), var(--purple-500));
+}
+
+.btnGhost {
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid var(--purple-300);
+  color: var(--purple-700);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.btnGhost:hover {
+  background: var(--purple-100);
+}
+
+.btnOutline {
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px dashed var(--purple-500);
+  color: var(--purple-700);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btnOutline:hover {
+  background: var(--purple-100);
+}
+
+.footerActions {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+}
+
+.actionsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.actionTile {
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(123, 55, 214, 0.08);
+  background: linear-gradient(180deg, rgba(123, 55, 214, 0.06), rgba(255, 255, 255, 0.4));
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.actionTile:hover {
+  background: linear-gradient(180deg, rgba(123, 55, 214, 0.12), rgba(255, 255, 255, 0.6));
+  transform: translateY(-2px);
+}
+
+@media (max-width: 920px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .cardWide {
+    grid-column: span 1;
+  }
+  .actionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+

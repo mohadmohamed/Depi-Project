@@ -1,0 +1,16 @@
+{
+  "sampleUsers": [
+    { "id": 1, "name": "Nour Mohamed", "email": "nour@example.com", "signup": "2025-08-18", "active": true, "role": "user" },
+    { "id": 2, "name": "Toka Adel", "email": "toka@example.com", "signup": "2025-09-02", "active": true, "role": "admin" },
+    { "id": 3, "name": "Habiba Ezzat", "email": "hibiba@example.com", "signup": "2025-07-12", "active": true, "role": "user" },
+    { "id": 4, "name": "Mohad Mohamed", "email": "mohad@example.com", "signup": "2025-07-20", "active": true, "role": "admin" },
+    { "id": 5, "name": "Youssef", "email": "anas@example.com", "signup": "2025-07-22", "active": true, "role": "admin" },
+    { "id": 6, "name": "Belal Ahmed", "email": "belal@example.com", "signup": "2025-07-13", "active": true, "role": "user" },
+    { "id": 7, "name": "Tasneem Mahmoud", "email": "tasneem@example.com", "signup": "2025-07-12", "active": true, "role": "user" },
+    { "id": 8, "name": "Ganna Kamal", "email": "ganna@example.com", "signup": "2025-07-22", "active": false, "role": "admin" },
+    { "id": 9, "name": "Mohamed", "email": "mohamed@example.com", "signup": "2025-07-25", "active": true, "role": "admin" },
+    { "id": 10, "name": "Mai Ahmed", "email": "mai@example.com", "signup": "2025-07-15", "active": false, "role": "user" },
+    { "id": 11, "name": "Jasmen Halem", "email": "jasmen@example.com", "signup": "2025-07-15", "active": true, "role": "user" },
+     { "id": 77, "name": "ttt Mohamed", "email": "nour@example.com", "signup": "2025-08-18", "active": true, "role": "user" }
+  ]
+}

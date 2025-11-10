@@ -1,0 +1,106 @@
+/* Search Input */
+.search {
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 280px;
+  font-size: 15px;
+  border: 2px solid #5a249f; 
+  border-radius: 8px;
+  background-color: #ffffff;
+  outline: none;
+  transition: 0.3s;
+  text-align: center;
+  color: #1b1f3a; 
+}
+
+.search:focus {
+  border-color: #7b37d6;
+  box-shadow: 0 0 6px rgba(123, 55, 214, 0.5);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(90, 36, 159, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 14px;
+  color: #1b1f3a; 
+}
+
+.table th {
+  background: #f5f0fa; 
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #5a249f;
+}
+
+/* Row hover */
+.table tr:hover {
+  background: #f8f5fc; 
+  transition: 0.2s;
+}
+
+.inactiveRow {
+  opacity: 0.7;
+  background: #fbe9f7; 
+}
+
+/*  Action Buttons */
+.table button {
+  margin-right: 5px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, #776293, #ad9dc9); 
+  color: #ffffff;
+}
+
+.table button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(123, 55, 214, 0.4);
+}
+
+
+.roleSelect {
+  padding: 8px 14px;
+  font-size: 14px;
+  border: 1px solid #7b37d6;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #1b1f3a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  appearance: none;
+  background-image: linear-gradient(to bottom, #ffffff, #f5f0fa);
+}
+
+.roleSelect:hover {
+  border-color: #5a249f;
+  background-color: #f8f5fc;
+}
+
+.roleSelect:focus {
+  border-color: #7b37d6;
+  box-shadow: 0 0 6px rgba(123, 55, 214, 0.6);
+}
+
+.roleSelect option {
+  background-color: #ffffff;
+  color: #1b1f3a;
+}
+
+

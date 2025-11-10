@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  background: #f8f8ff; 
+}
+
+.title {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #6a0dad;
+  font-weight: bold;
+}
+
+.card {
+  background: #ffffff;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(106, 13, 173, 0.15); 
+  border-left: 5px solid #6a0dad;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(106, 13, 173, 0.25);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #1e2a78; 
+  border-bottom: 2px solid #6a0dad;
+  padding-bottom: 5px;
+}
+
+.settingItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.settingItem label {
+  font-size: 16px;
+  color: #333;
+}
+
+.apiInput {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #d3c3f3;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.apiInput:focus {
+  border-color: #6a0dad;
+  box-shadow: 0 0 5px rgba(106, 13, 173, 0.4);
+}
+
+.btn {
+  background-color: #6a0dad;
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.btn:hover {
+  background-color: #1e2a78;
+}
+
+/* toggle switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 28px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 28px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background-color: #6a0dad; 
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(28px);
+}
+
+.apiInput {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  background-color: #ffffff;
+  color: #1e2a78;
+  font-size: 16px;
+  border: 2px solid #c9a4f8;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
