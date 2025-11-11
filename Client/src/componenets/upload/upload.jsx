@@ -93,7 +93,6 @@ export default function Upload() {
 
       const result = await response.json();
       console.log("Upload successful:", result);
-      
       setUploadSuccess(true);
       Navigate('/resume')
     } catch (err) {

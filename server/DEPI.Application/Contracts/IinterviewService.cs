@@ -11,5 +11,6 @@ namespace DEPI.Application.Contracts
     {
         public Task generateQuiz(int userId , int ResumeId , string targetJob );
         public Task evaluateAnswers(userAnswersDTO userAnswers);
+        public Task<object> getQuestions(InterviewQuestionDTO interviewQuestionDTO);
     }
 }

@@ -7,14 +7,13 @@ import "./LandingPage.css"
 import Upload from "../upload/upload"
 import "../upload/upload.css"
 import { useState } from "react"
-export default function LandingPage() {
-    const [resumeNumber , setResumeNumber] = useState(0);
+export default function LandingPage({resumeId}) {
     const token = sessionStorage.getItem("authToken");
     return (
         <>
             <Header isLoggedIn={!!token} />
             <main>
-                <Hero />
+                <Hero resumeId={resumeId} />
                 <HowItWorks />
             </main>
             <Footer />

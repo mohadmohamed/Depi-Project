@@ -128,54 +128,49 @@
 .hero-email-signup {
     display: flex;
     align-items: center;
-    gap: 0;
-    max-width: 480px;
-    margin: 24px auto;
-    background: rgba(255, 255, 255, 0.95);
+    gap: 12px;
+    max-width: 600px;
+    margin: 32px auto;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 999px;
-    padding: 6px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-    border: 1px solid rgba(109, 40, 217, 0.1);
-    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
     transition: all 0.3s ease;
-    animation: emailSignupFloat 3s ease-in-out infinite;
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.1);
 }
 
 .hero-email-signup:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-    border-color: rgba(109, 40, 217, 0.2);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.15);
+    border-color: rgba(255, 255, 255, 0.25);
 }
 
 .hero-email-input {
-    flex: 1;
+    flex: 2;
     border: none;
-    background: transparent;
-    padding: 14px 100px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 16px 20px;
     font-size: 1rem;
-    color: var(--text-primary);
+    color: #2d3b5a;
     outline: none;
     border-radius: 999px;
     transition: all 0.3s ease;
-    position: relative;
-    animation: subtleFloat 3s ease-in-out infinite;
+    font-weight: 500;
 }
 
 .hero-email-input::placeholder {
-    color: rgba(45, 59, 90, 0.5);
+    color: rgba(45, 59, 90, 0.6);
     transition: all 0.3s ease;
 }
 
 .hero-email-input:focus {
-    background: rgba(255, 255, 255, 0.8);
-    transform: scale(1.02);
-    animation-play-state: paused;
-    box-shadow: 0 0 20px rgba(109, 40, 217, 0.2);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 0 2px rgba(109, 40, 217, 0.3);
 }
 
 .hero-email-input:focus::placeholder {
-    color: rgba(45, 59, 90, 0.3);
-    transform: translateX(4px);
+    color: rgba(45, 59, 90, 0.4);
 }
 
 .hero-email-btn {
@@ -219,64 +214,91 @@
     transition: all 0.1s ease;
 }
 
-.hero-ctas {
-    display: flex;
-    gap: 16px;
-    margin-top: 8px;
-    justify-content: center;
+.hero-resume-select {
+  flex: 1.5;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 16px 20px;
+  font-size: 1rem;
+  color: #2d3b5a;
+  outline: none;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232d3b5a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px;
+  padding-right: 40px;
 }
 
-.cta {
-    padding: 14px 28px;
-    border-radius: 999px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: inline-flex;
-    align-items: center;
+.hero-resume-select:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.hero-resume-select:focus {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 0 2px rgba(109, 40, 217, 0.3);
+}
+
+.hero-resume-select option {
+  background: white;
+  color: #2d3b5a;
+  padding: 12px;
+  border: none;
+  font-weight: 500;
+}
+
+.hero-resume-select option:hover,
+.hero-resume-select option:checked {
+  background: rgba(109, 40, 217, 0.1);
+  color: #2d3b5a;
+}
+
+/* Modern side-by-side layout for input and select */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-email-signup {
+    flex-direction: column;
     gap: 8px;
-}
-
-.cta:hover {
-    transform: translateY(-2px);
-}
-
-.cta.primary {
-    background: linear-gradient(135deg, var(--secondary), var(--primary));
-    color: #ffffff;
-    box-shadow: 0 8px 24px rgba(109, 40, 217, 0.3);
-}
-
-.cta.primary:hover {
-    box-shadow: 0 12px 32px rgba(109, 40, 217, 0.4);
-}
-
-.cta.secondary {
-    background: rgba(255, 255, 255, 0.9);
-    color: var(--text-primary);
-    border: 1px solid rgba(109, 40, 217, 0.2);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.cta.secondary:hover {
-    background: #ffffff;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.hero-visual {
+    max-width: 400px;
+    margin: 24px auto;
+  }
+  
+  .hero-email-input,
+  .hero-resume-select {
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 14px 18px;
+    font-size: 15px;
+  }
+  
+  .hero-resume-select {
+    padding-right: 45px;
+    background-size: 16px;
+    background-position: right 18px center;
+  }
 }
 
-.hero-image {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+@media (max-width: 640px) {
+  .hero-email-signup {
+    max-width: 100%;
+    margin: 1rem auto 1.5rem;
+  }
+  
+  .hero-email-input,
+  .hero-resume-select {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+  
+  .hero-resume-select {
+    padding-right: 40px;
+    background-size: 16px;
+    background-position: right 16px center;
+  }
 }
 
 /* How It Works Section */
@@ -793,21 +815,51 @@
         border-radius: 16px;
     }
 
-    .hero-ctas {
-        width: 100%;
-        justify-content: center;
+    .hero-resume-select {
+        padding: 16px 20px;
+        font-size: 16px;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        color: white;
+        margin-top: 12px;
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 20px center;
+        background-size: 20px;
+        padding-right: 50px;
     }
 
-    .cta {
-        width: 100%;
-        text-align: center;
+    .hero-resume-select:hover {
+        border-color: rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
     }
 
-    .how-grid {
-        grid-template-columns: 1fr;
+    .hero-resume-select:focus {
+        border-color: rgba(255, 255, 255, 0.6);
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+        transform: translateY(-2px);
     }
 
-    .brand-row {
-        gap: 12px;
+    .hero-email-signup {
+        max-width: 100%;
+        margin: 1rem auto 1.5rem;
+    }
+    
+    .hero-email-input,
+    .hero-resume-select {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+    
+    .hero-resume-select {
+        padding-right: 40px;
+        background-size: 16px;
+        background-position: right 16px center;
     }
 }

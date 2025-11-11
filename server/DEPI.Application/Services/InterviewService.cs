@@ -343,6 +343,12 @@ Return ONLY this JSON format (no markdown, no explanations):
 
             return jsonString;
         }
+        public async Task<object> getQuestions(InterviewQuestionDTO interviewQuestionDTO)
+        {
+            var questionsJson = await _unitOfWork.InterviewSessions.FindAsync(q => q.UserId == interviewQuestionDTO.userId && q.ResumeId == interviewQuestionDTO.resumeId);
+            var cleanedJson = CleanJsonString(questionsJson.QuestionsJson);
+            return cleanedJson;
+        }
 
         /// <summary>
         /// Attempts to extract JSON from text that might contain other content

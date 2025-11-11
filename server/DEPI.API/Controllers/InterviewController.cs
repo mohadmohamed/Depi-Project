@@ -19,12 +19,12 @@ namespace DEPI.API.Controllers
         }
 
         [HttpPost("generate")]
-        public async Task<IActionResult> GenerateInterview([FromForm]int userid,[FromForm] int resumeid, [FromQuery] string targetJob)
+        public async Task<IActionResult> GenerateInterview([FromForm] int userid, [FromForm] int resumeid, [FromQuery] string targetJob)
         {
             try
             {
                 await _interviewService.generateQuiz(userid, resumeid, targetJob);
-                
+
                 return Ok(new { Message = "Interview quiz generated successfully", UserId = userid, ResumeId = resumeid, TargetJob = targetJob });
             }
             catch (ArgumentException ex)
@@ -50,16 +50,16 @@ namespace DEPI.API.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Unexpected error during interview generation");
-                return StatusCode(500, new 
-                { 
+                return StatusCode(500, new
+                {
                     Error = "An unexpected error occurred during interview generation",
                     Details = ex.Message
                 });
             }
         }
-       [HttpPatch("evaluate")]
-       public async Task<IActionResult> EvaluateAnswers([FromBody]userAnswersDTO userAnswers)
-       {
+        [HttpPatch("evaluate")]
+        public async Task<IActionResult> EvaluateAnswers([FromBody] userAnswersDTO userAnswers)
+        {
             try
             {
                 await _interviewService.evaluateAnswers(userAnswers);
@@ -88,9 +88,37 @@ namespace DEPI.API.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Unexpected error during answer evaluation");
-                return StatusCode(500, new 
-                { 
+                return StatusCode(500, new
+                {
                     Error = "An unexpected error occurred during answer evaluation",
+                    Details = ex.Message
+                });
+            }
+        }
+        [HttpGet("questions")]
+        public async Task<IActionResult> GetQuestions([FromQuery] InterviewQuestionDTO interviewQuestionDTO)
+        {
+            try
+            {
+                var questions = await _interviewService.getQuestions(interviewQuestionDTO);
+                return Ok(questions);
+            }
+            catch (ArgumentException ex)
+            {
+                _logger.LogWarning(ex, "Invalid parameters provided for fetching questions");
+                return BadRequest(new { Error = ex.Message });
+            }
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogWarning(ex, "Resource not found during fetching questions");
+                return NotFound(new { Error = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Unexpected error during fetching questions");
+                return StatusCode(500, new
+                {
+                    Error = "An unexpected error occurred during fetching questions",
                     Details = ex.Message
                 });
             }

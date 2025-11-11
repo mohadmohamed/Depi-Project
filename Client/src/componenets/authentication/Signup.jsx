@@ -16,6 +16,8 @@ export default function Signup() {
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
   const [token , setToken] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
   function validatePassword(pw) {
     const checks = {
       length: pw.length >= 8,
@@ -58,6 +60,8 @@ export default function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setSubmitError(null);
 
     const res = validatePassword(form.password);
     const newErrors = {};
@@ -73,6 +77,7 @@ export default function Signup() {
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
+      setLoading(false);
       return;
     }
 
@@ -95,8 +100,12 @@ export default function Signup() {
       if (!response.ok) throw new Error(payload);
       console.log("Server Response:", payload);
       setForm({ fullname: "", email: "", password: "", confirm: "" });
+      setLoading(false);
+      // You might want to redirect to login or show success message
     } catch (error) {
       console.error("Error:", error);
+      setSubmitError(error.message || "Registration failed. Please try again.");
+      setLoading(false);
     }
   };
 
@@ -221,8 +230,20 @@ export default function Signup() {
               )}
             </div>
 
-            <button className="auth-submit" type="submit" disabled={!canSubmit}>
-              Create account
+            {submitError && (
+              <div className="auth-error">
+                <p>{submitError}</p>
+              </div>
+            )}
+            <button className="auth-submit" type="submit" disabled={!canSubmit || loading}>
+              {loading ? (
+                <>
+                  <span className="loading-spinner-small"></span>
+                  Creating account...
+                </>
+              ) : (
+                "Create account"
+              )}
             </button>
             <p className="auth-switch">
               Already have an account?

@@ -17,9 +17,8 @@ export default function Header({isLoggedIn})
                 <li><Link to="/" className="logo">Depi</Link></li>
                 <div className="links">
                     <li><Link to="/">Home</Link></li>
-                    <li><a href="#">Process</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><Link to="/upload">Upload Resume</Link></li>
+                    <li><Link to = "/resume">Latest analysis</Link></li>
                 </div>
                 {!isLoggedIn && <div className="buttons">
                     <Link className="login" to="/login">Login</Link>

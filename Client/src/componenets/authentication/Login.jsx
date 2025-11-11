@@ -16,6 +16,8 @@ export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [form, setForm] = useState({ email: "", password: "" });
   const [token, setToken] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm(prev => ({ ...prev, [name]: value }));
@@ -23,20 +25,32 @@ export default function Login() {
   const navigate = useNavigate();
   function handleSubmit(event) { 
     event.preventDefault();
+    setLoading(true);
+    setError(null);
+    
     console.log("Logging in with:", form);
     fetch("http://localhost:5197/api/User/Login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form)
     })
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        return response.text().then(text => Promise.reject(`Login failed: ${response.status} - ${text}`));
+      }
+      return response.json();
+    })
     .then(data => {
       console.log("Login successful:", data);
-      setToken(data.token); 
+      setToken(data.token);
+      sessionStorage.setItem("authToken", data.token);
+      setLoading(false);
       navigate("/");
     })
     .catch(error => {
       console.error("Login error:", error);
+      setError(error.toString());
+      setLoading(false);
     });
   }
   sessionStorage.setItem("authToken", token);
@@ -109,7 +123,21 @@ export default function Login() {
               </div>
             </div>
 
-            <button className="auth-submit" type="submit">Log in</button>
+            {error && (
+              <div className="auth-error">
+                <p>{error}</p>
+              </div>
+            )}
+            <button className="auth-submit" type="submit" disabled={loading}>
+              {loading ? (
+                <>
+                  <span className="loading-spinner-small"></span>
+                  Logging in...
+                </>
+              ) : (
+                "Log in"
+              )}
+            </button>
             <p className="auth-switch">
               Don't have an account?
               <Link to="/signup"> Create one</Link>

@@ -8,22 +8,25 @@ import Questions from "./componenets/Questions/Questions";
 import ResumeAnalysis from "./componenets/resume/ResumeAnalysis";
 import Profile from "./componenets/profilePage/Profile";
 import Upload from "./componenets/upload/upload";
-import {useState} from "react"
+import { ResumeProvider } from "./context/ResumeContext";
+import Question from "./componenets/Questions/Questions";
 function App() {
-  const [resumeId , setResumeId] = useState(0);
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/resume" element={<ResumeAnalysis />} />
-        <Route path="/questions" element={<Questions />} />
-        <Route path="/mock-interview" element={<MockInterview />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/upload" element={<Upload />} />
-      </Routes>
-    </BrowserRouter>
+    <ResumeProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage  />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/resume" element={<ResumeAnalysis />} />
+          <Route path="/questions" element={<Questions />} />
+          <Route path="/mock-interview" element={<MockInterview />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/upload" element={<Upload  />} />
+          <Route path="/questions" element={<Question  />} />
+        </Routes>
+      </BrowserRouter>
+    </ResumeProvider>
   );
 }
 
