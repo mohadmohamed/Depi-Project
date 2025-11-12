@@ -1,0 +1,336 @@
+
+body {
+  font-family: 'poppins' , sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem !important;
+  }
+  p {
+    font-size: 0.9rem !important;
+  }
+  .cards-container .fdiv .review-card {
+    padding: 10px !important;
+  }
+  .cards-container {
+    padding: 10px !important;
+  }
+}
+
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  p {
+    font-size: 1rem !important;
+  }
+   .cards-container .fdiv .review-card {
+    padding: 15px !important;
+  }
+  .cards-container {
+    padding: 15px !important;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 1.8rem !important;
+  }
+  p {
+    font-size: 1.1rem !important;
+  }
+  .cards-container .fdiv .review-card{
+    padding: 20px !important;
+  }
+  .cards-container {
+    padding: 20px !important;
+  }
+}
+
+
+@media (max-width: 1440px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+  .cards-container .fdiv .review-card {
+    max-width: 1200px !important;
+    margin: auto !important;
+  }
+  .cards-container {
+    max-width: 1200px !important;
+    margin: auto !important;
+  }
+}
+
+
+@media (min-width: 1441px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+   .cards-container .fdiv .review-card {
+    max-width: 1400px !important;
+    margin: auto !important;
+  }
+  .cards-container {
+    max-width: 1400px !important;
+    margin: auto !important;
+  }
+}
+
+
+
+#root {
+  overflow-x: hidden;
+}
+.fdiv {
+  color: rgb(16, 15, 15);
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+  background: 
+    radial-gradient(circle at top left, #d14ee6 0%, transparent 70%),
+    radial-gradient(circle at top right , #6366F1 0%, transparent 70%),
+    radial-gradient(circle, rgba(200, 200, 255, 0.2) 0%, transparent 60%),
+    radial-gradient(circle, rgba(200, 200, 255, 0.15) 0%, transparent 70%),
+    radial-gradient(circle, rgba(200, 200, 255, 0.1) 0%, transparent 80%),
+    #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+ 
+  /* height: 100vh;
+  width: 100%;
+  background: 
+    radial-gradient(
+      circle at top left,
+      #d14ee6 0%,
+      #d14ee6 20%,
+      rgba(255, 182, 193, 0.3) 50%,
+      transparent 80%
+    ),
+    radial-gradient(
+      circle at top right,
+      #6366F1 0%,
+      #6366F1 20%,
+      rgba(135, 206, 235, 0.3) 50%,
+      transparent 80%
+    ),
+    #ffffff; */
+
+
+  
+
+}
+
+
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  /* left: 400px !important; */
+}
+
+.c1 {
+  width: 400px;
+  height: 400px;
+  top: 20%;
+  left: 35%;
+  border-top: white 2px solid;
+}
+
+.c2 {
+  width: 600px;
+  height: 600px;
+  top: 10%;
+  left: 27%;
+ 
+}
+
+.c3 {
+  width: 800px;
+  height: 800px;
+  top: 0;
+  left: 20%;
+}
+
+
+
+/* .fdiv img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+} */
+.fdiv h1{
+    /* font-size: 2.5em; */
+    /* margin-bottom: 20px; */
+    max-width:350px;
+     font-family: 'poppins';
+     z-index: 1;
+    position: relative;
+    top: 110px;
+    left: 480px;
+}
+
+.fdiv h3{
+    font-family: 'poppins', sans-serif;
+    z-index: 1;
+    position: relative;
+    bottom: -100px;
+    right: 20px;
+    font-size: 30px;
+}
+.fdiv p{
+    font-family: 'poppins', sans-serif;
+    z-index: 1;
+    position: relative;
+    bottom: -100px;
+    right: 20px;       
+    font-size: small;
+    font-weight: bold;
+}
+.fdiv button{
+    background-color: #080808;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+   
+    cursor: pointer;
+    width: 200px;
+    height: 40px ;
+    border-radius: 20px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 1em;
+    font-family: 'poppins', sans-serif;
+    z-index: 1;
+    position: relative;
+    bottom: -110px;
+    right: 150px;
+    justify-self: center;
+}
+.imgcontainer{
+    width: 100%;
+    height: 100px;
+    border-radius: 20px;
+    /* background-color:black; */
+    position: relative;
+    bottom: -150px;
+    /* left: 300px; */
+}
+.imgcontainer img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: contain;
+}
+.cards-container{
+    padding: 50px;
+    justify-content: center;
+    height: 80vh;
+    background-color:rgb(249, 249, 253);
+    /* width: 100%; */
+}
+.con{
+    height: 80%;
+   justify-content: center;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    gap: 20px;
+}
+.card{
+    width: 300px;
+height: 500 px;
+border-radius: 20px;
+background: linear-gradient(hsl(289, 86%, 86%) 5px,white 100%);
+
+}
+.card-img{
+   margin-left: 15px;
+   margin-top: 45px;
+    width: 90%;
+    height: 140px;
+    border-radius: 20px;
+    background-color:(249, 249, 253);
+}
+.img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: contain;
+}
+.card-body{
+    font-family: poppins, sans-serif;
+    padding: 20px;
+    text-align: center;
+    font-size: small;
+}
+.txt{
+    font-family: 'poppins', sans-serif;
+    text-align: center;
+}
+.review-section{
+    padding: 50px;
+    justify-content: center;
+    height: 50vh;
+    background-color:rgb(249, 249, 253);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+ .review-card {
+  position: relative;
+  background:rgb(249, 249, 253);
+  padding: 0px;
+  border-radius: 12px;
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.1); */
+  width: 500px;
+  overflow: hidden;
+}
+.quote-icon {
+  position: absolute;
+  top: -15px;
+  right: -15px; 
+  width: 100px;
+  height: 100px;
+  background-color: #7c3aed;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 0 100%; /* شكل شبه اللي في الصورة */
+  font-size: 50px;
+  font-weight: bold;
+  position: absolute;
+  z-index: 1;
+}
+.review-img{
+    width: 100%;
+    /* height: auto; */
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    /* margin-right: 10%; */
+}
