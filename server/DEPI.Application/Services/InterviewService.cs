@@ -25,83 +25,98 @@ namespace DEPI.Application.Services
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
-        public async Task generateQuiz(int userId, int ResumeId, string targetJob)
+        public async Task<int> generateQuiz(GenerateQuizDTO generateQuiz)
         {
             try
             {
-                // Validation 1: Check if parameters are valid
-                if (userId <= 0)
-                    throw new ArgumentException("User ID must be greater than zero.", nameof(userId));
+                // Validation 1: Check if DTO is null
+                if (generateQuiz == null)
+                {
+                    _logger.LogWarning("GenerateQuizDTO parameter is null");
+                    throw new ArgumentNullException(nameof(generateQuiz), "Generate quiz request cannot be null.");
+                }
 
-                if (ResumeId <= 0)
-                    throw new ArgumentException("Resume ID must be greater than zero.", nameof(ResumeId));
+                // Validation 2: Check if parameters are valid
+                if (generateQuiz.userid <= 0)
+                    throw new ArgumentException("User ID must be greater than zero.", nameof(generateQuiz.userid));
 
-                if (string.IsNullOrWhiteSpace(targetJob))
-                    throw new ArgumentException("Target job cannot be null or empty.", nameof(targetJob));
+                if (generateQuiz.resmueid <= 0)
+                    throw new ArgumentException("Resume ID must be greater than zero.", nameof(generateQuiz.resmueid));
 
-                _logger.LogInformation("Starting quiz generation for UserId {UserId}, ResumeId {ResumeId}, targetJob '{TargetJob}'", 
-                    userId, ResumeId, targetJob);
+                if (string.IsNullOrWhiteSpace(generateQuiz.targetJob))
+                    throw new ArgumentException("Target job cannot be null or empty.", nameof(generateQuiz.targetJob));
+
+                _logger.LogInformation("Starting quiz generation for UserId {UserId}, ResumeId {ResumeId}, targetJob '{TargetJob}'",
+                    generateQuiz.userid, generateQuiz.resmueid, generateQuiz.targetJob);
 
                 // Validation 2: Check if user exists
-                var user = await _unitOfWork.Users.GetByIdAsync(userId);
+                var user = await _unitOfWork.Users.GetByIdAsync(generateQuiz.userid);
                 if (user == null)
                 {
-                    _logger.LogWarning("User with ID {UserId} not found", userId);
-                    throw new KeyNotFoundException($"User with ID {userId} not found.");
+                    _logger.LogWarning("User with ID {UserId} not found", generateQuiz.userid);
+                    throw new KeyNotFoundException($"User with ID {generateQuiz.userid} not found.");
                 }
 
                 // Validation 3: Check if resume exists
-                var resume = await _unitOfWork.Resumes.GetByIdAsync(ResumeId);
+                var resume = await _unitOfWork.Resumes.GetByIdAsync(generateQuiz.resmueid);
                 if (resume == null)
                 {
-                    _logger.LogWarning("Resume with ID {ResumeId} not found", ResumeId);
-                    throw new KeyNotFoundException($"Resume with ID {ResumeId} not found.");
+                    _logger.LogWarning("Resume with ID {ResumeId} not found", generateQuiz.resmueid);
+                    throw new KeyNotFoundException($"Resume with ID {generateQuiz.resmueid} not found.");
                 }
 
                 // Validation 4: Check if resume belongs to the user
-                if (resume.UserId != userId)
+                if (resume.UserId !=generateQuiz.userid)
                 {
-                    _logger.LogWarning("Resume {ResumeId} does not belong to user {UserId}", ResumeId, userId);
-                    throw new InvalidOperationException($"Resume with ID {ResumeId} does not belong to user {userId}.");
+                    _logger.LogWarning("Resume {ResumeId} does not belong to user {UserId}", generateQuiz.resmueid, generateQuiz.userid);
+                    throw new InvalidOperationException($"Resume with ID {generateQuiz.resmueid} does not belong to user {generateQuiz.userid}.");
                 }
 
                 // Validation 5: Check if resume has content
                 if (string.IsNullOrWhiteSpace(resume.ParsedText))
                 {
-                    throw new InvalidDataException($"Resume with ID {ResumeId} has no content to generate quiz from.");
+                    throw new InvalidDataException($"Resume with ID {generateQuiz.resmueid} has no content to generate quiz from.");
                 }
 
-                // Validation 6: Check if quiz already exists for this user, resume, and target job
+                // Validation 7: Check if quiz already exists for this user, resume, and target job
                 var allSessions = await _unitOfWork.InterviewSessions.GetAllAsync();
                 var existingSession = allSessions.FirstOrDefault(s => 
-                    s.UserId == userId && 
-                    s.ResumeId == ResumeId && 
+                    s.UserId == generateQuiz.userid && 
+                    s.ResumeId == generateQuiz.resmueid && 
                     !string.IsNullOrEmpty(s.QuestionsJson) && 
-                    s.QuestionsJson.Contains(targetJob, StringComparison.OrdinalIgnoreCase));
+                    s.QuestionsJson.Contains(generateQuiz.targetJob, StringComparison.OrdinalIgnoreCase));
 
                 if (existingSession != null)
                 {
                     _logger.LogInformation("Quiz already exists for UserId {UserId}, ResumeId {ResumeId}, targetJob '{TargetJob}'", 
-                        userId, ResumeId, targetJob);
-                    throw new InvalidOperationException($"Quiz already exists for this user, resume, and target job '{targetJob}'. Please use the existing quiz or delete it first.");
+                        generateQuiz.userid, generateQuiz.resmueid, generateQuiz.targetJob);
+                    throw new InvalidOperationException($"Quiz already exists for this user, resume, and target job '{generateQuiz.targetJob}'. Please use the existing quiz or delete it first.");
                 }
 
                 _logger.LogInformation("Generating quiz questions using Gemini API");
-
                 string prompt = $@"
 You are an AI interview assistant. Generate ONLY valid JSON without any explanations, markdown, or extra text.
 
-Based on this information:
-- Candidate Resume: {resume.ParsedText}
-- Target Job: {targetJob}
+Your task: Generate a professional multiple-choice interview quiz designed to evaluate the candidate's readiness for the target job.
 
-Generate exactly 10 multiple-choice questions for interview assessment.
+Context:
+- Candidate Resume: {resume.ParsedText}
+- Target Job: {generateQuiz.targetJob}
+
+Instructions:
+1. Do NOT ask about the content of the resume directly (e.g., no questions like 'What did you write in your resume?' or 'Which project did you do?').
+2. Instead, analyze the skills, tools, and experiences mentioned in the resume and use them to craft questions that test the candidate’s knowledge and ability in areas relevant to the target job.
+3. Prioritize questions that align with the target job’s requirements, common technical challenges, and necessary skills.
+4. Every question must evaluate a concept, technique, or competency important for the target job, not biographical details.
+5. Each question should have 4 options (A, B, C, D) with only one correct answer.
+6. Generate exactly 10 questions.
 
 Return ONLY this JSON format (no markdown, no explanations):
+
 {{
-  ""targetJob"": ""{targetJob}"",
-  ""userId"": {userId},
-  ""resumeId"": {ResumeId},
+  ""targetJob"": ""{generateQuiz.targetJob}"",
+  ""userId"": {generateQuiz.userid},
+  ""resumeId"": {generateQuiz.resmueid},
   ""quiz"": [
     {{
       ""question"": ""What is your experience with programming languages?"",
@@ -116,7 +131,7 @@ Return ONLY this JSON format (no markdown, no explanations):
   ]
 }}
 ";
-                
+
                 string questions = await _geminiService.GenerateTextAsync(prompt);
 
                 // Validation 7: Check if Gemini returned valid response
@@ -137,8 +152,7 @@ Return ONLY this JSON format (no markdown, no explanations):
                     cleanedQuestions.Length > 500 ? cleanedQuestions.Substring(0, 500) + "..." : cleanedQuestions);
 
                 // Validate JSON format before saving
-                try
-                {
+              
                     var testParse = System.Text.Json.JsonDocument.Parse(cleanedQuestions);
                     if (!testParse.RootElement.TryGetProperty("quiz", out var quizArray) ||
                         quizArray.GetArrayLength() == 0)
@@ -149,47 +163,12 @@ Return ONLY this JSON format (no markdown, no explanations):
                     
                     _logger.LogInformation("JSON validation successful, quiz contains {Count} questions", quizArray.GetArrayLength());
                     testParse.Dispose();
-                }
-                catch (System.Text.Json.JsonException ex)
-                {
-                    _logger.LogError(ex, "JSON parsing failed. Original response: {Original}, Cleaned: {Cleaned}", 
-                        questions, cleanedQuestions);
-                    
-                    // Try alternative cleaning approach
-                    string alternativeCleaned = ExtractJsonFromText(questions);
-                    if (!string.IsNullOrEmpty(alternativeCleaned) && alternativeCleaned != cleanedQuestions)
-                    {
-                        try
-                        {
-                            var altParse = System.Text.Json.JsonDocument.Parse(alternativeCleaned);
-                            if (altParse.RootElement.TryGetProperty("quiz", out var altQuizArray) &&
-                                altQuizArray.GetArrayLength() > 0)
-                            {
-                                _logger.LogInformation("Alternative JSON extraction successful");
-                                cleanedQuestions = alternativeCleaned;
-                                altParse.Dispose();
-                            }
-                            else
-                            {
-                                altParse.Dispose();
-                                throw new InvalidOperationException("Alternative JSON extraction failed - no valid quiz found.");
-                            }
-                        }
-                        catch (System.Text.Json.JsonException)
-                        {
-                            throw new InvalidOperationException($"Gemini returned invalid JSON format. Raw response: {questions}");
-                        }
-                    }
-                    else
-                    {
-                        throw new InvalidOperationException($"Gemini returned invalid JSON format that could not be cleaned. Raw response: {questions}");
-                    }
-                }
-
+                
+                
                 var interviewSession = new InterviewSession
                 {
-                    UserId = userId,
-                    ResumeId = ResumeId,
+                    UserId = generateQuiz.userid,
+                    ResumeId = generateQuiz.resmueid,
                     QuestionsJson = cleanedQuestions,
                     Score = 0,
                     CreatedAt = DateTime.UtcNow
@@ -200,13 +179,16 @@ Return ONLY this JSON format (no markdown, no explanations):
                 _logger.LogInformation("Interview session added to context, saving to database");
                 
                 await _unitOfWork.SaveChangesAsync();
+                
 
                 _logger.LogInformation("Quiz generated and saved successfully for UserId {UserId}, ResumeId {ResumeId}, SessionId {SessionId}", 
-                    userId, ResumeId, interviewSession.Id);
+                    generateQuiz.userid, generateQuiz.resmueid, interviewSession.Id);
+                return interviewSession.Id;
+
             }
             catch (Exception ex) when (!(ex is ArgumentException || ex is KeyNotFoundException || ex is InvalidDataException || ex is InvalidOperationException))
             {
-                _logger.LogError(ex, "Unexpected error during quiz generation for UserId {UserId}, ResumeId {ResumeId}", userId, ResumeId);
+                _logger.LogError(ex, "Unexpected error during quiz generation for UserId {UserId}, ResumeId {ResumeId}", generateQuiz.userid, generateQuiz.resmueid);
                 throw new InvalidOperationException($"An unexpected error occurred during quiz generation: {ex.Message}", ex);
             }
         }
@@ -224,17 +206,17 @@ Return ONLY this JSON format (no markdown, no explanations):
                     throw new ArgumentNullException(nameof(userAnswers.Answers), "Answers list cannot be null.");
                 }
 
-                _logger.LogInformation("Starting evaluation for session {SessionId}", userAnswers.sessionid);
+                _logger.LogInformation("Starting evaluation for session {SessionId}", userAnswers.resumeId);
 
-                var session = await _unitOfWork.InterviewSessions.GetByIdAsync(userAnswers.sessionid);
+                var session = await _unitOfWork.InterviewSessions.FindAsync(s=>s.ResumeId == userAnswers.resumeId && s.UserId == userAnswers.userId && s.Id == userAnswers.sessionId);
                 if (session == null)
                 {
-                    throw new KeyNotFoundException($"Interview session with ID {userAnswers.sessionid} not found.");
+                    throw new KeyNotFoundException($"Interview session with ID {userAnswers.resumeId} not found.");
                 }
 
                 if (string.IsNullOrWhiteSpace(session.QuestionsJson))
                 {
-                    throw new InvalidDataException($"Session {userAnswers.sessionid} has no questions to evaluate against.");
+                    throw new InvalidDataException($"Session {userAnswers.resumeId} has no questions to evaluate against.");
                 }
 
                 var questionsJson = session.QuestionsJson;
@@ -254,13 +236,13 @@ Return ONLY this JSON format (no markdown, no explanations):
                 catch (System.Text.Json.JsonException ex)
                 {
                     _logger.LogError(ex, "Failed to parse questions JSON for session {SessionId}. JSON: {Json}", 
-                        userAnswers.sessionid, questionsJson.Length > 100 ? questionsJson.Substring(0, 100) + "..." : questionsJson);
-                    throw new InvalidDataException($"Session {userAnswers.sessionid} contains malformed JSON questions. Please regenerate the quiz.");
+                        userAnswers.resumeId, questionsJson.Length > 100 ? questionsJson.Substring(0, 100) + "..." : questionsJson);
+                    throw new InvalidDataException($"Session {userAnswers.resumeId} contains malformed JSON questions. Please regenerate the quiz.");
                 }
 
                 if (!quizData.TryGetProperty("quiz", out var quizArrayElement))
                 {
-                    throw new InvalidDataException($"Session {userAnswers.sessionid} questions JSON is missing 'quiz' property.");
+                    throw new InvalidDataException($"Session {userAnswers.resumeId} questions JSON is missing 'quiz' property.");
                 }
 
                 var quizArray = quizArrayElement.EnumerateArray().ToList();
@@ -297,16 +279,16 @@ Return ONLY this JSON format (no markdown, no explanations):
                 // Calculate final score as percentage
                 double finalScore = (double)correctAnswers / userAnswers.Answers.Count * 100;
                 session.Score = Math.Round(finalScore, 2); // number in prcentange 
-
+                Console.WriteLine(session.Score);
                 await _unitOfWork.InterviewSessions.Update(session);
                 await _unitOfWork.SaveChangesAsync();
 
                 _logger.LogInformation("Evaluation completed for session {SessionId}. Score: {Score}% ({Correct}/{Total})", 
-                    userAnswers.sessionid, session.Score, correctAnswers, userAnswers.Answers.Count);
+                    userAnswers.resumeId, session.Score, correctAnswers, userAnswers.Answers.Count);
             }
             catch (Exception ex) when (!(ex is ArgumentNullException || ex is ArgumentException || ex is KeyNotFoundException || ex is InvalidDataException))
             {
-                _logger.LogError(ex, "Unexpected error during answer evaluation for session {SessionId}", userAnswers?.sessionid);
+                _logger.LogError(ex, "Unexpected error during answer evaluation for session {SessionId}", userAnswers?.resumeId);
                 throw new InvalidOperationException($"An unexpected error occurred during answer evaluation: {ex.Message}", ex);
             }
         }
@@ -345,14 +327,120 @@ Return ONLY this JSON format (no markdown, no explanations):
         }
         public async Task<object> getQuestions(InterviewQuestionDTO interviewQuestionDTO)
         {
-            var questionsJson = await _unitOfWork.InterviewSessions.FindAsync(q => q.UserId == interviewQuestionDTO.userId && q.ResumeId == interviewQuestionDTO.resumeId);
-            var cleanedJson = CleanJsonString(questionsJson.QuestionsJson);
-            return cleanedJson;
-        }
+            try
+            {
+                // Parameter validation
+                if (interviewQuestionDTO == null)
+                {
+                    throw new ArgumentNullException(nameof(interviewQuestionDTO), "Interview question request cannot be null.");
+                }
 
-        /// <summary>
-        /// Attempts to extract JSON from text that might contain other content
-        /// </summary>
+                if (interviewQuestionDTO.userId <= 0)
+                {
+                    throw new ArgumentException("User ID must be greater than zero.", nameof(interviewQuestionDTO.userId));
+                }
+
+                if (interviewQuestionDTO.resumeId <= 0)
+                {
+                    throw new ArgumentException("Resume ID must be greater than zero.", nameof(interviewQuestionDTO.resumeId));
+                }
+
+                _logger.LogInformation("Retrieving questions for UserId {UserId}, ResumeId {ResumeId}", 
+                    interviewQuestionDTO.userId, interviewQuestionDTO.resumeId);
+
+                // Check if user exists
+                var user = await _unitOfWork.Users.GetByIdAsync(interviewQuestionDTO.userId);
+                if (user == null)
+                {
+                    _logger.LogWarning("User with ID {UserId} not found", interviewQuestionDTO.userId);
+                    throw new KeyNotFoundException($"User with ID {interviewQuestionDTO.userId} not found.");
+                }
+
+                // Check if resume exists
+                var resume = await _unitOfWork.Resumes.GetByIdAsync(interviewQuestionDTO.resumeId);
+                if (resume == null)
+                {
+                    _logger.LogWarning("Resume with ID {ResumeId} not found", interviewQuestionDTO.resumeId);
+                    throw new KeyNotFoundException($"Resume with ID {interviewQuestionDTO.resumeId} not found.");
+                }
+
+                // Check if resume belongs to the user
+                if (resume.UserId != interviewQuestionDTO.userId)
+                {
+                    _logger.LogWarning("Resume {ResumeId} does not belong to user {UserId}", 
+                        interviewQuestionDTO.resumeId, interviewQuestionDTO.userId);
+                    throw new UnauthorizedAccessException($"Resume with ID {interviewQuestionDTO.resumeId} does not belong to user {interviewQuestionDTO.userId}.");
+                }
+
+                // Find the interview session
+                var questionsSession = await _unitOfWork.InterviewSessions.FindAsync(q => 
+                    q.UserId == interviewQuestionDTO.userId && 
+                    q.ResumeId == interviewQuestionDTO.resumeId);
+
+                if (questionsSession == null)
+                {
+                    _logger.LogWarning("No interview session found for UserId {UserId}, ResumeId {ResumeId}", 
+                        interviewQuestionDTO.userId, interviewQuestionDTO.resumeId);
+                    throw new KeyNotFoundException($"No interview session found for user {interviewQuestionDTO.userId} and resume {interviewQuestionDTO.resumeId}. Please generate a quiz first.");
+                }
+
+                // Check if session has questions
+                if (string.IsNullOrWhiteSpace(questionsSession.QuestionsJson))
+                {
+                    _logger.LogWarning("Interview session {SessionId} has no questions", questionsSession.Id);
+                    throw new InvalidDataException($"Interview session {questionsSession.Id} has no questions. Please regenerate the quiz.");
+                }
+
+                _logger.LogDebug("Found interview session {SessionId} with questions", questionsSession.Id);
+
+                // Clean and validate the JSON
+                var cleanedJson = CleanJsonString(questionsSession.QuestionsJson);
+                
+                if (string.IsNullOrWhiteSpace(cleanedJson))
+                {
+                    _logger.LogError("Cleaned JSON is empty for session {SessionId}", questionsSession.Id);
+                    throw new InvalidDataException($"Interview session {questionsSession.Id} contains invalid questions data.");
+                }
+
+                // Validate JSON structure
+                try
+                {
+                    var jsonDocument = System.Text.Json.JsonDocument.Parse(cleanedJson);
+                    
+                    if (!jsonDocument.RootElement.TryGetProperty("quiz", out var quizArray))
+                    {
+                        jsonDocument.Dispose();
+                        throw new InvalidDataException($"Interview session {questionsSession.Id} questions are missing the 'quiz' property.");
+                    }
+
+                    if (quizArray.GetArrayLength() == 0)
+                    {
+                        jsonDocument.Dispose();
+                        throw new InvalidDataException($"Interview session {questionsSession.Id} has no questions in the quiz array.");
+                    }
+
+                    _logger.LogInformation("Successfully retrieved {QuestionCount} questions for UserId {UserId}, ResumeId {ResumeId}", 
+                        quizArray.GetArrayLength(), interviewQuestionDTO.userId, interviewQuestionDTO.resumeId);
+                    
+                    jsonDocument.Dispose();
+                    
+                    return cleanedJson;
+                }
+                catch (System.Text.Json.JsonException ex)
+                {
+                    _logger.LogError(ex, "Invalid JSON format in session {SessionId} questions", questionsSession.Id);
+                    throw new InvalidDataException($"Interview session {questionsSession.Id} contains malformed questions data. Please regenerate the quiz.");
+                }
+            }
+            catch (Exception ex) when (!(ex is ArgumentNullException || ex is ArgumentException || 
+                                 ex is KeyNotFoundException || ex is UnauthorizedAccessException || 
+                                 ex is InvalidDataException))
+            {
+                _logger.LogError(ex, "Unexpected error retrieving questions for UserId {UserId}, ResumeId {ResumeId}", 
+                    interviewQuestionDTO?.userId, interviewQuestionDTO?.resumeId);
+                throw new InvalidOperationException($"An unexpected error occurred while retrieving questions: {ex.Message}", ex);
+            }
+        }
         private string ExtractJsonFromText(string text)
         {
             if (string.IsNullOrWhiteSpace(text))
@@ -366,6 +454,18 @@ Return ONLY this JSON format (no markdown, no explanations):
             }
 
             return string.Empty;
+        }
+
+        public  async Task<InterviewSession> getLastestQuiz(int userid)
+        {
+            var latest = await _unitOfWork.InterviewSessions.GetLatestByUserIdAsync(userid);
+            return (latest);
+        }
+
+        public async Task<IEnumerable<InterviewSession>> getAllQuizzes(int userid)
+        {
+            IEnumerable<InterviewSession> all = await _unitOfWork.InterviewSessions.GetAllByUserIdAnalysisAsync(userid);
+            return (all);
         }
     }
 }

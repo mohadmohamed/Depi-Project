@@ -10,6 +10,7 @@ import Profile from "./componenets/profilePage/Profile";
 import Upload from "./componenets/upload/upload";
 import { ResumeProvider } from "./context/ResumeContext";
 import Question from "./componenets/Questions/Questions";
+import Interviews from "./componenets/Interviews/Interviews";
 function App() {
   return (
     <ResumeProvider>
@@ -24,6 +25,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/upload" element={<Upload  />} />
           <Route path="/questions" element={<Question  />} />
+          <Route path="/interviews" element={<Interviews />} />
         </Routes>
       </BrowserRouter>
     </ResumeProvider>

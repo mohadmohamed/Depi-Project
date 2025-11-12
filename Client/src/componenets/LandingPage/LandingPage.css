@@ -518,6 +518,48 @@
     border: 1px solid rgba(109, 40, 217, 0.28);
 }
 
+/* Hero Error Display */
+.hero-error {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 1rem auto;
+}
+
+.hero-error .inline-error {
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 12px;
+    animation: slideInDown 0.3s ease-out;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading Spinner */
+.loading-spinner-small {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 .cta.ghost:hover,
 .cta.ghost:focus-visible {
     background: rgba(109, 40, 217, 0.18);

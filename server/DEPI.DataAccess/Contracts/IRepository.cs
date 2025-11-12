@@ -20,5 +20,6 @@ namespace DEPI.DataAccess.Contracts
         public Task<T> FindAsync(Expression<Func<T, bool>> predicate);
         public Task<IEnumerable<Resume>> GetAllByUserIdAsync(int userId);
         public Task<T> GetLatestByUserIdAsync(int userId);
+        Task<IEnumerable<InterviewSession>> GetAllByUserIdAnalysisAsync(int userid);
     }
 }

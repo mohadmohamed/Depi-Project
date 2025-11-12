@@ -63,6 +63,12 @@ namespace DEPI.DataAccess.Repositories
                 .Where(r => r.UserId == userId)
                 .ToListAsync();
         }
+        public async Task<IEnumerable<InterviewSession>> GetAllByUserIdAnalysisAsync(int userId)
+        {
+            return await _context.InterviewSessions
+                .Where(r => r.UserId == userId)
+                .ToListAsync();
+        }
         public async Task<TEntity?> GetByIdAsync(TID id)
         {
             return await _Dbset.FindAsync(id);
@@ -98,6 +104,7 @@ namespace DEPI.DataAccess.Repositories
             // For InterviewSession, order by CreatedAt
             if (typeof(TEntity) == typeof(InterviewSession))
             {
+                Console.WriteLine("I am here");
                 var result = await _context.InterviewSessions
                     .Where(i => i.UserId == userId)
                     .OrderByDescending(i => i.CreatedAt)

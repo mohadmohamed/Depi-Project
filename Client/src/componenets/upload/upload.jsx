@@ -144,7 +144,7 @@ export default function Upload() {
                     className="file-input"
                   />
                   <div className="supported-formats">
-                    <small>Supported formats: PDF, DOC, DOCX</small>
+                    <small>Supported formats: PDF</small>
                   </div>
                 </>
               ) : (
@@ -159,13 +159,6 @@ export default function Upload() {
                       <FiX size={20} />
                     </button>
                   </div>
-                  
-                  {error && (
-                    <div className="upload-error">
-                      <FiX size={20} />
-                      <span>{error}</span>
-                    </div>
-                  )}
                   
                   {uploadSuccess ? (
                     <div className="upload-success">

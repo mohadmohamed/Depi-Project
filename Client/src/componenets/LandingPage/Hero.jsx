@@ -2,12 +2,17 @@ import React, { useEffect, useMemo } from 'react'
 import { jwtDecode } from 'jwt-decode';
 import { useNavigate } from "react-router-dom";
 import { useResume } from '../../context/ResumeContext';
+import { handleError } from '../../utils/errorHandler';
+import { InlineError } from '../../components/common/ErrorDisplay';
 
 export default function Hero() {
     const token = sessionStorage.getItem("authToken");
     const [targetJob, setTargetJob] = React.useState("");
     const [resumesLoading, setResumesLoading] = React.useState(false);
     const [analysisLoading, setAnalysisLoading] = React.useState(false);
+    const [interviewLoading, setInterviewLoading] = React.useState(false);
+    const [error, setError] = React.useState(null);
+    const [sessionId , setSessionId] = React.useState(0);
     const navigate = useNavigate();
     
     // Use Resume Context
@@ -31,11 +36,12 @@ export default function Hero() {
     
     const handleCv = () => {
         if (!selectedResumeId || !targetJob) {
-            alert("Please select a resume and enter a target job");
+            setError("Please select a resume and enter a target job");
             return;
         }
         
         setAnalysisLoading(true);
+        setError(null);
         
         // Store selection in context
         selectResume(selectedResumeId, targetJob);
@@ -71,17 +77,20 @@ export default function Hero() {
             navigate("/resume");
         })
         .catch(error => {
-            console.error("Analysis error:", error);
+            const userMessage = handleError(error, 'resume-analysis');
             setAnalysisLoading(false);
-            alert(`Failed to analyze resume: ${error.toString()}`);
+            setError(userMessage);
         });
     }
     console.log("Selected Resume ID in Hero:", selectedResumeId);
     const handleInterview = () => {
         if (!selectedResumeId || !targetJob) {
-            alert("Please select a resume and enter a target job");
+            setError("Please select a resume and enter a target job");
             return;
         }
+
+        setInterviewLoading(true);
+        setError(null);
 
         console.log("Starting interview generation with:", {
             userid: decryptToken?.sub,
@@ -91,15 +100,15 @@ export default function Hero() {
 
         const formData = new FormData();
         formData.append('userid', parseInt(decryptToken?.sub));
-        formData.append('resumeid', parseInt(selectedResumeId));
-        
+        formData.append('resmueid', parseInt(selectedResumeId));
+        formData.append('targetJob', targetJob);
         console.log("Sending interview request with:", {
             userid: parseInt(decryptToken?.sub),
             resumeid: parseInt(selectedResumeId),
             targetJob: targetJob
         });
 
-        fetch(`http://localhost:5197/api/Interview/generate?targetJob=${encodeURIComponent(targetJob)}`,{
+        fetch(`http://localhost:5197/api/Interview/generate`,{
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -115,11 +124,15 @@ export default function Hero() {
         })
         .then((data)=>{
             console.log("Interview API Response data:", data);
-            navigate("/interview");
+            setInterviewLoading(false);
+            setSessionId(data.sessionId);
+            sessionStorage.setItem("sessionId", data.sessionId);
+            navigate("/questions");
         })
         .catch(error => {
-            console.error("Interview generation error:", error);
-            alert(`Failed to generate interview: ${error.toString()}`);
+            const userMessage = handleError(error, 'interview');
+            setInterviewLoading(false);
+            setError(userMessage);
         });
     }
 
@@ -157,7 +170,7 @@ export default function Hero() {
                 setResumesLoading(false);
             })
             .catch(error => {
-                console.error("Error fetching resumes:", error);
+                handleError(error, 'resume');
                 setResumes([]); // Ensure it stays as array
                 setResumesLoading(false);
             });
@@ -206,9 +219,29 @@ export default function Hero() {
                             </select>
                         </div>
                     )}
+                    {error && (
+                        <div className="hero-error">
+                            <InlineError error={error} onRetry={() => setError(null)} />
+                        </div>
+                    )}
                     <div className="hero-ctas">
                         {!token && <button className="cta primary">Start for free</button>}
-                        {!!token && <button className="cta primary" onClick={handleInterview}>Go to Interview</button>}
+                        {!!token && (
+                            <button 
+                                className="cta primary" 
+                                onClick={handleInterview}
+                                disabled={interviewLoading || analysisLoading || resumesLoading}
+                            >
+                                {interviewLoading ? (
+                                    <>
+                                        <span className="loading-spinner-small"></span>
+                                        Starting Interview...
+                                    </>
+                                ) : (
+                                    "Go to Interview"
+                                )}
+                            </button>
+                        )}
                         {!token && <button className="cta ghost"> Learn More</button>}
                         {!!token && (
                             <button 
