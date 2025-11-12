@@ -37,7 +37,6 @@ public class ResumeService : IResumeService
 
         if (string.IsNullOrWhiteSpace(parsedText))
             throw new InvalidDataException("No readable text found in the uploaded PDF.");
-        // check is the resume already exists for the specific user 
         var resume = new Resume
         {
             UserId = userId,
@@ -204,21 +203,10 @@ The JSON object MUST follow this exact schema and include the target job for fut
             if (string.IsNullOrWhiteSpace(analyzedCv))
                 throw new InvalidOperationException("Gemini returned an empty response for detailed analysis.");
 
-            // Validation 9: Try to validate JSON format (basic check)
-            try
-            {
-                var testParse = System.Text.Json.JsonDocument.Parse(analyzedCv);
-                testParse.Dispose();
-            }
-            catch (System.Text.Json.JsonException ex)
-            {
-                _logger.LogError(ex, "Invalid JSON returned from Gemini for ResumeId {ResumeId}", resumeId);
-                throw new InvalidOperationException("Gemini returned invalid JSON format. Please try again.");
-            }
-
             var resumeAnalysis = new ResumeAnalysis
             {
                 ResumeId = resume.Id,
+                UserId = resume.UserId, // Add the missing UserId
                 FeedbackJson = analyzedCv,
                 AnalyzedAt = DateTime.UtcNow
             };
@@ -272,5 +260,32 @@ The JSON object MUST follow this exact schema and include the target job for fut
         }
 
         return builder.ToString();
+    }
+
+    public async Task<object> getResumeIdByUser(int userid)
+    {
+        var Resume = await _unitOfWork.Resumes.GetAllByUserIdAsync(userid);
+        return Resume;
+    }
+    public async Task<ResumeAnalysis> getAnalysisByResumeId(int userid , int resumeid)
+    {
+        var analysis = await _unitOfWork.ResumeAnalysis.FindAsync(r=>r.UserId == userid && r.ResumeId == resumeid);
+        if (analysis == null)
+        {
+            throw new KeyNotFoundException($"Analysis for Resume with ID {userid} does not exist.");
+        }
+        return analysis;
+    }
+
+    public async Task<ResumeAnalysis> getLatestAnalysis(int userid)
+    {
+        var analysis = await _unitOfWork.ResumeAnalysis.GetLatestByUserIdAsync(userid);
+        return analysis;
+    }
+
+    public async Task<ResumeAnalysis> getLatestAnalysisByUserId(int userid)
+    {
+        var analysis = await _unitOfWork.ResumeAnalysis.GetLatestByUserIdAsync(userid);
+        return analysis;
     }
 }

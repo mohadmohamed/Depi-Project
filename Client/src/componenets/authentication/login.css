@@ -1,338 +1,411 @@
-/* =========================
-   Root Variables (Theme Colors)
-   ========================= */
 :root {
-  --clr-bg-light: #ffffff;
-  /* primary text (headings, labels) - dark slate with purple undertone */
-  --clr-text-dark:#000000;
-  /* secondary / placeholder text - soft cool gray */
-  --clr-text-light: #6c6c6c;
-  /* primary link / accent (used for CTAs and links) */
-  --clr-link: #6d2af3;
-  /* outline / focus */
-  --clr-outline: #393939;
-  --clr-btn-shadow: rgba(146, 146, 146, 0.359);
+  color-scheme: light;
 }
 
-/* =========================
-   Global Styles
-   ========================= */
-* {
-  cursor: default;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  min-height: 100vh;  
-  background-color: #ffffff;
-}
-
-
-
-/* =========================
-   Main Container
-   ========================= */
-.login-main {
-  height: 100%;
-  min-height: 100vh;
+.auth-page {
+  min-height: 100dvh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
- 
-  /* padding-top: 2.5rem; */
-   background-image:
-    radial-gradient(ellipse at 10% 90%, rgba(255, 153, 153, 0.45) 0%, rgba(246, 143, 155, 0.335) 18%, transparent 45%),
-    radial-gradient(ellipse at 90% 90%, rgba(255, 153, 153, 0.45) 0%, rgba(246, 143, 155, 0.335) 18%  , transparent 45%),
-    radial-gradient(circle at 50% 10%, rgba(241, 85, 255, 0.213) 0%, rgba(93, 71, 202, 0.357) 28%, transparent 45%),
-    linear-gradient(180deg, rgba(248,243,255,1) 0%, rgb(255, 255, 255) 42%, rgb(255, 255, 255) 100%);
-}
-#su-main{
-  padding-top: 30px;
+  justify-content: center;
+  padding: 120px 24px 96px;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(109, 40, 217, 0.16), transparent 46%),
+    radial-gradient(circle at 82% 8%, rgba(102, 126, 234, 0.12), transparent 48%),
+    radial-gradient(circle at 50% 88%, rgba(249, 168, 212, 0.18), transparent 52%),
+    linear-gradient(180deg, var(--bg-soft) 0%, #ffffff 60%, rgba(255, 255, 255, 0.95) 100%);
+  animation: auth-page-fade 0.6s ease forwards;
 }
 
-.login-main h1 {
-  font-size: 1.8rem; /* slightly smaller */
-  font-weight: 600;
-  text-align: center;
-  color: var(--clr-text-dark);
+.auth-card {
+  width: min(1080px, 100%);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 56px;
+  padding: 48px;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 32px;
+  border: 1px solid rgba(109, 40, 217, 0.14);
+  box-shadow: 0 42px 80px rgba(79, 70, 229, 0.14), 0 16px 32px rgba(79, 70, 229, 0.08);
+  backdrop-filter: blur(22px);
+  animation: auth-card-pop 0.65s cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
 }
 
-.login-main p {
-  margin-top: 0px;
-  font-size: 1rem; /* tighter body copy */
-  font-weight: 500;
-  color: var(--clr-text-dark);
-  text-align: center;
-  margin-bottom: 20px;
-  padding: 0 0.75rem;
-}
-
-/* =========================
-   Form
-   ========================= */
-.login-main > form {
-  padding: 1.25rem 1.5rem; /* reduce outer form padding */
-  /* keep form container minimal; card styles live on inner elements */
-  width: 100%;
-  max-width: 36rem; /* narrower form */
-  margin-bottom: 0rem;
-  padding-top: 12px;
-  padding-bottom: 0px;
-}
-
-#signup-form{
-  margin-bottom: 0rem;
-  padding-bottom: 0px;
-}
-
-.login-main > form div {
+.auth-card__copy {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.2rem;
+  gap: 20px;
+  max-width: 420px;
+  color: var(--text-primary);
 }
 
-.card-outer {
-  padding: 12px; /* reduced */
-  padding-bottom: 0px;
-  border-radius: 16px;
-  margin-bottom: 0px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.09), rgba(7, 7, 7, 0.09));
-  box-shadow: 0 6px 0 rgba(65, 65, 65, 0.05) inset, 0 12px 22px rgba(46, 46, 46, 0.04);
+.auth-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  color: #ffffff;
+  font-weight: 600;
 }
 
-/* Inner white card with strong border-radius and soft inset shadow */
-.card-inner {
-  background: var(--clr-bg-light);
-  border-radius: 14px;
-  padding: 30px 22px; /* tighter inner padding */
-  box-shadow: 0 6px 14px rgba(22, 22, 22, 0.05), 0 0 0 5px rgba(229,232,247,0.9) inset;
-}
-.card-inner-su {
-  background: var(--clr-bg-light);
-  border-radius: 14px;
-  padding: 20px 22px; /* tighter inner padding */
-  box-shadow: 0 6px 14px rgba(22, 22, 22, 0.05), 0 0 0 5px rgba(229,232,247,0.9) inset;
+.auth-title {
+  font-size: clamp(2.1rem, 3vw + 1rem, 2.75rem);
+  line-height: 1.08;
+  margin: 4px 0;
+  font-weight: 700;
 }
 
-.login-main > form div label {
+.auth-subtitle {
+  color: var(--text-secondary);
   font-size: 1rem;
-  font-weight: 400;
-  color: var(--clr-text-dark);
+  line-height: 1.65;
+}
+
+.auth-benefits {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.auth-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-secondary);
+  font-size: 0.96rem;
+}
+
+.auth-benefits li svg {
+  flex-shrink: 0;
+  font-size: 1.2rem;
+  color: var(--primary);
+  background: rgba(109, 40, 217, 0.12);
+  border-radius: 50%;
+  padding: 6px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 28px;
+  padding: 32px 32px 36px;
+  border: 1px solid rgba(99, 102, 241, 0.14);
+  box-shadow: 0 30px 60px rgba(79, 70, 229, 0.12);
+}
+
+.auth-form__header h2 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.auth-form__header p {
+  margin: 6px 0 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-field label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.auth-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.auth-input-icon {
+  position: absolute;
+  left: 18px;
+  font-size: 1.2rem;
+  color: rgba(17, 24, 39, 0.45);
+}
+
+.auth-input {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  background: rgba(255, 255, 255, 0.92);
+  padding: 14px 48px 14px 50px;
+  font-size: 0.98rem;
+  color: var(--text-primary);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.auth-input::placeholder {
+  color: rgba(17, 24, 39, 0.42);
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.16);
+}
+
+.auth-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: rgba(17, 24, 39, 0.55);
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.auth-toggle:hover,
+.auth-toggle:focus-visible {
+  background: rgba(109, 40, 217, 0.08);
+  color: var(--primary);
+}
+
+.auth-submit {
+  border: none;
+  border-radius: 999px;
+  padding: 14px 20px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  box-shadow: 0 20px 36px rgba(109, 40, 217, 0.24);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.auth-submit:hover:not(:disabled),
+.auth-submit:focus-visible:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 26px 44px rgba(109, 40, 217, 0.28);
+}
+
+.auth-submit:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.auth-switch {
+  text-align: center;
+  font-size: 0.97rem;
+  color: var(--text-secondary);
+  margin: 6px 0 0;
+}
+
+.auth-switch a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.auth-switch a:hover,
+.auth-switch a:focus {
+  color: var(--primary-dark);
+}
+
+.field-error,
+.field-ok {
+  font-size: 0.85rem;
+  margin-top: -4px;
+}
+
+.field-error {
+  color: #dc2626;
+}
+
+.field-ok {
+  color: #15803d;
+}
+
+.pw-checklist {
+  margin-top: 10px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(109, 40, 217, 0.18);
+  background: rgba(109, 40, 217, 0.06);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.pw-checklist small {
+  display: block;
+  font-weight: 600;
+  color: var(--text-primary);
   margin-bottom: 8px;
 }
 
-.login-main > form div input {
-  padding: 10px 14px; /* smaller inputs */
-  border-radius: 0.5rem;
-  border: 1px solid rgba(167, 167, 167, 0.48);
-  font-size: 0.95rem;
-  font-weight: 400;
-  width: 100%;
-  cursor: text;
-  background: #fff;
-  box-shadow: 0 6px 12px rgba(89,99,165,0.04) inset;
-  transition: all 0.12s ease;
-}
-
-
-.login-main > form div input:hover {
-  border-color: rgba(0, 0, 0, 0.49);
-}
-
-.login-main > form div input:focus {
-  outline: none;
-  border-width: 2px;
-  border-color: var(--clr-outline);
-  box-shadow: 0 8px 24px rgba(92,69,251,0.08), 0 2px 6px rgba(138,144,196,0.06) inset;
-}
-
-  
-
-
-.login-main > form div input::placeholder {
-  color: var(--clr-text-light);
-}
-
-/* =========================
-   Submit Button
-   ========================= */
-.login-main form #submit {
-  width: 100%;
-  border-radius: 9999px;
-  padding: 13px 18px; /* smaller button */
-  font-size: 1rem;
-  font-weight: 600;
-  color: white;
-  background: rgb(0, 0, 0);
-  border: none;
-  cursor: pointer;
-  background-size: 200% 100%;
-  transition: all 0.2s ease-in-out;
-  box-shadow: 0 4px 0px #D6CBCF;
-}
-
-.login-main form #submit:hover {
-  background-position: right center;
-  transform: translateY(-1px) scale(1.01);
-   
-}
-
-
-
-/* smaller input placeholder like the design */
-.login-main > form div input::placeholder {
-  color: var(--clr-text-light);
-  font-weight: 300;
-}
-
-/* =========================
-   Span / Links
-   ========================= */
-.login-main > span {
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: var(--clr-text-dark);
-}
-input#password{
-  margin-bottom: 0px;
-}
-.login-main > span a {
-  color: var(--clr-link);
-  text-decoration: none;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-#su-span{
- margin-bottom: 2rem;
-}
-
-/* Password checklist and inline field messages */
-.login-main > form .pw-checklist {
-  color: var(--clr-text-light);
-  font-size: 0.85rem; /* slightly smaller */
-  margin-bottom: 0px;
-}
-.pw-checklist small {
-font-size: 0.9rem;
-margin-top: 7px;
-
-}
 .pw-checklist ul {
-  margin: 2px 0 0 0;
-  /* match the input horizontal padding so bullets align with input text */
-  padding-left: 18px;
-  list-style: disc;
-  font-size: 0.85rem;
-}
-.login-main > form div .field-error {
-  margin-top: 7px;
-  margin-bottom:0px;
-  color: #c62828; /* red */
-  font-size: 0.9rem;
-}
-.field-ok {
-  margin-top: 6px;
-  color: #2e7d32; /* green */
-  font-size: 0.9rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
 }
 
-/* Smooth pop/fade for field-level messages (appearing/disappearing) */
-.field-error, .field-ok {
-  will-change: opacity, transform;
-  animation: msgPopIn 260ms cubic-bezier(.2,.9,.2,1) both;
+.pw-checklist li {
+  display: grid;
+  grid-template-columns: 12px auto;
+  align-items: center;
+  gap: 10px;
+  color: rgba(17, 24, 39, 0.6);
 }
 
-.field-error { animation-duration: 300ms; }
-.field-ok { animation-duration: 220ms; }
-
-@keyframes msgPopIn {
-  0% { opacity: 0; transform: translateY(-8px) scale(0.98); }
-  60% { opacity: 1; transform: translateY(4px) scale(1.02); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
+.pw-checklist li::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(109, 40, 217, 0.3);
+  transition: background 0.2s ease;
 }
 
-/* Also make password checklist updates feel smoother by reducing abrupt color jumps */
-.pw-checklist ul li { transition: color 180ms ease, opacity 160ms ease; }
+.pw-checklist li[data-valid="true"] {
+  color: #15803d;
+}
+
+.pw-checklist li[data-valid="true"]::before {
+  background: #22c55e;
+}
+
+@media (max-width: 1024px) {
+  .auth-card {
+    grid-template-columns: 1fr;
+    padding: 40px;
+    gap: 36px;
+  }
+
+  .auth-form {
+    order: 1;
+  }
+
+  .auth-card__copy {
+    order: 2;
+    max-width: none;
+    text-align: center;
+    align-items: center;
+  }
+
+  .auth-benefits li {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .auth-page {
+    padding: 96px 16px 72px;
+  }
+
+  .auth-card {
+    padding: 28px;
+    border-radius: 26px;
+    gap: 28px;
+  }
+
+  .auth-form {
+    padding: 24px;
+  }
+
+  .auth-input {
+    padding: 12px 46px 12px 48px;
+    border-radius: 16px;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .field-error, .field-ok, .pw-checklist ul li { animation: none !important; transition: none !important; transform: none !important; }
-}
-
-/* =========================
-   Animations & Micro-interactions (Auth pages)
-   These styles power a gentle entrance animation for the
-   login / signup pages and small hover/focus interactions.
-   Applied in a non-invasive way so existing markup works.
-   ========================= */
-
-
-.login-main {
-  animation: fadeInUp 560ms cubic-bezier(.2,.9,.2,1) both;
-}
-
-/* Slight pop-in for card and inner area with a tiny stagger */
-.card-outer {
-  animation: popIn 520ms cubic-bezier(.2,.9,.2,1) both;
-}
-
-.card-inner {
-  animation: popIn 520ms cubic-bezier(.2,.9,.2,1) both;
-  animation-delay: 120ms;
-}
-
-/* Inputs lift subtly on focus to add depth */
-.login-main > form div input {
-  transition: box-shadow 200ms ease, transform 200ms ease, border-color 180ms ease;
-}
-
-.login-main > form div input:focus {
-  transform: translateY(-3px);
-}
-
-
-
-
-
-/* Optional floating variant to keep the card feeling alive; apply `float` class on `.card-outer` if you like */
-/* .card-outer{
-  animation: float 6s ease-in-out infinite;
-} */
-
-/* Keyframes */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(14px) scale(0.995); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-@keyframes popIn {
-  0% { opacity: 0; transform: translateY(10px) scale(.995); }
-  60% { transform: translateY(-4px) scale(1.005); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-
-/* Responsive tweak: make form even tighter on small screens */
-@media (max-width: 520px) {
-  .login-main > form {
-    padding: 0rem 0.7rem;
-    max-width: 92%;
-  }
-  .card-inner {
-    padding: 20px;
-  }
-  .login-main h1 { font-size: 1.4rem; }
-  .login-main p { font-size: 0.95rem; }
-}
-
-/* Respect user's reduced-motion preference */
-@media (prefers-reduced-motion: reduce) {
-  .login-main, .card-outer, .card-inner, .card-outer.float {
+  .auth-page,
+  .auth-card,
+  .auth-form,
+  .auth-submit {
     animation: none !important;
     transition: none !important;
   }
+}
+
+@keyframes auth-page-fade {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes auth-card-pop {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.005);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Loading and Error States for Authentication */
+.auth-error {
+  padding: 12px 16px;
+  background: rgba(220, 53, 69, 0.1);
+  border: 1px solid rgba(220, 53, 69, 0.2);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.auth-error p {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.auth-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.loading-spinner-small {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

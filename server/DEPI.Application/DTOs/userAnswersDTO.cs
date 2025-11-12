@@ -8,7 +8,10 @@ namespace DEPI.Application.DTOs
 {
     public class userAnswersDTO
     {
-        public int sessionid { get; set; }                    
+        public int resumeId { get; set; }                    
+        public int userId { get; set; }
+        public int sessionId { get; set; }
+
         public List<string> Answers { get; set; } = new(); 
     }
 }

@@ -131,10 +131,15 @@ namespace DEPI.DataAccess.Migrations
                     b.Property<int>("ResumeId")
                         .HasColumnType("int");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ResumeId")
                         .IsUnique();
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("ResumeAnalyses");
                 });
@@ -216,7 +221,15 @@ namespace DEPI.DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("DEPI.DataAccess.Entites.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Resume");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("DEPI.DataAccess.Entites.InterviewSession", b =>
