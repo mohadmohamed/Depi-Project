@@ -2,6 +2,8 @@ using DEPI.Application;
 using DEPI.Application.Services;
 using DEPI.Application.Settings;
 using DEPI.DataAccess;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace DEPI.API
 {
@@ -34,7 +36,21 @@ namespace DEPI.API
                           .AllowCredentials();
                 });
             });
-            
+    builder.Services.AddAuthentication("Bearer").AddJwtBearer("Bearer", options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+        };
+    });
+
             // Add database context and unit of work
             builder.Services.AddDataAccessServices(builder.Configuration);
             builder.Services.AddHttpClient<GeminiService>();
@@ -51,6 +67,10 @@ namespace DEPI.API
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+
+            app.UseAuthentication();
+            app.UseAuthorization();
             // Enable CORS for React client
             app.UseCors("ReactClientPolicy");
 

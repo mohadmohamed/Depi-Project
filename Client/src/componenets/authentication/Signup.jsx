@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FiCheckCircle, FiEye, FiEyeOff, FiLock, FiMail, FiUser } from "react-icons/fi";
 import Header from "../resume/Header";
 import Footer from "../resume/Footer";
@@ -18,6 +18,7 @@ export default function Signup() {
   const [token , setToken] = useState(null);
   const [loading, setLoading] = useState(false);
   const [submitError, setSubmitError] = useState(null);
+  const navigate = useNavigate();
   function validatePassword(pw) {
     const checks = {
       length: pw.length >= 8,
@@ -98,6 +99,7 @@ export default function Signup() {
         : await response.text();
 
       if (!response.ok) throw new Error(payload);
+      navigate("/login")
       console.log("Server Response:", payload);
       setForm({ fullname: "", email: "", password: "", confirm: "" });
       setLoading(false);
