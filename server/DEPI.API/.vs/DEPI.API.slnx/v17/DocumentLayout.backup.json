@@ -1,86 +1,86 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.API\\",
+  "WorkspaceRootPath": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project Newest\\Depi-Project\\server\\DEPI.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project newest\\depi-project\\server\\depi.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DCE090A-3C96-44C0-0525-B7060394A3D1}|..\\DEPI.Application\\DEPI.Application.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.application\\dtos\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02ABC32F-0468-5D4B-8914-CE23CD08E398}|..\\DEPI.DataAccess\\DEPI.DataAccess.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.dataaccess\\dataaccessextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.api\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|solutionrelative:controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DCE090A-3C96-44C0-0525-B7060394A3D1}|..\\DEPI.Application\\DEPI.Application.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.application\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DCE090A-3C96-44C0-0525-B7060394A3D1}|..\\DEPI.Application\\DEPI.Application.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.application\\contracts\\igeminiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DCE090A-3C96-44C0-0525-B7060394A3D1}|..\\DEPI.Application\\DEPI.Application.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.application\\services\\geminiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.api\\depi.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project newest\\depi-project\\server\\depi.api\\depi.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|solutionrelative:depi.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02ABC32F-0468-5D4B-8914-CE23CD08E398}|..\\DEPI.DataAccess\\DEPI.DataAccess.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.dataaccess\\contracts\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project newest\\depi-project\\server\\depi.api\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|solutionrelative:controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Migrations\\20251031160340_x.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02ABC32F-0468-5D4B-8914-CE23CD08E398}|..\\DEPI.DataAccess\\DEPI.DataAccess.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.dataaccess\\entites\\interviewsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project newest\\depi-project\\server\\depi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DCE090A-3C96-44C0-0525-B7060394A3D1}|..\\DEPI.Application\\DEPI.Application.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.application\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DCE090A-3C96-44C0-0525-B7060394A3D1}|..\\DEPI.Application\\DEPI.Application.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.application\\dtos\\quizdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02ABC32F-0468-5D4B-8914-CE23CD08E398}|..\\DEPI.DataAccess\\DEPI.DataAccess.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.dataaccess\\entites\\resume.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02ABC32F-0468-5D4B-8914-CE23CD08E398}|..\\DEPI.DataAccess\\DEPI.DataAccess.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.dataaccess\\migrations\\20251031154820_makeresumeoptional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DCE090A-3C96-44C0-0525-B7060394A3D1}|..\\DEPI.Application\\DEPI.Application.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.application\\applicationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project newest\\depi-project\\server\\depi.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C741B586-726E-F70C-8EC9-10E82EFB860C}|DEPI.API.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DCE090A-3C96-44C0-0525-B7060394A3D1}|..\\DEPI.Application\\DEPI.Application.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.application\\services\\interviewsessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\JwtService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02ABC32F-0468-5D4B-8914-CE23CD08E398}|..\\DEPI.DataAccess\\DEPI.DataAccess.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.dataaccess\\contracts\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\DataAccessExtensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DCE090A-3C96-44C0-0525-B7060394A3D1}|..\\DEPI.Application\\DEPI.Application.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\QuizDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02ABC32F-0468-5D4B-8914-CE23CD08E398}|..\\DEPI.DataAccess\\DEPI.DataAccess.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.dataaccess\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\userLoginDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02ABC32F-0468-5D4B-8914-CE23CD08E398}|..\\DEPI.DataAccess\\DEPI.DataAccess.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.dataaccess\\entites\\resumeanalysis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\GeminiService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02ABC32F-0468-5D4B-8914-CE23CD08E398}|..\\DEPI.DataAccess\\DEPI.DataAccess.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.dataaccess\\datacontext\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Contracts\\IGeminiService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DCE090A-3C96-44C0-0525-B7060394A3D1}|..\\DEPI.Application\\DEPI.Application.csproj|c:\\users\\mshms\\onedrive\\desktop\\depi project\\depi-project\\server\\depi.application\\contracts\\iuserservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\userRegisterDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Contracts\\IUnitOfWork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Entites\\InterviewSession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\InterviewSessionService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Entites\\Resume.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Migrations\\20251031154820_MakeResumeOptional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\ApplicationExtensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\userService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Entites\\ResumeAnalysis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Repositories\\Repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Contracts\\IRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\DataContext\\AppDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Contracts\\IUserServices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,15 +90,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "DEPI.API.csproj",
-              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.API\\DEPI.API.csproj",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project Newest\\Depi-Project\\server\\DEPI.API\\DEPI.API.csproj",
               "RelativeDocumentMoniker": "DEPI.API.csproj",
-              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.API\\DEPI.API.csproj",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project Newest\\Depi-Project\\server\\DEPI.API\\DEPI.API.csproj",
               "RelativeToolTip": "DEPI.API.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -108,317 +108,294 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.API\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project Newest\\Depi-Project\\server\\DEPI.API\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.API\\Program.cs",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project Newest\\Depi-Project\\server\\DEPI.API\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAAwCMAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-31T13:37:28.11Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "QuizController.cs",
-              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.API\\Controllers\\QuizController.cs",
-              "RelativeDocumentMoniker": "Controllers\\QuizController.cs",
-              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.API\\Controllers\\QuizController.cs",
-              "RelativeToolTip": "Controllers\\QuizController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T13:41:13.029Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "JwtService.cs",
-              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\JwtService.cs",
-              "RelativeDocumentMoniker": "..\\DEPI.Application\\Services\\JwtService.cs",
-              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\JwtService.cs",
-              "RelativeToolTip": "..\\DEPI.Application\\Services\\JwtService.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T15:21:40.9Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DataAccessExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\DataAccessExtensions.cs",
-              "RelativeDocumentMoniker": "..\\DEPI.DataAccess\\DataAccessExtensions.cs",
-              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\DataAccessExtensions.cs",
-              "RelativeToolTip": "..\\DEPI.DataAccess\\DataAccessExtensions.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "QuizController.cs",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project Newest\\Depi-Project\\server\\DEPI.API\\Controllers\\QuizController.cs",
+              "RelativeDocumentMoniker": "Controllers\\QuizController.cs",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project Newest\\Depi-Project\\server\\DEPI.API\\Controllers\\QuizController.cs",
+              "RelativeToolTip": "Controllers\\QuizController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T15:20:53.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.API\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.API\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T15:20:10.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "QuizDto.cs",
-              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\QuizDto.cs",
-              "RelativeDocumentMoniker": "..\\DEPI.Application\\DTOs\\QuizDto.cs",
-              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\QuizDto.cs",
-              "RelativeToolTip": "..\\DEPI.Application\\DTOs\\QuizDto.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T13:28:48.33Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "userLoginDTO.cs",
-              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\userLoginDTO.cs",
-              "RelativeDocumentMoniker": "..\\DEPI.Application\\DTOs\\userLoginDTO.cs",
-              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\userLoginDTO.cs",
-              "RelativeToolTip": "..\\DEPI.Application\\DTOs\\userLoginDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T12:55:03.595Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GeminiService.cs",
-              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\GeminiService.cs",
-              "RelativeDocumentMoniker": "..\\DEPI.Application\\Services\\GeminiService.cs",
-              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\GeminiService.cs",
-              "RelativeToolTip": "..\\DEPI.Application\\Services\\GeminiService.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAuwB0AAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T13:29:36.683Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IGeminiService.cs",
-              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Contracts\\IGeminiService.cs",
-              "RelativeDocumentMoniker": "..\\DEPI.Application\\Contracts\\IGeminiService.cs",
-              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Contracts\\IGeminiService.cs",
-              "RelativeToolTip": "..\\DEPI.Application\\Contracts\\IGeminiService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T15:02:15.059Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "20251031160340_x.cs",
-              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Migrations\\20251031160340_x.cs",
-              "RelativeDocumentMoniker": "..\\DEPI.DataAccess\\Migrations\\20251031160340_x.cs",
-              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Migrations\\20251031160340_x.cs",
-              "RelativeToolTip": "..\\DEPI.DataAccess\\Migrations\\20251031160340_x.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T16:03:40.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T13:41:13.029Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.API\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.API\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project Newest\\Depi-Project\\server\\DEPI.API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project Newest\\Depi-Project\\server\\DEPI.API\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-31T12:55:18.64Z",
+              "WhenOpened": "2025-10-31T17:24:49.062Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "userRegisterDTO.cs",
-              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\userRegisterDTO.cs",
-              "RelativeDocumentMoniker": "..\\DEPI.Application\\DTOs\\userRegisterDTO.cs",
-              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\userRegisterDTO.cs",
-              "RelativeToolTip": "..\\DEPI.Application\\DTOs\\userRegisterDTO.cs",
+              "DocumentIndex": 7,
+              "Title": "DataAccessExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\DataAccessExtensions.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\DataAccessExtensions.cs",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\DataAccessExtensions.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\DataAccessExtensions.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T15:20:53.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project Newest\\Depi-Project\\server\\DEPI.API\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project Newest\\Depi-Project\\server\\DEPI.API\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T15:24:06.726Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T15:20:10.89Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Contracts\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "..\\DEPI.DataAccess\\Contracts\\IUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Contracts\\IUnitOfWork.cs",
-              "RelativeToolTip": "..\\DEPI.DataAccess\\Contracts\\IUnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAsAAAAAAAAAA==",
+              "Title": "QuizDto.cs",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\QuizDto.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\QuizDto.cs",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\QuizDto.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\QuizDto.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T15:25:44.897Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T13:28:48.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "userLoginDTO.cs",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\userLoginDTO.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\userLoginDTO.cs",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\userLoginDTO.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\userLoginDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T12:55:03.595Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "InterviewSession.cs",
-              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Entites\\InterviewSession.cs",
-              "RelativeDocumentMoniker": "..\\DEPI.DataAccess\\Entites\\InterviewSession.cs",
-              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Entites\\InterviewSession.cs",
-              "RelativeToolTip": "..\\DEPI.DataAccess\\Entites\\InterviewSession.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
+              "Title": "GeminiService.cs",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\GeminiService.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\GeminiService.cs",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\GeminiService.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\GeminiService.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAuwB0AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T15:44:00.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T13:29:36.683Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "InterviewSessionService.cs",
-              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\InterviewSessionService.cs",
-              "RelativeDocumentMoniker": "..\\DEPI.Application\\Services\\InterviewSessionService.cs",
-              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\InterviewSessionService.cs",
-              "RelativeToolTip": "..\\DEPI.Application\\Services\\InterviewSessionService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAA0wCsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "IGeminiService.cs",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Contracts\\IGeminiService.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Contracts\\IGeminiService.cs",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Contracts\\IGeminiService.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Contracts\\IGeminiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T15:26:46.302Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T15:02:15.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20251031160340_x.cs",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Migrations\\20251031160340_x.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Migrations\\20251031160340_x.cs",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Migrations\\20251031160340_x.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Migrations\\20251031160340_x.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T16:03:40.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\JwtService.cs",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\JwtService.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\JwtService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T15:21:40.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "userRegisterDTO.cs",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\userRegisterDTO.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\userRegisterDTO.cs",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\userRegisterDTO.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.Application\\DTOs\\userRegisterDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T15:24:06.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Contracts\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Contracts\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Contracts\\IUnitOfWork.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Contracts\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T15:25:44.897Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "Resume.cs",
-              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Entites\\Resume.cs",
-              "RelativeDocumentMoniker": "..\\DEPI.DataAccess\\Entites\\Resume.cs",
-              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Entites\\Resume.cs",
-              "RelativeToolTip": "..\\DEPI.DataAccess\\Entites\\Resume.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "InterviewSession.cs",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Entites\\InterviewSession.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Entites\\InterviewSession.cs",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Entites\\InterviewSession.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Entites\\InterviewSession.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T15:43:50.086Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T15:44:00.54Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "20251031154820_MakeResumeOptional.cs",
-              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Migrations\\20251031154820_MakeResumeOptional.cs",
-              "RelativeDocumentMoniker": "..\\DEPI.DataAccess\\Migrations\\20251031154820_MakeResumeOptional.cs",
-              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Migrations\\20251031154820_MakeResumeOptional.cs",
-              "RelativeToolTip": "..\\DEPI.DataAccess\\Migrations\\20251031154820_MakeResumeOptional.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Title": "InterviewSessionService.cs",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\InterviewSessionService.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\InterviewSessionService.cs",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\InterviewSessionService.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\InterviewSessionService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA0wCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T15:48:21.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T15:26:46.302Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
+              "Title": "Resume.cs",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Entites\\Resume.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Entites\\Resume.cs",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Entites\\Resume.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Entites\\Resume.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T15:43:50.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "20251031154820_MakeResumeOptional.cs",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Migrations\\20251031154820_MakeResumeOptional.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Migrations\\20251031154820_MakeResumeOptional.cs",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Migrations\\20251031154820_MakeResumeOptional.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Migrations\\20251031154820_MakeResumeOptional.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T15:48:21.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "ApplicationExtensions.cs",
               "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\ApplicationExtensions.cs",
-              "RelativeDocumentMoniker": "..\\DEPI.Application\\ApplicationExtensions.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.Application\\ApplicationExtensions.cs",
               "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\ApplicationExtensions.cs",
-              "RelativeToolTip": "..\\DEPI.Application\\ApplicationExtensions.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.Application\\ApplicationExtensions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIA7wBEAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T13:31:44.434Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T13:31:44.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "userService.cs",
+              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\userService.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\userService.cs",
+              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\userService.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\userService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T14:41:31.68Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "userService.cs",
-              "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\userService.cs",
-              "RelativeDocumentMoniker": "..\\DEPI.Application\\Services\\userService.cs",
-              "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Services\\userService.cs",
-              "RelativeToolTip": "..\\DEPI.Application\\Services\\userService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T14:41:31.68Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
               "Title": "ResumeAnalysis.cs",
               "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Entites\\ResumeAnalysis.cs",
-              "RelativeDocumentMoniker": "..\\DEPI.DataAccess\\Entites\\ResumeAnalysis.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Entites\\ResumeAnalysis.cs",
               "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Entites\\ResumeAnalysis.cs",
-              "RelativeToolTip": "..\\DEPI.DataAccess\\Entites\\ResumeAnalysis.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Entites\\ResumeAnalysis.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T15:20:49.992Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T15:20:49.992Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
               "Title": "Repository.cs",
               "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Repositories\\Repository.cs",
-              "RelativeDocumentMoniker": "..\\DEPI.DataAccess\\Repositories\\Repository.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Repositories\\Repository.cs",
               "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Repositories\\Repository.cs",
-              "RelativeToolTip": "..\\DEPI.DataAccess\\Repositories\\Repository.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Repositories\\Repository.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T14:58:50.047Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T14:58:50.047Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "IRepository.cs",
               "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Contracts\\IRepository.cs",
-              "RelativeDocumentMoniker": "..\\DEPI.DataAccess\\Contracts\\IRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Contracts\\IRepository.cs",
               "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Contracts\\IRepository.cs",
-              "RelativeToolTip": "..\\DEPI.DataAccess\\Contracts\\IRepository.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\Contracts\\IRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T15:07:32.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T15:07:32.077Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\DataContext\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "..\\DEPI.DataAccess\\DataContext\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\DataContext\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\DataContext\\AppDbContext.cs",
-              "RelativeToolTip": "..\\DEPI.DataAccess\\DataContext\\AppDbContext.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.DataAccess\\DataContext\\AppDbContext.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAqwBEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T14:57:07.432Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T14:57:07.432Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
               "Title": "IUserServices.cs",
               "DocumentMoniker": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Contracts\\IUserServices.cs",
-              "RelativeDocumentMoniker": "..\\DEPI.Application\\Contracts\\IUserServices.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Contracts\\IUserServices.cs",
               "ToolTip": "C:\\Users\\mshms\\OneDrive\\Desktop\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Contracts\\IUserServices.cs",
-              "RelativeToolTip": "..\\DEPI.Application\\Contracts\\IUserServices.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Depi Project\\Depi-Project\\server\\DEPI.Application\\Contracts\\IUserServices.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T12:54:56.894Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T12:54:56.894Z"
             }
           ]
         }
