@@ -63,7 +63,11 @@ export default function Profile() {
         setResumeLoading(true);
         setResumeError('');
 
-        fetch(url, { signal: controller.signal })
+        fetch(url,
+             { signal: controller.signal , headers: {
+                        "Authorization": `Bearer ${token}`
+                    } }
+            )
             .then((res) => {
                 if (!res.ok) {
                     throw new Error(`Resume analysis request failed (${res.status})`);
@@ -98,7 +102,9 @@ export default function Profile() {
         setInterviewLoading(true);
         setInterviewError('');
 
-        fetch(url, { signal: controller.signal })
+        fetch(url, { signal: controller.signal , headers: {
+                        "Authorization": `Bearer ${token}`
+                    }})
             .then((res) => {
                 if (!res.ok) {
                     throw new Error(`Interview summary request failed (${res.status})`);
