@@ -1,11 +1,13 @@
 ﻿using DEPI.Application.Contracts;
 using DEPI.Application.DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.IO;
 
 namespace DEPI.API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class InterviewController : ControllerBase

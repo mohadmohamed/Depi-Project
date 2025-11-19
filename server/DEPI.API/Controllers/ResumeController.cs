@@ -1,5 +1,6 @@
 ﻿using DEPI.Application.Contracts;
 using DEPI.DataAccess.Entites;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 namespace DEPI.API.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class ResumeController : ControllerBase
     {
