@@ -1,5 +1,6 @@
 ﻿using DEPI.Application.Contracts;
 using DEPI.DataAccess.Entites;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
@@ -16,7 +17,7 @@ namespace DEPI.API.Controllers
         {
             _resumeService = resumeService;
         }
-
+        [Authorize]
         [HttpPost("upload")]
         [Consumes("multipart/form-data")]
         public async Task<IActionResult> UploadResume([FromForm] int userId, [FromForm] IFormFile file)

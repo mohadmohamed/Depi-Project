@@ -1,5 +1,6 @@
 ﻿using DEPI.Application.Contracts;
 using DEPI.Application.DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.IO;
@@ -19,7 +20,9 @@ namespace DEPI.API.Controllers
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
+        
         [HttpPost("generate")]
+        [Authorize]
         public async Task<IActionResult> GenerateInterview([FromForm] GenerateQuizDTO generateQuiz)
         {
             try
