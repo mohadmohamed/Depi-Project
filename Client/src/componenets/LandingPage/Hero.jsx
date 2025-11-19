@@ -225,7 +225,7 @@ export default function Hero() {
                         </div>
                     )}
                     <div className="hero-ctas">
-                        {!token && <button className="cta primary">Start for free</button>}
+                        {!token && <button className="cta primary"    onClick={() => navigate("/signup")}>Start for free</button>}
                         {!!token && (
                             <button 
                                 className="cta primary" 
@@ -242,7 +242,10 @@ export default function Hero() {
                                 )}
                             </button>
                         )}
-                        {!token && <button className="cta ghost"> Learn More</button>}
+                        {/* {!token && <button className="cta ghost"   onClick={() => {
+    document.querySelector(".howitworks")?.scrollIntoView({
+      behavior: "smooth"
+    });}}> Learn More</button>} */}
                         {!!token && (
                             <button 
                                 className="cta ghost" 
