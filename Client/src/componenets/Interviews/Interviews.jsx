@@ -53,7 +53,13 @@ export default function Interviews() {
 
         const fetchSessions = async () => {
             try {
-                const response = await fetch(`http://localhost:5197/api/Interview/all?userid=${decryptedToken.sub}`);
+                const response = await fetch(`http://localhost:5197/api/Interview/all?userid=${decryptedToken.sub}` , 
+                    {
+                        headers : {
+                            "Authorization": `Bearer ${token}`
+                        }
+                    }
+                );
                 if (response.ok) {
                     const data = await response.json();
                     // If it's a single session, wrap it in an array

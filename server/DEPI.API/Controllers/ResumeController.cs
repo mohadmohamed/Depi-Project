@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 namespace DEPI.API.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class ResumeController : ControllerBase
     {

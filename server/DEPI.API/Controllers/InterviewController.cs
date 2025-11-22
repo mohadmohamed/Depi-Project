@@ -7,6 +7,7 @@ using System.IO;
 
 namespace DEPI.API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class InterviewController : ControllerBase
