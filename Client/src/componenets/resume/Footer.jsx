@@ -105,9 +105,9 @@ export default function Footer() {
                 <div className="footer-col right">
                     <h3>CONTACT US</h3>
                     <div className="footer-contact">
-                        <span style={{cursor: "default"}}>+966 000 000 000</span>
+                        <span style={{cursor: "default"}}>+20 000 000 0000</span>
                         <span style={{cursor: "copy"}}>info@depi.com</span>
-                        <span style={{cursor: "default"}}>Riyadh, Saudi Arabia</span>
+                        <span style={{cursor: "default"}}>Cairo, Egypt</span>
                     </div>
                 </div>
             </div>

@@ -188,7 +188,7 @@ export default function Hero() {
                     <h1 className="hero-title">ResumeAnalysis & Mock Interview
                         <span className="hero-subtitle-block">with AI</span>
                     </h1>
-                    <p className="hero-lead">Resume scan and find recruiter.</p>
+                    <p className="hero-lead">Analyze your resume and get a personalized mock interview for Free</p>
                     {!!token && (
                         <div className="hero-email-signup">
                             <input 

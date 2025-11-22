@@ -15,12 +15,12 @@ export default function Header({isLoggedIn})
         <header className={menuOpen ? 'menu-open' : ''}>
             <ul>
                 <li><Link to="/" className="logo">Depi</Link></li>
-                <div className="links">
+             {isLoggedIn &&   <div className="links">
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/upload">Upload Resume</Link></li>
-                    <li><Link to = "/resume">Latest analysis</Link></li>
+                 <li><Link to="/upload">Upload Resume</Link></li>
+                  <li><Link to = "/resume">Latest analysis</Link></li>
                     <li><Link to = "/interviews">Latest Interviews</Link></li>
-                </div>
+                </div>}
                 {!isLoggedIn && <div className="buttons">
                     <Link className="login" to="/login">Login</Link>
                     <Link className="signup" to="/signup">Sign Up</Link>
