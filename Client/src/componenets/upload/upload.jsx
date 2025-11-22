@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FiUpload, FiFile, FiCheck, FiX, FiUser, FiMail, FiBriefcase } from 'react-icons/fi';
 import './upload.css';
+import { Link } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode';
 import { Navigate } from 'react-router-dom';
 import Header from '../resume/Header';
@@ -182,17 +183,20 @@ export default function Upload() {
               <div className="next-steps">
                 <h3>What's Next?</h3>
                 <div className="steps-grid">
-                  <div className="step-card">
-                    <FiUser />
+                  <div className="step-card"><Link to="/">
+                    <FiUser /><br />
                     <span>AI Analysis</span>
+                  </Link>
                   </div>
-                  <div className="step-card">
-                    <FiBriefcase />
+                  <div className="step-card"><Link to="/">
+                    <FiBriefcase /><br />
                     <span>Mock Interview</span>
+                  </Link>
                   </div>
-                  <div className="step-card">
-                    <FiMail />
+                  <div className="step-card"><Link to="/">
+                    <FiMail /><br />
                     <span>Get Feedback</span>
+                  </Link>
                   </div>
                 </div>
               </div>

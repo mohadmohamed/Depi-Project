@@ -28,11 +28,11 @@ export default function Header({isLoggedIn})
                 {!!isLoggedIn && <div className="buttons">
                     <Link to="/profile"><CgProfile size={24} /></Link>
                 </div>}
-                <button className="mobile-menu-btn" onClick={toggleMenu}>
+                {isLoggedIn && <button className="mobile-menu-btn" onClick={toggleMenu}>
                     <span></span>
                     <span></span>
                     <span></span>
-                </button>
+                </button>}
             </ul>
         </header>
     )

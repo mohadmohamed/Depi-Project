@@ -23,7 +23,7 @@ namespace DEPI.API.Controllers
 
         
         [HttpPost("generate")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> GenerateInterview([FromForm] GenerateQuizDTO generateQuiz)
         {
             try

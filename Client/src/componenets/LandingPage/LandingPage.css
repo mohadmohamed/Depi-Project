@@ -130,20 +130,21 @@
     align-items: center;
     gap: 12px;
     max-width: 600px;
-    margin: 32px auto;
+    margin: 24px auto;
     padding: 8px;
-    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgba(109, 40, 217, 0.12), rgba(107, 132, 245, 0.15));
     border-radius: 999px;
-    border: 2px solid rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(109, 40, 217, 0.25);
     backdrop-filter: blur(20px);
     transition: all 0.3s ease;
-    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.1);
+    box-shadow: 0 8px 32px rgba(109, 40, 217, 0.2);
 }
 
 .hero-email-signup:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.15);
-    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 12px 40px rgba(109, 40, 217, 0.3);
+    border-color: rgba(109, 40, 217, 0.4);
+    background: linear-gradient(135deg, rgba(109, 40, 217, 0.18), rgba(102, 126, 234, 0.22));
 }
 
 .hero-email-input {
@@ -216,6 +217,7 @@
 
 .hero-resume-select {
   flex: 1.5;
+    box-shadow: 0 0 0 2px rgba(109, 40, 217, 0.1);
   border: none;
   background: rgba(255, 255, 255, 0.9);
   padding: 16px 20px;
@@ -248,6 +250,7 @@
   color: #2d3b5a;
   padding: 12px;
   border: none;
+  
   font-weight: 500;
 }
 
@@ -452,7 +455,7 @@
 
 .hero-left {
     flex: 1;
-    max-width: 500px;
+    max-width: 660px;
     display: flex;
     flex-direction: column;
     gap: 28px;
@@ -659,12 +662,11 @@
 }
 
 .howitworks {
-    padding: 72px 24px 96px;
+    padding: 72px 24px;
     opacity: 1;
     transform: translateY(0);
     transition: opacity 0.6s ease, transform 0.6s ease;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    background: #ffffff;
 }
 
 .howitworks.is-visible {
@@ -681,11 +683,29 @@
     gap: 36px;
 }
 
+.how-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: rgba(109, 40, 217, 0.1);
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 16px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .how-heading {
     font-size: 2rem;
     color: var(--text-primary);
     cursor: text;
-
+    margin: 0 0 12px 0;
 }
 
 .how-subheading {
@@ -693,6 +713,7 @@
     font-size: 1rem;
     max-width: 540px;
     margin: 0 auto;
+    line-height: 1.6;
 }
 
 .how-grid {
@@ -706,7 +727,7 @@
     border-radius: 20px;
     padding: 28px 24px;
     box-shadow: 0 18px 38px rgba(79, 70, 229, 0.08);
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -714,7 +735,14 @@
     overflow: hidden;
     transform: translateY(0);
     opacity: 1;
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(109, 40, 217, 0.12);
+}
+
+.how-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(109, 40, 217, 0.15);
+    border-color: rgba(109, 40, 217, 0.2);
 }
 
 .howitworks.is-visible .how-card {
@@ -730,13 +758,18 @@
     transition-delay: 0.24s;
 }
 
-.how-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 20px;
-    border: 1px solid rgba(109, 40, 217, 0.12);
-    pointer-events: none;
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0 auto 8px auto;
 }
 
 .how-card-icon {
@@ -748,23 +781,24 @@
     place-items: center;
     color: var(--primary);
     font-size: 1.8rem;
-        cursor: text;
-
+    cursor: text;
+    margin: 0 auto;
 }
 
 .how-card h4 {
     margin: 0;
     font-size: 1.25rem;
     color: var(--text-primary);
-        cursor: text;
-
+    cursor: text;
+    font-weight: 600;
 }
 
 .how-card p {
     margin: 0;
     color: var(--text-secondary);
     line-height: 1.6;
-        cursor: text;
+    cursor: text;
+    font-size: 0.95rem;
 }
 
 .lp-loading {
@@ -825,6 +859,18 @@
 @media (max-width: 900px) {
     .how-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    
+    .howitworks {
+        padding: 60px 20px;
+    }
+    
+    .how-heading {
+        font-size: 1.75rem;
+    }
+    
+    .how-subheading {
+        font-size: 0.95rem;
     }
 }
 
@@ -903,5 +949,181 @@
         padding-right: 40px;
         background-size: 16px;
         background-position: right 16px center;
+    }
+    
+    /* How It Works - Mobile */
+    .howitworks {
+        padding: 48px 16px;
+    }
+    
+    .how-heading {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+    
+    .how-subheading {
+        font-size: 0.9rem;
+    }
+    
+    .how-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .how-card {
+        padding: 24px 20px;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .how-card-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .how-card h4 {
+        font-size: 1.1rem;
+    }
+    
+    .how-card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Features Section */
+.features-section {
+    padding: 72px 24px 96px;
+    background: #ffffff;
+}
+
+.features-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.features-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+    margin-top: 24px;
+    margin-bottom: 100px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    padding: 32px 28px;
+    text-align: left;
+    border: 1px solid rgba(109, 40, 217, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(79, 70, 229, 0.06);
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(109, 40, 217, 0.12);
+    border-color: rgba(109, 40, 217, 0.2);
+}
+
+.feature-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.15), rgba(109, 40, 217, 0.15));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    margin-bottom: 16px;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.25), rgba(109, 40, 217, 0.25));
+}
+
+.feature-card h4 {
+    margin: 0 0 12px 0;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.feature-card p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Responsive adjustments for features */
+@media (max-width: 900px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .features-section {
+        padding: 60px 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .features-section {
+        padding: 48px 16px;
+    }
+    
+    .features-grid {
+        gap: 20px;
+    }
+    
+    .feature-card {
+        padding: 24px 20px;
+    }
+    
+    .feature-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .feature-card h4 {
+        font-size: 1.1rem;
+    }
+    
+    .feature-card p {
+        font-size: 0.9rem;
     }
 }

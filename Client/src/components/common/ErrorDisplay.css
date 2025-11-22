@@ -116,7 +116,7 @@
 }
 
 .retry-button {
-  background: linear-gradient(to right, #e65cfa, #6ad6fc);
+  background:#6C3ADD;
   color: white;
 }
 
@@ -161,7 +161,7 @@
 
 .inline-retry-button {
   padding: 0.25rem 0.75rem;
-  background: linear-gradient(to right, #e65cfa, #6ad6fc);
+  background: #6C3ADD;
   color: white;
   border: none;
   border-radius: 6px;

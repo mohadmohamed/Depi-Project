@@ -53,7 +53,7 @@ export default function Login() {
       setLoading(false);
     });
   }
-  sessionStorage.setItem("authToken", token);
+  // sessionStorage.setItem("authToken", token);
   return (
     <>
       <Header isLoggedIn={false} />

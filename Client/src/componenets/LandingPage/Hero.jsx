@@ -185,8 +185,8 @@ export default function Hero() {
         <section className="hero">
             <div className="hero-inner justify-center">
                 <div className="hero-left justify-center ">
-                    <h1 className="hero-title">ResumeAnalysis & Mock Interview
-                        <span className="hero-subtitle-block">with AI</span>
+                    <h1 className="hero-title">Resume Analysis  & <br /> Mock Interview
+                     <span className="hero-subtitle-block">with AI</span>
                     </h1>
                     <p className="hero-lead">Analyze your resume and get a personalized mock interview for Free</p>
                     {!!token && (
@@ -225,7 +225,10 @@ export default function Hero() {
                         </div>
                     )}
                     <div className="hero-ctas">
+                        
                         {!token && <button className="cta primary"    onClick={() => navigate("/signup")}>Start for free</button>}
+                         {!token && <button className="cta ghost"    onClick={() => navigate("/login")}>Login to your account</button>}
+
                         {!!token && (
                             <button 
                                 className="cta primary" 
