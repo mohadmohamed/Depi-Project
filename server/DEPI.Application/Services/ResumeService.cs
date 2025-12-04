@@ -1,4 +1,5 @@
 ﻿using DEPI.Application.Contracts;
+using DEPI.Application.DTOs;
 using DEPI.Application.Services;
 using DEPI.DataAccess.Contracts;
 using DEPI.DataAccess.Entites;
@@ -19,74 +20,119 @@ public class ResumeService : IResumeService
         _logger = logger;
     }
 
-    public async Task<int> UploadResumeAsync(int userId, IFormFile file)
+    public async Task<int> UploadResumeAsync(UploadResumeDTO upload)
     {
-        var user = await _unitOfWork.Users.GetByIdAsync(userId);
-        if (user == null)
+        try
         {
-            throw new KeyNotFoundException($"User with ID {userId} not found.");
+            // Validation 1: Check if DTO is null
+            if (upload == null)
+            {
+                throw new ArgumentNullException(nameof(upload), "Upload request cannot be null.");
+            }
+
+            // Validation 2: Check if userId is valid
+            if (upload.userId <= 0)
+            {
+                throw new ArgumentException("User ID must be greater than zero.", nameof(upload.userId));
+            }
+
+            // Validation 3: Check if file is provided
+            if (upload.file == null || upload.file.Length == 0)
+            {
+                throw new ArgumentException("Invalid or empty file.", nameof(upload.file));
+            }
+
+            // Validation 4: Check if user exists
+            var user = await _unitOfWork.Users.GetByIdAsync(upload.userId);
+            if (user == null)
+            {
+                throw new KeyNotFoundException($"User with ID {upload.userId} not found.");
+            }
+
+            // Validation 5: Check file size (10MB limit)
+            const long maxFileSize = 10 * 1024 * 1024; // 10MB
+            if (upload.file.Length > maxFileSize)
+            {
+                throw new ArgumentException($"File size ({upload.file.Length:N0} bytes) exceeds the maximum allowed size of {maxFileSize:N0} bytes.");
+            }
+
+            // Validation 6: Check file extension
+            var allowedExtensions = new[] { ".pdf", ".doc", ".docx", ".txt" };
+            var fileExtension = Path.GetExtension(upload.file.FileName)?.ToLowerInvariant();
+            
+            if (string.IsNullOrEmpty(fileExtension) || !allowedExtensions.Contains(fileExtension))
+            {
+                throw new ArgumentException($"File type '{fileExtension}' is not supported. Allowed types: {string.Join(", ", allowedExtensions)}");
+            }
+
+            _logger.LogInformation("Starting file upload for user {UserId}, file: {FileName}", upload.userId, upload.file.FileName);
+
+            using var memoryStream = new MemoryStream();
+            await upload.file.CopyToAsync(memoryStream);
+            memoryStream.Position = 0;
+
+            string parsedText = ExtractTextFromPdf(memoryStream);
+
+            if (string.IsNullOrWhiteSpace(parsedText))
+                throw new InvalidDataException("No readable text found in the uploaded PDF.");
+
+            var resume = new Resume
+            {
+                UserId = upload.userId,
+                FilePath = upload.file.FileName, // Store original filename
+                ParsedText = parsedText,
+                UploadedAt = DateTime.UtcNow
+            };
+
+            // Check for duplicate content
+            var existingResume = await _unitOfWork.Resumes.FindAsync(r => r.UserId == upload.userId && r.ParsedText == parsedText);
+            
+            if (existingResume != null)
+            {
+                throw new InvalidOperationException($"This resume already exists for user with ID {upload.userId}. Please upload a different CV.");
+            }
+
+            await _unitOfWork.Resumes.AddAsync(resume);
+            await _unitOfWork.SaveChangesAsync();
+
+            _logger.LogInformation("Resume uploaded and parsed for UserId {UserId}, ResumeId {ResumeId}", upload.userId, resume.Id);
+
+            return resume.Id;
         }
-        if (file == null || file.Length == 0)
-            throw new ArgumentException("Invalid or empty file.");
-
-        using var memoryStream = new MemoryStream();
-        await file.CopyToAsync(memoryStream);
-        memoryStream.Position = 0;
-
-        string parsedText = ExtractTextFromPdf(memoryStream);
-
-        if (string.IsNullOrWhiteSpace(parsedText))
-            throw new InvalidDataException("No readable text found in the uploaded PDF.");
-        var resume = new Resume
+        catch (Exception ex) when (!(ex is ArgumentNullException || ex is ArgumentException || ex is KeyNotFoundException || ex is InvalidDataException || ex is InvalidOperationException))
         {
-            UserId = userId,
-            FilePath = "",
-            ParsedText = parsedText,
-            UploadedAt = DateTime.UtcNow
-        };
-
-        var existingResume = await _unitOfWork.Resumes.FindAsync(r => r.UserId == userId && r.ParsedText == parsedText);
-        
-        if (existingResume != null)
-        {
-            throw new InvalidOperationException($"this resume already exists for user with ID {userId}. change CV ");
+            _logger.LogError(ex, "Unexpected error during resume upload for UserId {UserId}", upload?.userId ?? 0);
+            throw new InvalidOperationException($"An unexpected error occurred during resume upload: {ex.Message}", ex);
         }
-
-        await _unitOfWork.Resumes.AddAsync(resume);
-        await _unitOfWork.SaveChangesAsync();
-
-        _logger.LogInformation("Resume uploaded and parsed for UserId {UserId}, ResumeId {ResumeId}", userId, resume.Id);
-
-        return resume.Id;
     }
 
-    public async Task AnalyzeResumeAsync(int resumeId, string targetJob)
+    public async Task AnalyzeResumeAsync(AnalyzeResumeRequestDTO analyzeResume)
     {
         // Validation 1: Check if resumeId is valid
-        if (resumeId <= 0)
-            throw new ArgumentException("Resume ID must be greater than zero.", nameof(resumeId));
+        if (analyzeResume.ResumeId <= 0)
+            throw new ArgumentException("Resume ID must be greater than zero.", nameof(analyzeResume.ResumeId));
 
         // Validation 2: Check if targetJob is provided and not empty
-        if (string.IsNullOrWhiteSpace(targetJob))
-            throw new ArgumentException("Target job cannot be null or empty.", nameof(targetJob));
+        if (string.IsNullOrWhiteSpace(analyzeResume.TargetJob))
+            throw new ArgumentException("Target job cannot be null or empty.", nameof(analyzeResume.ResumeId));
 
         // Validation 3: Check if resume exists
-        var resume = await _unitOfWork.Resumes.GetByIdAsync(resumeId);
+        var resume = await _unitOfWork.Resumes.GetByIdAsync(analyzeResume.ResumeId);
         if (resume == null)
-            throw new KeyNotFoundException($"Resume with ID {resumeId} not found.");
+            throw new KeyNotFoundException($"Resume with ID {analyzeResume.ResumeId} not found.");
 
         // Validation 4: Check if the associated user exists
         var user = await _unitOfWork.Users.GetByIdAsync(resume.UserId);
         if (user == null)
         {
-            _logger.LogWarning("Resume {ResumeId} belongs to non-existent user {UserId}", resumeId, resume.UserId);
-            throw new KeyNotFoundException($"User associated with resume ID {resumeId} not found.");
+            _logger.LogWarning("Resume {ResumeId} belongs to non-existent user {UserId}", analyzeResume.ResumeId, resume.UserId);
+            throw new KeyNotFoundException($"User associated with resume ID {analyzeResume.ResumeId} not found.");
         }
 
         // Validation 5: Check if resume has content to analyze
         if (string.IsNullOrWhiteSpace(resume.ParsedText))
         {
-            throw new InvalidDataException($"Resume with ID {resumeId} has no content to analyze.");
+            throw new InvalidDataException($"Resume with ID {analyzeResume.ResumeId} has no content to analyze.");
         }
 
         // Validation 6: Enhanced check - see if this user has already analyzed this resume for this target job
@@ -109,7 +155,7 @@ public class ResumeService : IResumeService
                         // You could store target job in the JSON or check content
                         // For now, we'll check if it contains the target job in a structured way
                         var jsonString = analysis.FeedbackJson.ToLower();
-                        var targetJobLower = targetJob.ToLower();
+                        var targetJobLower = analyzeResume.TargetJob.ToLower();
                         
                         // More sophisticated matching - check for exact job title matches
                         if (jsonString.Contains($"target job title: **{targetJobLower}**") || 
@@ -117,9 +163,9 @@ public class ResumeService : IResumeService
                             jsonString.Contains(targetJobLower))
                         {
                             _logger.LogInformation("User {UserId} has already analyzed a resume for target job '{TargetJob}'", 
-                                resume.UserId, targetJob);
+                                resume.UserId, analyzeResume.TargetJob);
                             throw new InvalidOperationException(
-                                $"User has already analyzed a resume for the target job '{targetJob}'. " +
+                                $"User has already analyzed a resume for the target job '{analyzeResume.TargetJob}'. " +
                                 $"Previous analysis found for resume ID {userResume.Id}. " +
                                 "Please use the existing analysis or delete it first.");
                         }
@@ -128,7 +174,7 @@ public class ResumeService : IResumeService
                     catch (System.Text.Json.JsonException)
                     {
                         // If JSON parsing fails, fall back to simple string search
-                        if (analysis.FeedbackJson.Contains(targetJob, StringComparison.OrdinalIgnoreCase))
+                        if (analysis.FeedbackJson.Contains(analyzeResume.TargetJob, StringComparison.OrdinalIgnoreCase))
                         {
                             throw new InvalidOperationException(
                                 $"User has already analyzed a resume for a similar target job. " +
@@ -140,7 +186,7 @@ public class ResumeService : IResumeService
         }
 
         _logger.LogInformation("Starting resume analysis for ResumeId {ResumeId}, UserId {UserId}, target job '{TargetJob}'", 
-            resumeId, resume.UserId, targetJob);
+            analyzeResume.ResumeId, resume.UserId, analyzeResume.TargetJob);
 
         try
         {
@@ -161,7 +207,7 @@ Resume content:
                 throw new InvalidOperationException("Gemini returned an empty response for resume analysis.");
 
             string prompt2 = $@"
-You are a CV analysis service. Your task is to analyze the following CV data for the target job title: **{targetJob}**.
+You are a CV analysis service. Your task is to analyze the following CV data for the target job title: **{analyzeResume.TargetJob}**.
 
 CV DATA:
 {analysisResult}
@@ -171,7 +217,7 @@ You MUST respond with **only** a single, valid JSON object. Do not add any text,
 
 The JSON object MUST follow this exact schema and include the target job for future reference:
 {{
-  ""targetJob"": ""{targetJob}"",
+  ""targetJob"": ""{analyzeResume.TargetJob}"",
   ""analyzedForUser"": {resume.UserId},
   ""overallScore"": {{
     ""score"": <number_out_of_100>,
@@ -215,11 +261,11 @@ The JSON object MUST follow this exact schema and include the target job for fut
             await _unitOfWork.SaveChangesAsync();
 
             _logger.LogInformation("Resume analysis completed successfully for ResumeId {ResumeId}, target job '{TargetJob}'", 
-                resumeId, targetJob);
+                analyzeResume.ResumeId, analyzeResume.TargetJob);
         }
         catch (Exception ex) when (!(ex is ArgumentException || ex is KeyNotFoundException || ex is InvalidDataException || ex is InvalidOperationException))
         {
-            _logger.LogError(ex, "Unexpected error during resume analysis for ResumeId {ResumeId}", resumeId);
+            _logger.LogError(ex, "Unexpected error during resume analysis for ResumeId {ResumeId}", analyzeResume.ResumeId);
             throw new InvalidOperationException($"An unexpected error occurred during resume analysis: {ex.Message}", ex);
         }
     }
