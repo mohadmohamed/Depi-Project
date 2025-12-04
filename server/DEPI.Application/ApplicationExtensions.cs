@@ -14,7 +14,7 @@ namespace DEPI.Application
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
             services.AddScoped<IUserService, UserService>();
-            services.AddScoped<JwtService>();
+            services.AddScoped<IJwtService, JwtService>();
             services.AddScoped<IGeminiService, GeminiService>(); 
             services.AddScoped<IResumeService, ResumeService>();
             services.AddScoped<IinterviewService, InterviewService>();

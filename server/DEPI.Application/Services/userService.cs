@@ -13,9 +13,9 @@ namespace DEPI.Application.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly PasswordHasher<User> _passwordHasher = new();
-        private readonly JwtService _jwtService;
+        private readonly IJwtService _jwtService;
 
-        public UserService(IUnitOfWork unitOfWork, JwtService jwtService)
+        public UserService(IUnitOfWork unitOfWork, IJwtService jwtService)
         {
             _unitOfWork = unitOfWork;
             _jwtService = jwtService;

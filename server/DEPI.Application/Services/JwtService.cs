@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using DEPI.Application.Contracts;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.IdentityModel.Tokens.Jwt;
@@ -7,7 +8,7 @@ using System.Text;
 
 namespace DEPI.Application.Services
 {
-    public class JwtService
+    public class JwtService : IJwtService
     {
         private readonly IConfiguration _config;
 

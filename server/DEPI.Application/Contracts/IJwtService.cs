@@ -9,6 +9,6 @@ namespace DEPI.Application.Contracts
 {
     public interface IJwtService
     {
-        public string GenerateToken();
+         string GenerateToken(string userId, string email, string name);
     }
 }
