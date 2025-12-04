@@ -375,7 +375,7 @@ Return ONLY this JSON format (no markdown, no explanations):
                 // Find the interview session
                 var questionsSession = await _unitOfWork.InterviewSessions.FindAsync(q => 
                     q.UserId == interviewQuestionDTO.userId && 
-                    q.ResumeId == interviewQuestionDTO.resumeId);
+                    q.ResumeId == interviewQuestionDTO.resumeId && q.Id == interviewQuestionDTO.sessionId);
 
                 if (questionsSession == null)
                 {
