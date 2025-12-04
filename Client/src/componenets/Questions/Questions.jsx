@@ -45,7 +45,7 @@ export default function Questions() {
 		}
 		return `technical-quiz-${decryptToken.sub}-${effectiveResumeId}-answers`;
 	}, [decryptToken, effectiveResumeId]);
-
+	console.log(decryptToken);
 	useEffect(() => {
 		if (!token) {
 			setError('You must be logged in to access the technical quiz.');
@@ -64,13 +64,13 @@ export default function Questions() {
 			setLoading(false);
 			return;
 		}
-
+	
 		const controller = new AbortController();
 		const fetchQuestions = async () => {
 			setLoading(true);
 			setError('');
 
-			const url = `http://localhost:5197/api/Interview/questions?userId=${decryptToken.sub}&resumeId=${effectiveResumeId}`;
+			const url = `http://localhost:5197/api/Interview/questions?userId=${decryptToken.sub}&resumeId=${effectiveResumeId}&sessionId=${sessionStorage.getItem("sessionId")}`;
 
 			try {
 				const response = await fetch(url, {
