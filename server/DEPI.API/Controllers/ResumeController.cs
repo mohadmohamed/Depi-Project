@@ -1,4 +1,5 @@
 ﻿using DEPI.Application.Contracts;
+using DEPI.Application.DTOs;
 using DEPI.DataAccess.Entites;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -21,12 +22,12 @@ namespace DEPI.API.Controllers
 
         [HttpPost("upload")]
         [Consumes("multipart/form-data")]
-        public async Task<IActionResult> UploadResume([FromForm] int userId, [FromForm] IFormFile file)
+        public async Task<IActionResult> UploadResume([FromForm] UploadResumeDTO upload)
         {
             try
             {
                 // Validation
-                if (userId <= 0)
+                if (upload.userId <= 0)
                 {
                     return BadRequest(new
                     {
@@ -35,7 +36,7 @@ namespace DEPI.API.Controllers
                     });
                 }
 
-                if (file == null || file.Length == 0)
+                if (upload.file == null || upload.file.Length == 0)
                 {
                     return BadRequest(new
                     {
@@ -45,7 +46,7 @@ namespace DEPI.API.Controllers
                 }
 
                 // Check file size (limit to 10MB)
-                if (file.Length > 10 * 1024 * 1024)
+                if (upload.file.Length > 10 * 1024 * 1024)
                 {
                     return BadRequest(new
                     {
@@ -56,7 +57,7 @@ namespace DEPI.API.Controllers
 
                 // Check file extension
                 var allowedExtensions = new[] { ".pdf", ".doc", ".docx", ".txt" };
-                var fileExtension = Path.GetExtension(file.FileName).ToLowerInvariant();
+                var fileExtension = Path.GetExtension(upload.file.FileName).ToLowerInvariant();
                 if (!allowedExtensions.Contains(fileExtension))
                 {
                     return BadRequest(new
@@ -66,12 +67,12 @@ namespace DEPI.API.Controllers
                     });
                 }
 
-                var resumeId = await _resumeService.UploadResumeAsync(userId, file);
+                var resumeId = await _resumeService.UploadResumeAsync(upload);
                 return Ok(new
                 {
                     ResumeId = resumeId,
                     Message = "Resume uploaded successfully",
-                    FileName = file.FileName
+                    FileName = upload.file.FileName
                 });
             }
             catch (ArgumentException ex)
@@ -117,7 +118,7 @@ namespace DEPI.API.Controllers
             }
         }
         [HttpPost("Analyze")]
-        public async Task<IActionResult> AnalyzeResume([FromBody] AnalyzeResumeRequest request)
+        public async Task<IActionResult> AnalyzeResume([FromBody] AnalyzeResumeRequestDTO request)
         {
             try
             {
@@ -158,7 +159,7 @@ namespace DEPI.API.Controllers
                     });
                 }
 
-                await _resumeService.AnalyzeResumeAsync(request.ResumeId, request.TargetJob);
+                await _resumeService.AnalyzeResumeAsync(request);
                 return Ok(new
                 {
                     Message = "Resume analysis completed successfully",
