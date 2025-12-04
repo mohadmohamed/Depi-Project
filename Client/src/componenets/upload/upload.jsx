@@ -62,9 +62,9 @@ export default function Upload() {
       }
 
       const formData = new FormData();
-      formData.append('userid', decryptedToken.Sub || decryptedToken.sub || decryptedToken.userId);
+      formData.append('userId', decryptedToken.Sub || decryptedToken.sub || decryptedToken.userId);
       formData.append('file', file);
-
+      console.log('Uploading file:', file.name, 'for userId:', decryptedToken.Sub || decryptedToken.sub || decryptedToken.userId);
       // Debug FormData contents
       console.log('FormData contents:');
       for (let [key, value] of formData.entries()) {

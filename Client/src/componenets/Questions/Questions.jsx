@@ -202,7 +202,8 @@ export default function Questions() {
 		fetch("http://localhost:5197/api/Interview/evaluate", {
 			method: 'PATCH',
 			headers: {
-				'Content-Type': 'application/json'
+				'Content-Type': 'application/json',
+				'Authorization': `Bearer ${sessionStorage.getItem("authToken")}`
 			},
 			body: JSON.stringify({
 				userId: decryptToken?.sub,
